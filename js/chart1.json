@@ -1,0 +1,1469 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Annotated hierarchical radial partition showing Australia's mapped land and the composition of its forest share. The two smallest outer-ring forest categories use a minimum display width for legibility; labels and tooltips report the exact values.",
+  "width": 820,
+  "height": 640,
+  "background": null,
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "category": "Forest",
+            "area_ha": 133564800,
+            "share": 17.37056,
+            "order": 1
+          },
+          {
+            "category": "Non-forest",
+            "area_ha": 635349978,
+            "share": 82.62944,
+            "order": 2
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "innerHover",
+          "select": {
+            "type": "point",
+            "fields": [
+              "category"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "arc",
+        "innerRadius": 102,
+        "outerRadius": 162,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 4
+      },
+      "encoding": {
+        "theta": {
+          "field": "area_ha",
+          "type": "quantitative",
+          "stack": true
+        },
+        "order": {
+          "field": "order",
+          "type": "ordinal"
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Forest",
+              "Non-forest"
+            ],
+            "range": [
+              "#0B5942",
+              "#D7D6D0"
+            ]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "condition": {
+            "param": "innerHover",
+            "value": 1
+          },
+          "value": 0.98
+        },
+        "tooltip": [
+          {
+            "field": "category",
+            "title": "Land classification"
+          },
+          {
+            "field": "area_ha",
+            "title": "Area (ha)",
+            "format": ",.0f"
+          },
+          {
+            "field": "share",
+            "title": "Share of mapped land (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "category": "Native forest",
+            "area_ha": 131501369,
+            "share": 17.10220336,
+            "order": 1,
+            "display_area": 125564800
+          },
+          {
+            "category": "Commercial plantation",
+            "area_ha": 1820853,
+            "share": 0.23680817,
+            "order": 2,
+            "display_area": 5000000
+          },
+          {
+            "category": "Other forest",
+            "area_ha": 242578,
+            "share": 0.0315481,
+            "order": 3,
+            "display_area": 3000000
+          },
+          {
+            "category": "Non-forest",
+            "area_ha": 635349978,
+            "share": 82.62944037,
+            "order": 4,
+            "display_area": 635349978
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "outerHover",
+          "select": {
+            "type": "point",
+            "fields": [
+              "category"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "arc",
+        "innerRadius": 166,
+        "outerRadius": 252,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.8,
+        "cornerRadius": 0
+      },
+      "encoding": {
+        "theta": {
+          "field": "display_area",
+          "type": "quantitative",
+          "stack": true
+        },
+        "order": {
+          "field": "order",
+          "type": "ordinal"
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Native forest",
+              "Commercial plantation",
+              "Other forest",
+              "Non-forest"
+            ],
+            "range": [
+              "#63A844",
+              "#A8D879",
+              "#DFA23A",
+              "#D7D6D0"
+            ]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "condition": {
+            "param": "outerHover",
+            "value": 1
+          },
+          "value": 0.98
+        },
+        "tooltip": [
+          {
+            "field": "category",
+            "title": "Forest category"
+          },
+          {
+            "field": "area_ha",
+            "title": "Area (ha)",
+            "format": ",.0f"
+          },
+          {
+            "field": "share",
+            "title": "Share of mapped land (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "label": "17.4%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 44,
+        "fontWeight": 700,
+        "color": "#07553E",
+        "dy": -28
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "label": "of Australia's"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "color": "#60736A",
+        "dy": 16
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "label": "mapped land"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "color": "#60736A",
+        "dy": 35
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "label": "is forest"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "color": "#60736A",
+        "dy": 54
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 444,
+            "y": 176,
+            "label": "Forest"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 15,
+        "fontWeight": 700,
+        "color": "#FFFFFF",
+        "align": "center"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 444,
+            "y": 200,
+            "label": "17.4%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 18,
+        "fontWeight": 700,
+        "color": "#FFFFFF",
+        "align": "center"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 342,
+            "y": 432,
+            "label": "Non-forest"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 15,
+        "fontWeight": 700,
+        "color": "#111111",
+        "align": "center"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 342,
+            "y": 456,
+            "label": "82.6%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 18,
+        "fontWeight": 700,
+        "color": "#111111",
+        "align": "center"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 28,
+            "y": 210,
+            "label": "Inner ring"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 16,
+        "fontWeight": 700,
+        "align": "left",
+        "color": "#103D2E"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 28,
+            "y": 241,
+            "label": "Shows the split"
+          },
+          {
+            "x": 28,
+            "y": 262,
+            "label": "between forest"
+          },
+          {
+            "x": 28,
+            "y": 283,
+            "label": "and non-forest"
+          },
+          {
+            "x": 28,
+            "y": 304,
+            "label": "across all of"
+          },
+          {
+            "x": 28,
+            "y": 325,
+            "label": "Australia's"
+          },
+          {
+            "x": 28,
+            "y": 346,
+            "label": "mapped land."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 11,
+        "align": "left",
+        "color": "#60736A"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 135,
+            "y": 214,
+            "x2": 210,
+            "y2": 214
+          },
+          {
+            "x": 210,
+            "y": 214,
+            "x2": 275,
+            "y2": 278
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "stroke": "#49685B",
+        "strokeWidth": 1.3
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "y2": {
+          "field": "y2"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 275,
+            "y": 278
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "color": "#345D4D",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.4
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 28,
+            "y": 430,
+            "label": "Outer ring"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 16,
+        "fontWeight": 700,
+        "align": "left",
+        "color": "#103D2E"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 28,
+            "y": 462,
+            "label": "Breaks down the"
+          },
+          {
+            "x": 28,
+            "y": 483,
+            "label": "forest share into"
+          },
+          {
+            "x": 28,
+            "y": 504,
+            "label": "native forest,"
+          },
+          {
+            "x": 28,
+            "y": 525,
+            "label": "commercial plantation"
+          },
+          {
+            "x": 28,
+            "y": 546,
+            "label": "and other forest."
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 11,
+        "align": "left",
+        "color": "#60736A"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 145,
+            "y": 434,
+            "x2": 205,
+            "y2": 434
+          },
+          {
+            "x": 205,
+            "y": 434,
+            "x2": 263,
+            "y2": 486
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "stroke": "#49685B",
+        "strokeWidth": 1.3
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "y2": {
+          "field": "y2"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 263,
+            "y": 486
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "color": "#345D4D",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.4
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 575,
+            "y": 143,
+            "x2": 620,
+            "y2": 100,
+            "colour": "#63A844"
+          },
+          {
+            "x": 620,
+            "y": 100,
+            "x2": 652,
+            "y2": 100,
+            "colour": "#63A844"
+          },
+          {
+            "x": 608,
+            "y": 207,
+            "x2": 652,
+            "y2": 344,
+            "colour": "#A8D879"
+          },
+          {
+            "x": 652,
+            "y": 344,
+            "x2": 684,
+            "y2": 344,
+            "colour": "#A8D879"
+          },
+          {
+            "x": 614,
+            "y": 219,
+            "x2": 652,
+            "y2": 480,
+            "colour": "#DFA23A"
+          },
+          {
+            "x": 652,
+            "y": 480,
+            "x2": 684,
+            "y2": 480,
+            "colour": "#DFA23A"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 1.6
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "y2": {
+          "field": "y2"
+        },
+        "color": {
+          "field": "colour",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 575,
+            "y": 143,
+            "colour": "#63A844"
+          },
+          {
+            "x": 608,
+            "y": 207,
+            "colour": "#A8D879"
+          },
+          {
+            "x": 614,
+            "y": 219,
+            "colour": "#DFA23A"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 78,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "color": {
+          "field": "colour",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 660,
+            "y": 76,
+            "label": "Native forest"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "align": "left",
+        "color": "#103D2E"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 660,
+            "y": 100,
+            "label": "17.10%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 19,
+        "fontWeight": 700,
+        "align": "left",
+        "color": "#103D2E"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 660,
+            "y": 122,
+            "label": "131.5M ha"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 11,
+        "fontWeight": 500,
+        "align": "left",
+        "color": "#63766C"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 692,
+            "y": 332,
+            "label": "Commercial"
+          },
+          {
+            "x": 692,
+            "y": 351,
+            "label": "plantation"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "align": "left",
+        "color": "#103D2E"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 692,
+            "y": 378,
+            "label": "0.24%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 18,
+        "fontWeight": 700,
+        "align": "left",
+        "color": "#103D2E"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 692,
+            "y": 400,
+            "label": "1.82M ha"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 11,
+        "fontWeight": 500,
+        "align": "left",
+        "color": "#63766C"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 692,
+            "y": 468,
+            "label": "Other forest"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "align": "left",
+        "color": "#103D2E"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 692,
+            "y": 493,
+            "label": "0.03%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 18,
+        "fontWeight": 700,
+        "align": "left",
+        "color": "#103D2E"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 692,
+            "y": 515,
+            "label": "0.24M ha"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 11,
+        "fontWeight": 500,
+        "align": "left",
+        "color": "#63766C"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              820
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              640,
+              0
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "independent"
+    }
+  },
+  "config": {
+    "font": "DM Sans",
+    "view": {
+      "stroke": null
+    }
+  }
+}

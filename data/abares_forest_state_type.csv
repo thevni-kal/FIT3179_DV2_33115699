@@ -1,0 +1,141 @@
+STATE,FOR_CATEGORY,FOR_TYPE,area_ha,percent_of_state_forest
+ACT,Commercial plantation,Hardwood plantation,33,0.02309759784982362
+ACT,Commercial plantation,Softwood plantation,9488,6.640909345428075
+ACT,Native forest,Casuarina,984,0.6887283722492861
+ACT,Native forest,Eucalypt Medium Open,861,0.6026373257181253
+ACT,Native forest,Eucalypt Medium Woodland,7574,5.301248670138305
+ACT,Native forest,Eucalypt Tall Open,90712,63.49179685312728
+ACT,Native forest,Eucalypt Tall Woodland,29985,20.987317318998823
+ACT,Native forest,Other native forest,177,0.12388711573996303
+ACT,Other forest,Other forest - unallocated type,3058,2.1403774007503222
+NSW,Commercial plantation,Hardwood plantation,56710,0.2795781864727837
+NSW,Commercial plantation,Mixed species plantation,336,0.0016564674776028095
+NSW,Commercial plantation,Softwood plantation,310522,1.5308618871433917
+NSW,Native forest,Acacia,680519,3.3549333077106738
+NSW,Native forest,Callitris,1365658,6.732643043238386
+NSW,Native forest,Casuarina,466082,2.297766889571645
+NSW,Native forest,Eucalypt Low Closed,8,3.943970184768594e-05
+NSW,Native forest,Eucalypt Low Open,145829,0.7189315350932741
+NSW,Native forest,Eucalypt Low Woodland,1664133,8.204113669361893
+NSW,Native forest,Eucalypt Mallee Open,82670,0.4075600189685246
+NSW,Native forest,Eucalypt Mallee Woodland,1659456,8.18105623366919
+NSW,Native forest,Eucalypt Medium Closed,1061,0.005230690457549348
+NSW,Native forest,Eucalypt Medium Open,5057048,24.931058168679563
+NSW,Native forest,Eucalypt Medium Woodland,4891703,24.115913480928857
+NSW,Native forest,Eucalypt Tall Closed,73881,0.3642305765261106
+NSW,Native forest,Eucalypt Tall Open,2086433,10.286036930646615
+NSW,Native forest,Eucalypt Tall Woodland,2338,0.011526252864986217
+NSW,Native forest,Mangrove,7706,0.03799029280478348
+NSW,Native forest,Melaleuca,66627,0.3284686268757214
+NSW,Native forest,Other native forest,1016818,5.012874844170041
+NSW,Native forest,Rainforest,614123,3.027603502225804
+NSW,Other forest,Other forest - unallocated type,34468,0.16992595541075486
+NT,Commercial plantation,Hardwood plantation,44741,0.1917497177819245
+NT,Commercial plantation,Softwood plantation,1910,0.008185824209639387
+NT,Native forest,Acacia,1471943,6.30841185581635
+NT,Native forest,Casuarina,33386,0.14308477856702648
+NT,Native forest,Eucalypt Low Closed,741,0.0031757569315930814
+NT,Native forest,Eucalypt Low Open,656553,2.8138363572310827
+NT,Native forest,Eucalypt Low Woodland,3866877,16.572552545705612
+NT,Native forest,Eucalypt Mallee Woodland,431,0.0018471676619657466
+NT,Native forest,Eucalypt Medium Closed,3576,0.015325920090926936
+NT,Native forest,Eucalypt Medium Open,5747277,24.631517908954777
+NT,Native forest,Eucalypt Medium Woodland,9134101,39.14667282674939
+NT,Native forest,Mangrove,391575,1.6782011072720122
+NT,Native forest,Melaleuca,1018906,4.36679863986745
+NT,Native forest,Other native forest,703624,3.0155719233943996
+NT,Native forest,Rainforest,251084,1.0760887360487412
+NT,Other forest,Other forest - unallocated type,6295,0.026978933717109913
+Qld,Commercial plantation,Hardwood plantation,18360,0.0353236558829471
+Qld,Commercial plantation,Mixed species plantation,2937,0.005650630573432224
+Qld,Commercial plantation,Softwood plantation,192536,0.3704289438496244
+Qld,Native forest,Acacia,5187829,9.981104922416861
+Qld,Native forest,Callitris,543504,1.0456725635623791
+Qld,Native forest,Casuarina,175455,0.33756601541081066
+Qld,Native forest,Eucalypt Low Closed,10001,0.019241387934932134
+Qld,Native forest,Eucalypt Low Open,35669,0.06862524410069935
+Qld,Native forest,Eucalypt Low Woodland,1405697,2.7044856810289266
+Qld,Native forest,Eucalypt Mallee Woodland,290,0.0005579444556674651
+Qld,Native forest,Eucalypt Medium Closed,21606,0.041568785893625004
+Qld,Native forest,Eucalypt Medium Open,3548655,6.827422008022857
+Qld,Native forest,Eucalypt Medium Woodland,28045288,53.95763085240445
+Qld,Native forest,Eucalypt Tall Open,216050,0.4156686194722615
+Qld,Native forest,Eucalypt Tall Woodland,2098518,4.037436149028888
+Qld,Native forest,Mangrove,493114,0.94872490452416
+Qld,Native forest,Melaleuca,5946456,11.440662607139766
+Qld,Native forest,Other native forest,2167874,4.170873375467759
+Qld,Native forest,Rainforest,1854373,3.5677142554808423
+Qld,Other forest,Other forest - unallocated type,12288,0.023641453349109696
+SA,Commercial plantation,Hardwood plantation,45804,0.892640857827007
+SA,Commercial plantation,Mixed species plantation,90,0.001753944572623147
+SA,Commercial plantation,Softwood plantation,129940,2.532306197407241
+SA,Native forest,Acacia,96477,1.8801701170329261
+SA,Native forest,Callitris,65432,1.275156680843086
+SA,Native forest,Casuarina,260154,5.069952181624469
+SA,Native forest,Eucalypt Low Open,7356,0.14335573640239854
+SA,Native forest,Eucalypt Low Woodland,157143,3.0624456886191016
+SA,Native forest,Eucalypt Mallee Open,211040,4.112805140070988
+SA,Native forest,Eucalypt Mallee Woodland,3749110,73.06367929630184
+SA,Native forest,Eucalypt Medium Open,16992,0.33114473531125016
+SA,Native forest,Eucalypt Medium Woodland,199704,3.891886077012588
+SA,Native forest,Mangrove,18967,0.36963407454381364
+SA,Native forest,Melaleuca,25220,0.491494245795064
+SA,Native forest,Other native forest,58439,1.1388751875502676
+SA,Other forest,Other forest - unallocated type,89423,1.7426998390853297
+Tas,Commercial plantation,Hardwood plantation,202606,5.465269188906317
+Tas,Commercial plantation,Mixed species plantation,3977,0.10727903203399912
+Tas,Commercial plantation,Softwood plantation,81193,2.190170090001632
+Tas,Native forest,Acacia,79109,2.1339544745229158
+Tas,Native forest,Callitris,824,0.02222728750214113
+Tas,Native forest,Casuarina,6293,0.16975281583856083
+Tas,Native forest,Eucalypt Low Closed,6043,0.16300909997019278
+Tas,Native forest,Eucalypt Low Open,60725,1.6380485844266022
+Tas,Native forest,Eucalypt Low Woodland,59134,1.5951315766403078
+Tas,Native forest,Eucalypt Mallee Woodland,66,0.001780340989249168
+Tas,Native forest,Eucalypt Medium Open,208782,5.6318659457184825
+Tas,Native forest,Eucalypt Medium Woodland,1069671,28.85422918653253
+Tas,Native forest,Eucalypt Tall Open,873990,23.575760927180006
+Tas,Native forest,Eucalypt Tall Woodland,258576,6.97505229751656
+Tas,Native forest,Melaleuca,24217,0.6532502687370774
+Tas,Native forest,Other native forest,59475,1.6043300050847618
+Tas,Native forest,Rainforest,686409,18.51578906196261
+Tas,Other forest,Other forest - unallocated type,26065,0.7030998164360541
+Vic,Commercial plantation,Hardwood plantation,167967,2.042482497775628
+Vic,Commercial plantation,Mixed species plantation,566,0.006882572730006521
+Vic,Commercial plantation,Softwood plantation,234504,2.851573914271112
+Vic,Native forest,Acacia,36978,0.4496533116787653
+Vic,Native forest,Callitris,17968,0.2184912841214791
+Vic,Native forest,Casuarina,54128,0.658197697402461
+Vic,Native forest,Eucalypt Low Woodland,11561,0.14058202002050424
+Vic,Native forest,Eucalypt Mallee Open,198514,2.41393470481363
+Vic,Native forest,Eucalypt Mallee Woodland,1140140,13.864128043091227
+Vic,Native forest,Eucalypt Medium Open,3595890,43.72610327580062
+Vic,Native forest,Eucalypt Medium Woodland,1377570,16.751282183171526
+Vic,Native forest,Eucalypt Tall Open,915969,11.138203641221454
+Vic,Native forest,Mangrove,2865,0.03483846443722382
+Vic,Native forest,Melaleuca,23195,0.2820517216828644
+Vic,Native forest,Other native forest,379334,4.612709971668363
+Vic,Native forest,Rainforest,36085,0.4387944115941437
+Vic,Other forest,Other forest - unallocated type,30435,0.37009028451899023
+WA,Commercial plantation,Hardwood plantation,202299,0.9741760683388612
+WA,Commercial plantation,Mixed species plantation,14316,0.06893906838066
+WA,Commercial plantation,Softwood plantation,100018,0.4816392666454912
+WA,Native forest,Acacia,3342362,16.09523068391447
+WA,Native forest,Callitris,76,0.0003659799662566471
+WA,Native forest,Casuarina,89794,0.43240533013222854
+WA,Native forest,Eucalypt Low Closed,5117,0.024641045885990306
+WA,Native forest,Eucalypt Low Open,101049,0.4866040738193149
+WA,Native forest,Eucalypt Low Woodland,1106872,5.330170752768783
+WA,Native forest,Eucalypt Mallee Open,535,0.002576306341411924
+WA,Native forest,Eucalypt Mallee Woodland,3375561,16.255101327332287
+WA,Native forest,Eucalypt Medium Closed,238,0.0011460951574879211
+WA,Native forest,Eucalypt Medium Open,1912392,9.209173153019497
+WA,Native forest,Eucalypt Medium Woodland,9651967,46.47929680224042
+WA,Native forest,Eucalypt Tall Closed,16,7.704841394876781e-05
+WA,Native forest,Eucalypt Tall Open,221594,1.0670916400352033
+WA,Native forest,Eucalypt Tall Woodland,2188,0.010536370607494
+WA,Native forest,Mangrove,195584,0.9418398121097377
+WA,Native forest,Melaleuca,88568,0.4265014954134042
+WA,Native forest,Other native forest,314875,1.5162887088823915
+WA,Native forest,Rainforest,197,0.0009486585967442038
+WA,Other forest,Other forest - unallocated type,40546,0.19525031199792123

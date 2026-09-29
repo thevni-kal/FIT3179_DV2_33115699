@@ -1,0 +1,874 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Heatmap showing how the 12 largest national forest types contribute to forest area across Australian states and territories.",
+  "background": null,
+  "width": 650,
+  "height": 455,
+  "data": {
+    "values": [
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Eucalypt Medium Woodland",
+        "area_mha": 9.652,
+        "percent_of_state_forest": 46.4793,
+        "share_label": "46%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Eucalypt Medium Woodland",
+        "area_mha": 9.1341,
+        "percent_of_state_forest": 39.1467,
+        "share_label": "39%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Eucalypt Medium Woodland",
+        "area_mha": 0.1997,
+        "percent_of_state_forest": 3.8919,
+        "share_label": "4%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Eucalypt Medium Woodland",
+        "area_mha": 28.0453,
+        "percent_of_state_forest": 53.9576,
+        "share_label": "54%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Eucalypt Medium Woodland",
+        "area_mha": 4.8917,
+        "percent_of_state_forest": 24.1159,
+        "share_label": "24%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Eucalypt Medium Woodland",
+        "area_mha": 1.3776,
+        "percent_of_state_forest": 16.7513,
+        "share_label": "17%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Eucalypt Medium Woodland",
+        "area_mha": 1.0697,
+        "percent_of_state_forest": 28.8542,
+        "share_label": "29%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Eucalypt Medium Woodland",
+        "area_mha": 0.0076,
+        "percent_of_state_forest": 5.3012,
+        "share_label": "5%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Eucalypt Medium Open",
+        "area_mha": 1.9124,
+        "percent_of_state_forest": 9.2092,
+        "share_label": "9%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Eucalypt Medium Open",
+        "area_mha": 5.7473,
+        "percent_of_state_forest": 24.6315,
+        "share_label": "25%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Eucalypt Medium Open",
+        "area_mha": 0.017,
+        "percent_of_state_forest": 0.3311,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Eucalypt Medium Open",
+        "area_mha": 3.5487,
+        "percent_of_state_forest": 6.8274,
+        "share_label": "7%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Eucalypt Medium Open",
+        "area_mha": 5.057,
+        "percent_of_state_forest": 24.9311,
+        "share_label": "25%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Eucalypt Medium Open",
+        "area_mha": 3.5959,
+        "percent_of_state_forest": 43.7261,
+        "share_label": "44%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Eucalypt Medium Open",
+        "area_mha": 0.2088,
+        "percent_of_state_forest": 5.6319,
+        "share_label": "6%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Eucalypt Medium Open",
+        "area_mha": 0.0009,
+        "percent_of_state_forest": 0.6026,
+        "share_label": "1%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Acacia",
+        "area_mha": 3.3424,
+        "percent_of_state_forest": 16.0952,
+        "share_label": "16%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Acacia",
+        "area_mha": 1.4719,
+        "percent_of_state_forest": 6.3084,
+        "share_label": "6%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Acacia",
+        "area_mha": 0.0965,
+        "percent_of_state_forest": 1.8802,
+        "share_label": "2%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Acacia",
+        "area_mha": 5.1878,
+        "percent_of_state_forest": 9.9811,
+        "share_label": "10%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Acacia",
+        "area_mha": 0.6805,
+        "percent_of_state_forest": 3.3549,
+        "share_label": "3%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Acacia",
+        "area_mha": 0.037,
+        "percent_of_state_forest": 0.4497,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Acacia",
+        "area_mha": 0.0791,
+        "percent_of_state_forest": 2.134,
+        "share_label": "2%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Acacia",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Eucalypt Mallee Woodland",
+        "area_mha": 3.3756,
+        "percent_of_state_forest": 16.2551,
+        "share_label": "16%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Eucalypt Mallee Woodland",
+        "area_mha": 0.0004,
+        "percent_of_state_forest": 0.0018,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Eucalypt Mallee Woodland",
+        "area_mha": 3.7491,
+        "percent_of_state_forest": 73.0637,
+        "share_label": "73%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Eucalypt Mallee Woodland",
+        "area_mha": 0.0003,
+        "percent_of_state_forest": 0.0006,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Eucalypt Mallee Woodland",
+        "area_mha": 1.6595,
+        "percent_of_state_forest": 8.1811,
+        "share_label": "8%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Eucalypt Mallee Woodland",
+        "area_mha": 1.1401,
+        "percent_of_state_forest": 13.8641,
+        "share_label": "14%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Eucalypt Mallee Woodland",
+        "area_mha": 0.0001,
+        "percent_of_state_forest": 0.0018,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Eucalypt Mallee Woodland",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Eucalypt Low Woodland",
+        "area_mha": 1.1069,
+        "percent_of_state_forest": 5.3302,
+        "share_label": "5%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Eucalypt Low Woodland",
+        "area_mha": 3.8669,
+        "percent_of_state_forest": 16.5726,
+        "share_label": "17%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Eucalypt Low Woodland",
+        "area_mha": 0.1571,
+        "percent_of_state_forest": 3.0624,
+        "share_label": "3%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Eucalypt Low Woodland",
+        "area_mha": 1.4057,
+        "percent_of_state_forest": 2.7045,
+        "share_label": "3%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Eucalypt Low Woodland",
+        "area_mha": 1.6641,
+        "percent_of_state_forest": 8.2041,
+        "share_label": "8%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Eucalypt Low Woodland",
+        "area_mha": 0.0116,
+        "percent_of_state_forest": 0.1406,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Eucalypt Low Woodland",
+        "area_mha": 0.0591,
+        "percent_of_state_forest": 1.5951,
+        "share_label": "2%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Eucalypt Low Woodland",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Melaleuca",
+        "area_mha": 0.0886,
+        "percent_of_state_forest": 0.4265,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Melaleuca",
+        "area_mha": 1.0189,
+        "percent_of_state_forest": 4.3668,
+        "share_label": "4%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Melaleuca",
+        "area_mha": 0.0252,
+        "percent_of_state_forest": 0.4915,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Melaleuca",
+        "area_mha": 5.9465,
+        "percent_of_state_forest": 11.4407,
+        "share_label": "11%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Melaleuca",
+        "area_mha": 0.0666,
+        "percent_of_state_forest": 0.3285,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Melaleuca",
+        "area_mha": 0.0232,
+        "percent_of_state_forest": 0.2821,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Melaleuca",
+        "area_mha": 0.0242,
+        "percent_of_state_forest": 0.6533,
+        "share_label": "1%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Melaleuca",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Other native forest",
+        "area_mha": 0.3149,
+        "percent_of_state_forest": 1.5163,
+        "share_label": "2%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Other native forest",
+        "area_mha": 0.7036,
+        "percent_of_state_forest": 3.0156,
+        "share_label": "3%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Other native forest",
+        "area_mha": 0.0584,
+        "percent_of_state_forest": 1.1389,
+        "share_label": "1%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Other native forest",
+        "area_mha": 2.1679,
+        "percent_of_state_forest": 4.1709,
+        "share_label": "4%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Other native forest",
+        "area_mha": 1.0168,
+        "percent_of_state_forest": 5.0129,
+        "share_label": "5%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Other native forest",
+        "area_mha": 0.3793,
+        "percent_of_state_forest": 4.6127,
+        "share_label": "5%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Other native forest",
+        "area_mha": 0.0595,
+        "percent_of_state_forest": 1.6043,
+        "share_label": "2%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Other native forest",
+        "area_mha": 0.0002,
+        "percent_of_state_forest": 0.1239,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Eucalypt Tall Open",
+        "area_mha": 0.2216,
+        "percent_of_state_forest": 1.0671,
+        "share_label": "1%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Eucalypt Tall Open",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Eucalypt Tall Open",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Eucalypt Tall Open",
+        "area_mha": 0.216,
+        "percent_of_state_forest": 0.4157,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Eucalypt Tall Open",
+        "area_mha": 2.0864,
+        "percent_of_state_forest": 10.286,
+        "share_label": "10%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Eucalypt Tall Open",
+        "area_mha": 0.916,
+        "percent_of_state_forest": 11.1382,
+        "share_label": "11%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Eucalypt Tall Open",
+        "area_mha": 0.874,
+        "percent_of_state_forest": 23.5758,
+        "share_label": "24%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Eucalypt Tall Open",
+        "area_mha": 0.0907,
+        "percent_of_state_forest": 63.4918,
+        "share_label": "63%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Rainforest",
+        "area_mha": 0.0002,
+        "percent_of_state_forest": 0.0009,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Rainforest",
+        "area_mha": 0.2511,
+        "percent_of_state_forest": 1.0761,
+        "share_label": "1%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Rainforest",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Rainforest",
+        "area_mha": 1.8544,
+        "percent_of_state_forest": 3.5677,
+        "share_label": "4%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Rainforest",
+        "area_mha": 0.6141,
+        "percent_of_state_forest": 3.0276,
+        "share_label": "3%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Rainforest",
+        "area_mha": 0.0361,
+        "percent_of_state_forest": 0.4388,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Rainforest",
+        "area_mha": 0.6864,
+        "percent_of_state_forest": 18.5158,
+        "share_label": "19%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Rainforest",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Eucalypt Tall Woodland",
+        "area_mha": 0.0022,
+        "percent_of_state_forest": 0.0105,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Eucalypt Tall Woodland",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Eucalypt Tall Woodland",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Eucalypt Tall Woodland",
+        "area_mha": 2.0985,
+        "percent_of_state_forest": 4.0374,
+        "share_label": "4%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Eucalypt Tall Woodland",
+        "area_mha": 0.0023,
+        "percent_of_state_forest": 0.0115,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Eucalypt Tall Woodland",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Eucalypt Tall Woodland",
+        "area_mha": 0.2586,
+        "percent_of_state_forest": 6.9751,
+        "share_label": "7%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Eucalypt Tall Woodland",
+        "area_mha": 0.03,
+        "percent_of_state_forest": 20.9873,
+        "share_label": "21%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Callitris",
+        "area_mha": 0.0001,
+        "percent_of_state_forest": 0.0004,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Callitris",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Callitris",
+        "area_mha": 0.0654,
+        "percent_of_state_forest": 1.2752,
+        "share_label": "1%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Callitris",
+        "area_mha": 0.5435,
+        "percent_of_state_forest": 1.0457,
+        "share_label": "1%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Callitris",
+        "area_mha": 1.3657,
+        "percent_of_state_forest": 6.7326,
+        "share_label": "7%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Callitris",
+        "area_mha": 0.018,
+        "percent_of_state_forest": 0.2185,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Callitris",
+        "area_mha": 0.0008,
+        "percent_of_state_forest": 0.0222,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Callitris",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "WA",
+        "FOR_TYPE": "Mangrove",
+        "area_mha": 0.1956,
+        "percent_of_state_forest": 0.9418,
+        "share_label": "1%"
+      },
+      {
+        "STATE": "NT",
+        "FOR_TYPE": "Mangrove",
+        "area_mha": 0.3916,
+        "percent_of_state_forest": 1.6782,
+        "share_label": "2%"
+      },
+      {
+        "STATE": "SA",
+        "FOR_TYPE": "Mangrove",
+        "area_mha": 0.019,
+        "percent_of_state_forest": 0.3696,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Qld",
+        "FOR_TYPE": "Mangrove",
+        "area_mha": 0.4931,
+        "percent_of_state_forest": 0.9487,
+        "share_label": "1%"
+      },
+      {
+        "STATE": "NSW",
+        "FOR_TYPE": "Mangrove",
+        "area_mha": 0.0077,
+        "percent_of_state_forest": 0.038,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Vic",
+        "FOR_TYPE": "Mangrove",
+        "area_mha": 0.0029,
+        "percent_of_state_forest": 0.0348,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "Tas",
+        "FOR_TYPE": "Mangrove",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      },
+      {
+        "STATE": "ACT",
+        "FOR_TYPE": "Mangrove",
+        "area_mha": 0.0,
+        "percent_of_state_forest": 0.0,
+        "share_label": "0%"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5,
+        "cornerRadius": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "STATE",
+          "type": "nominal",
+          "sort": [
+            "WA",
+            "NT",
+            "SA",
+            "Qld",
+            "NSW",
+            "Vic",
+            "Tas",
+            "ACT"
+          ],
+          "axis": {
+            "title": null,
+            "labelAngle": 0,
+            "labelFont": "DM Sans",
+            "labelFontSize": 12,
+            "labelFontWeight": 700,
+            "labelColor": "#314B40",
+            "labelPadding": 8,
+            "domain": false,
+            "ticks": false
+          }
+        },
+        "y": {
+          "field": "FOR_TYPE",
+          "type": "nominal",
+          "sort": [
+            "Eucalypt Medium Woodland",
+            "Eucalypt Medium Open",
+            "Acacia",
+            "Eucalypt Mallee Woodland",
+            "Eucalypt Low Woodland",
+            "Melaleuca",
+            "Other native forest",
+            "Eucalypt Tall Open",
+            "Rainforest",
+            "Eucalypt Tall Woodland",
+            "Callitris",
+            "Mangrove"
+          ],
+          "axis": {
+            "title": null,
+            "labelFont": "DM Sans",
+            "labelFontSize": 11,
+            "labelColor": "#415A4F",
+            "labelLimit": 190,
+            "labelPadding": 8,
+            "domain": false,
+            "ticks": false
+          }
+        },
+        "color": {
+          "field": "percent_of_state_forest",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              75
+            ],
+            "range": [
+              "#DDEAD6",
+              "#C8DEBD",
+              "#A9CC99",
+              "#83B573",
+              "#5A9956",
+              "#347A47",
+              "#175F3B",
+              "#064B33"
+            ]
+          },
+          "legend": {
+            "title": "Share of state forest (%)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 260,
+            "gradientThickness": 11,
+            "titleFont": "DM Sans",
+            "titleFontSize": 10,
+            "titleFontWeight": 700,
+            "labelFont": "DM Sans",
+            "labelFontSize": 9,
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50,
+              60,
+              70
+            ],
+            "format": ".0f"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "STATE",
+            "type": "nominal",
+            "title": "State / territory"
+          },
+          {
+            "field": "FOR_TYPE",
+            "type": "nominal",
+            "title": "Forest type"
+          },
+          {
+            "field": "area_mha",
+            "type": "quantitative",
+            "title": "Mapped area (million ha)",
+            "format": ".2f"
+          },
+          {
+            "field": "percent_of_state_forest",
+            "type": "quantitative",
+            "title": "Share of state forest (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 10,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "x": {
+          "field": "STATE",
+          "type": "nominal",
+          "sort": [
+            "WA",
+            "NT",
+            "SA",
+            "Qld",
+            "NSW",
+            "Vic",
+            "Tas",
+            "ACT"
+          ]
+        },
+        "y": {
+          "field": "FOR_TYPE",
+          "type": "nominal",
+          "sort": [
+            "Eucalypt Medium Woodland",
+            "Eucalypt Medium Open",
+            "Acacia",
+            "Eucalypt Mallee Woodland",
+            "Eucalypt Low Woodland",
+            "Melaleuca",
+            "Other native forest",
+            "Eucalypt Tall Open",
+            "Rainforest",
+            "Eucalypt Tall Woodland",
+            "Callitris",
+            "Mangrove"
+          ]
+        },
+        "text": {
+          "field": "share_label",
+          "type": "nominal"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.percent_of_state_forest >= 35",
+            "value": "#FFFFFF"
+          },
+          "value": "#173F30"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "DM Sans",
+    "view": {
+      "stroke": null
+    }
+  }
+}

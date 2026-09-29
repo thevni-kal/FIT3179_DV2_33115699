@@ -1,0 +1,688 @@
+﻿Rowid,VALUE *,COUNT,FOR_CATEGORY,FOR_TYPE,FOR_CODE,COVER_CODE,HT_CODE,FOREST,STATE,FOR_SOURCE
+0,1,121022073,Non-forest,Non-forest,0,6,6,0,Qld, 
+1,2,5875,Non-forest,Non-forest,0,6,6,0, , 
+2,3,17703,Native forest,Mangrove,63,3,2,1,Qld,Global Mangroves
+3,4,335,Native forest,Mangrove,61,1,2,1,Qld,Global Mangroves
+4,5,16724,Native forest,Rainforest,98,3,2,1,Qld,NVIS 6.0
+5,6,4555,Native forest,Rainforest,96,3,1,1,Qld,NVIS 6.0
+6,7,36033,Native forest,Acacia,5,2,2,1,Qld,NVIS 6.0
+7,8,20070,Native forest,Casuarina,29,2,2,1,Qld,NVIS 6.0
+8,9,3363,Native forest,Mangrove,60,3,1,1,Qld,Global Mangroves
+9,10,16036,Native forest,Mangrove,59,2,1,1,Qld,Global Mangroves
+10,11,659859,Native forest,Eucalypt Low Woodland,40,1,1,1,Qld,NVIS 6.0
+11,12,66291,Native forest,Mangrove,58,1,1,1,Qld,Global Mangroves
+12,13,824759,Native forest,Rainforest,97,2,2,1,Qld,Aus_For18
+13,14,75450,Native forest,Rainforest,96,3,1,1,Qld,Aus_For18
+14,15,606229,Native forest,Rainforest,98,3,2,1,Qld,Aus_For18
+15,16,3704,Native forest,Mangrove,63,3,2,1,Qld,Aus_For18
+16,17,4432714,Native forest,Eucalypt Medium Woodland,41,1,2,1,Qld,NVIS 6.0
+17,18,185,Native forest,Mangrove,63,3,2,1,Qld,NVIS 6.0
+18,19,23612574,Native forest,Eucalypt Medium Woodland,41,1,2,1,Qld,Aus_For18
+19,20,788584,Native forest,Melaleuca,64,1,1,1,Qld,Aus_For18
+20,21,49683,Native forest,Melaleuca,68,2,2,1,Qld,NVIS 6.0
+21,22,106356,Native forest,Other native forest,73,1,1,1,Qld,NVIS 6.0
+22,23,2289,Native forest,Mangrove,61,1,2,1,Qld,NVIS 6.0
+23,24,1631,Native forest,Mangrove,62,2,2,1,Qld,NVIS 6.0
+24,25,190807,Native forest,Mangrove,58,1,1,1,Qld,Aus_For18
+25,26,431134,Native forest,Melaleuca,64,1,1,1,Qld,NVIS 6.0
+26,27,748,Native forest,Mangrove,61,1,2,1,Qld,Aus_For18
+27,28,1380998,Native forest,Eucalypt Medium Open,44,2,2,1,Qld,NVIS 6.0
+28,29,24424,Native forest,Rainforest,97,2,2,1,Qld,NVIS 6.0
+29,30,222156,Native forest,Melaleuca,68,2,2,1,Qld,Aus_For18
+30,31,2167657,Native forest,Eucalypt Medium Open,44,2,2,1,Qld,Aus_For18
+31,32,260176,Native forest,Other native forest,73,1,1,1,Qld,Aus_For18
+32,33,76791,Native forest,Rainforest,24,1,1,1,Qld,Aus_For18
+33,34,130078,Native forest,Acacia,2,1,2,1,Qld,NVIS 6.0
+34,35,6176,Native forest,Mangrove,58,1,1,1,Qld,NVIS 6.0
+35,36,78441,Native forest,Mangrove,59,2,1,1,Qld,Aus_For18
+36,37,242,Native forest,Other native forest,74,2,1,1,Qld,NVIS 6.0
+37,38,72169,Native forest,Acacia,5,2,2,1,Qld,Aus_For18
+38,39,60,Native forest,Melaleuca,71,2,3,1,Qld,NVIS 6.0
+39,40,60340,Native forest,Other native forest,77,2,2,1,Qld,NVIS 6.0
+40,41,1732,Native forest,Mangrove,59,2,1,1,Qld,NVIS 6.0
+41,42,18053,Native forest,Other native forest,77,2,2,1,Qld,Aus_For18
+42,43,3276,Non-forest,Non-forest,0,6,6,0,Qld,CLUM
+43,44,128,Native forest,Melaleuca,71,2,3,1,Qld,Aus_For18
+44,45,4086,Native forest,Rainforest,24,1,1,1,Qld,NVIS 6.0
+45,46,3128,Native forest,Mangrove,62,2,2,1,Qld,Global Mangroves
+46,47,130803,Native forest,Rainforest,94,1,2,1,Qld,Aus_For18
+47,48,2744853,Native forest,Melaleuca,65,2,1,1,Qld,Aus_For18
+48,49,734,Native forest,Mangrove,60,3,1,1,Qld,NVIS 6.0
+49,50,111503668,Non-forest,Non-forest,0,6,6,0,NT, 
+50,51,97364,Native forest,Other native forest,18,5,5,1,NT,Aus_For18
+51,52,85040,Native forest,Mangrove,60,3,1,1,NT,Aus_For18
+52,53,10288,Native forest,Other native forest,18,5,5,1,NT,NVIS 6.0
+53,54,114328,Native forest,Rainforest,97,2,2,1,NT,Aus_For18
+54,55,2746,Native forest,Rainforest,94,1,2,1,NT,Aus_For18
+55,56,77350,Native forest,Mangrove,59,2,1,1,NT,Aus_For18
+56,57,23816,Native forest,Casuarina,28,1,2,1,NT,Aus_For18
+57,58,132464,Native forest,Rainforest,98,3,2,1,NT,Aus_For18
+58,59,171512,Native forest,Mangrove,63,3,2,1,NT,Aus_For18
+59,60,550,Native forest,Rainforest,98,3,2,1,NT,NVIS 6.0
+60,61,36727,Native forest,Mangrove,15,5,5,1,NT,Global Mangroves
+61,62,30519,Native forest,Casuarina,28,1,2,1,Qld,Aus_For18
+62,63,2678,Native forest,Mangrove,60,3,1,1,NT,Global Mangroves
+63,64,85,Native forest,Rainforest,94,1,2,1,NT,NVIS 6.0
+64,65,1819708,Native forest,Acacia,2,1,2,1,Qld,Aus_For18
+65,66,11315,Native forest,Casuarina,28,1,2,1,Qld,NVIS 6.0
+66,67,1232839,Native forest,Other native forest,18,5,5,1,Qld,Aus_For18
+67,68,2349084,Native forest,Acacia,1,1,1,1,Qld,Aus_For18
+68,69,5657848,Native forest,Eucalypt Medium Open,44,2,2,1,NT,Aus_For18
+69,70,219297,Native forest,Melaleuca,68,2,2,1,NT,Aus_For18
+70,71,9074952,Native forest,Eucalypt Medium Woodland,41,1,2,1,NT,Aus_For18
+71,72,439,Native forest,Mangrove,58,1,1,1,NT,Aus_For18
+72,73,89429,Native forest,Eucalypt Medium Open,44,2,2,1,NT,NVIS 6.0
+73,74,3688979,Native forest,Eucalypt Low Woodland,40,1,1,1,NT,Aus_For18
+74,75,623102,Native forest,Eucalypt Low Open,43,2,1,1,NT,Aus_For18
+75,76,33451,Native forest,Eucalypt Low Open,43,2,1,1,NT,NVIS 6.0
+76,77,527104,Native forest,Melaleuca,64,1,1,1,NT,Aus_For18
+77,78,10213,Native forest,Melaleuca,64,1,1,1,NT,NVIS 6.0
+78,79,59149,Native forest,Eucalypt Medium Woodland,41,1,2,1,NT,NVIS 6.0
+79,80,167612,Native forest,Melaleuca,67,1,2,1,NT,Aus_For18
+80,81,322005,Native forest,Acacia,1,1,1,1,Qld,NVIS 6.0
+81,82,177898,Native forest,Eucalypt Low Woodland,40,1,1,1,NT,NVIS 6.0
+82,83,55600,Native forest,Casuarina,25,1,1,1,Qld,NVIS 6.0
+83,84,248,Native forest,Other native forest,84,3,1,1,NT,Aus_For18
+84,85,21,Native forest,Mangrove,63,3,2,1,NT,NVIS 6.0
+85,86,36,Native forest,Mangrove,60,3,1,1,NT,NVIS 6.0
+86,87,24787,Native forest,Casuarina,25,1,1,1,Qld,Aus_For18
+87,88,1814,Native forest,Mangrove,63,3,2,1,NT,Global Mangroves
+88,89,13719,Native forest,Mangrove,15,5,5,1,NT,NVIS 6.0
+89,90,43800,Native forest,Other native forest,74,2,1,1,NT,NVIS 6.0
+90,91,92091,Native forest,Other native forest,73,1,1,1,NT,NVIS 6.0
+91,92,44741,Commercial plantation,Hardwood plantation,91,4,4,1,NT,NPI spatial
+92,93,911,Native forest,Rainforest,97,2,2,1,NT,NVIS 6.0
+93,94,1686,Native forest,Melaleuca,68,2,2,1,NT,NVIS 6.0
+94,95,1827,Native forest,Mangrove,59,2,1,1,NT,Global Mangroves
+95,96,2372,Native forest,Melaleuca,67,1,2,1,NT,NVIS 6.0
+96,97,99,Native forest,Mangrove,59,2,1,1,NT,NVIS 6.0
+97,98,322164,Native forest,Melaleuca,65,2,1,1,Qld,NVIS 6.0
+98,99,1910,Commercial plantation,Softwood plantation,92,4,4,1,NT,NPI spatial
+99,100,62942,Native forest,Other native forest,84,3,1,1,Qld,Aus_For18
+100,101,413517,Native forest,Acacia,4,2,1,1,NT,Aus_For18
+101,102,537861,Native forest,Acacia,1,1,1,1,NT,Aus_For18
+102,103,90180,Native forest,Melaleuca,65,2,1,1,NT,Aus_For18
+103,104,993,Native forest,Acacia,4,2,1,1,NT,NVIS 6.0
+104,105,442,Native forest,Melaleuca,65,2,1,1,NT,NVIS 6.0
+105,106,102643,Native forest,Acacia,1,1,1,1,NT,NVIS 6.0
+106,107,4367,Native forest,Other native forest,74,2,1,1,NT,Aus_For18
+107,108,5853,Native forest,Casuarina,29,2,2,1,NT,Aus_For18
+108,109,305,Native forest,Mangrove,58,1,1,1,NT,Global Mangroves
+109,110,40,Native forest,Other native forest,84,3,1,1,NT,NVIS 6.0
+110,111,425545,Native forest,Other native forest,73,1,1,1,NT,Aus_For18
+111,112,3565,Native forest,Eucalypt Medium Closed,47,3,2,1,NT,Aus_For18
+112,113,251,Native forest,Casuarina,28,1,2,1,NT,NVIS 6.0
+113,114,1928,Native forest,Other native forest,74,2,1,1,Qld,Aus_For18
+114,115,8,Native forest,Mangrove,58,1,1,1,NT,NVIS 6.0
+115,116,688,Non-forest,Non-forest,0,6,6,0,NT,CLUM
+116,117,19,Native forest,Casuarina,29,2,2,1,NT,NVIS 6.0
+117,118,111670,Native forest,Other native forest,10,3,2,1,Qld,NVIS 6.0
+118,119,23246,Native forest,Acacia,3,1,3,1,Qld,NVIS 6.0
+119,120,42607,Native forest,Mangrove,62,2,2,1,Qld,Aus_For18
+120,121,1912009,Native forest,Eucalypt Tall Woodland,42,1,3,1,Qld,NVIS 6.0
+121,122,375084,Native forest,Acacia,2,1,2,1,NT,Aus_For18
+122,123,376830,Native forest,Melaleuca,67,1,2,1,Qld,NVIS 6.0
+123,124,938014,Native forest,Melaleuca,67,1,2,1,Qld,Aus_For18
+124,125,11,Native forest,Eucalypt Medium Closed,47,3,2,1,NT,NVIS 6.0
+125,126,784,Native forest,Acacia,2,1,2,1,NT,NVIS 6.0
+126,127,231772339,Non-forest,Non-forest,0,6,6,0,WA, 
+127,128,1087848,Native forest,Eucalypt Low Woodland,40,1,1,1,WA,Aus_For18
+128,129,6338956,Native forest,Eucalypt Medium Woodland,41,1,2,1,WA,Aus_For18
+129,130,3313011,Native forest,Eucalypt Medium Woodland,41,1,2,1,WA,NVIS 6.0
+130,131,103531,Native forest,Mangrove,59,2,1,1,WA,Aus_For18
+131,132,45455,Native forest,Mangrove,15,5,5,1,WA,Global Mangroves
+132,133,19024,Native forest,Eucalypt Low Woodland,40,1,1,1,WA,NVIS 6.0
+133,134,12900,Native forest,Other native forest,18,5,5,1,WA,Aus_For18
+134,135,39896,Native forest,Other native forest,74,2,1,1,WA,Aus_For18
+135,136,40546,Other forest,Other forest - unallocated type,90,5,5,1,WA,NVIS 6.0
+136,137,2068,Native forest,Mangrove,61,1,2,1,WA,NVIS 6.0
+137,138,1461749,Native forest,Eucalypt Medium Open,44,2,2,1,WA,Aus_For18
+138,139,17608,Native forest,Mangrove,15,5,5,1,WA,NVIS 6.0
+139,140,7419,Native forest,Mangrove,63,3,2,1,WA,Aus_For18
+140,141,955,Native forest,Mangrove,62,2,2,1,WA,Aus_For18
+141,142,3215,Other forest,Other forest - unallocated type,102,5,5,1,NT,NT_CLUM
+142,143,1721,Native forest,Mangrove,58,1,1,1,WA,NVIS 6.0
+143,144,17,Native forest,Mangrove,63,3,2,1,WA,NVIS 6.0
+144,145,558,Other forest,Other forest - unallocated type,102,5,5,1,NT,NT_CLUM
+145,146,3172,Native forest,Mangrove,58,1,1,1,WA,Aus_For18
+146,147,29,Other forest,Other forest - unallocated type,102,5,5,1,NT,NT_CLUM
+147,148,797,Other forest,Other forest - unallocated type,102,5,5,1,NT,NT_CLUM
+148,149,9856,Native forest,Mangrove,59,2,1,1,WA,Global Mangroves
+149,150,238,Native forest,Eucalypt Medium Closed,47,3,2,1,WA,Aus_For18
+150,151,77653,Native forest,Eucalypt Low Open,43,2,1,1,WA,Aus_For18
+151,152,156,Native forest,Rainforest,95,2,1,1,WA,Aus_For18
+152,153,5117,Native forest,Eucalypt Low Closed,46,3,1,1,WA,Aus_For18
+153,154,41,Native forest,Rainforest,100,3,3,1,WA,Aus_For18
+154,155,1793,Native forest,Other native forest,74,2,1,1,WA,NVIS 6.0
+155,156,2042,Native forest,Mangrove,59,2,1,1,WA,NVIS 6.0
+156,157,93636,Native forest,Other native forest,76,1,2,1,Qld,NVIS 6.0
+157,158,163442,Non-forest,Non-forest,0,6,6,0,WA,CLUM
+158,159,745838,Native forest,Eucalypt Low Woodland,40,1,1,1,Qld,Aus_For18
+159,160,7,Native forest,Mangrove,62,2,2,1,WA,NVIS 6.0
+160,161,85067,Native forest,Acacia,4,2,1,1,Qld,Aus_For18
+161,162,214461,Native forest,Other native forest,76,1,2,1,Qld,Aus_For18
+162,163,1,Other forest,Other forest - unallocated type,102,5,5,1,NT,NT_CLUM
+163,164,24174,Native forest,Rainforest,94,1,2,1,Qld,NVIS 6.0
+164,165,3210194,Native forest,Acacia,1,1,1,1,WA,Aus_For18
+165,166,1672,Other forest,Other forest - unallocated type,102,5,5,1,NT,NT_CLUM
+166,167,23,Other forest,Other forest - unallocated type,102,5,5,1,NT,NT_CLUM
+167,168,31891,Native forest,Eucalypt Low Open,43,2,1,1,Qld,Aus_For18
+168,169,57204,Native forest,Mangrove,60,3,1,1,Qld,Aus_For18
+169,170,741,Native forest,Eucalypt Low Closed,46,3,1,1,NT,Aus_For18
+170,171,19297,Native forest,Other native forest,73,1,1,1,WA,NVIS 6.0
+171,172,219418,Native forest,Other native forest,73,1,1,1,WA,Aus_For18
+172,173,1623,Native forest,Mangrove,58,1,1,1,WA,Global Mangroves
+173,174,29881,Native forest,Other native forest,76,1,2,1,NT,NVIS 6.0
+174,175,202299,Commercial plantation,Hardwood plantation,91,4,4,1,WA,NPI spatial
+175,176,12286,Other forest,Other forest - unallocated type,90,5,5,1,Qld,NVIS 6.0
+176,177,1,Other forest,Other forest - unallocated type,89,3,2,1,Qld,NVIS 6.0
+177,178,1,Other forest,Other forest - unallocated type,86,2,2,1,Qld,NVIS 6.0
+178,179,186509,Native forest,Eucalypt Tall Woodland,42,1,3,1,Qld,Aus_For18
+179,180,41000,Native forest,Acacia,5,2,2,1,NT,Aus_For18
+180,181,61,Native forest,Acacia,5,2,2,1,NT,NVIS 6.0
+181,182,2178,Native forest,Acacia,8,3,2,1,Qld,NVIS 6.0
+182,183,4831,Native forest,Acacia,4,2,1,1,Qld,NVIS 6.0
+183,184,89461,Native forest,Eucalypt Tall Open,45,2,3,1,Qld,NVIS 6.0
+184,185,30144,Native forest,Casuarina,29,2,2,1,Qld,Aus_For18
+185,186,2937,Commercial plantation,Mixed species plantation,93,4,4,1,Qld,NPI spatial
+186,187,1732,Native forest,Other native forest,84,3,1,1,Qld,NVIS 6.0
+187,188,18360,Commercial plantation,Hardwood plantation,91,4,4,1,Qld,NPI spatial
+188,189,21606,Native forest,Eucalypt Medium Closed,47,3,2,1,Qld,Aus_For18
+189,190,322,Native forest,Melaleuca,69,3,2,1,Qld,NVIS 6.0
+190,191,126589,Native forest,Eucalypt Tall Open,45,2,3,1,Qld,Aus_For18
+191,192,13618,Native forest,Acacia,8,3,2,1,Qld,Aus_For18
+192,193,3,Native forest,Mangrove,60,3,1,1,WA,NVIS 6.0
+193,194,138,Native forest,Casuarina,26,2,1,1,Qld,Aus_For18
+194,195,104,Native forest,Mangrove,61,1,2,1,WA,Aus_For18
+195,196,54,Native forest,Acacia,7,3,1,1,Qld,Aus_For18
+196,197,8982,Native forest,Callitris,16,1,1,1,Qld,Aus_For18
+197,198,39,Native forest,Acacia,7,3,1,1,Qld,NVIS 6.0
+198,199,6465,Native forest,Melaleuca,65,2,1,1,WA,Aus_For18
+199,200,1295,Native forest,Melaleuca,65,2,1,1,WA,NVIS 6.0
+200,201,128857,Native forest,Acacia,1,1,1,1,WA,NVIS 6.0
+201,202,48045,Native forest,Melaleuca,64,1,1,1,WA,Aus_For18
+202,203,247,Native forest,Melaleuca,69,3,2,1,Qld,Aus_For18
+203,204,192536,Commercial plantation,Softwood plantation,92,4,4,1,Qld,NPI spatial
+204,205,20,Native forest,Eucalypt Mallee Woodland,35,1,2,1,Qld,Aus_For18
+205,206,28,Native forest,Other native forest,10,3,2,1,Qld,Aus_For18
+206,207,593,Native forest,Rainforest,99,2,3,1,Qld,Aus_For18
+207,208,3005,Native forest,Acacia,4,2,1,1,WA,Aus_For18
+208,209,23482,Native forest,Callitris,17,1,2,1,Qld,NVIS 6.0
+209,210,8469,Native forest,Melaleuca,70,1,3,1,Qld,NVIS 6.0
+210,211,63812,Native forest,Melaleuca,70,1,3,1,Qld,Aus_For18
+211,212,9559,Native forest,Eucalypt Low Closed,46,3,1,1,Qld,Aus_For18
+212,213,3307023,Native forest,Eucalypt Mallee Woodland,34,1,1,1,WA,Aus_For18
+213,214,270,Native forest,Eucalypt Mallee Woodland,35,1,2,1,Qld,NVIS 6.0
+214,215,3778,Native forest,Eucalypt Low Open,43,2,1,1,Qld,NVIS 6.0
+215,216,64955,Native forest,Rainforest,95,2,1,1,Qld,Aus_For18
+216,217,439,Native forest,Rainforest,95,2,1,1,Qld,NVIS 6.0
+217,218,390,Native forest,Rainforest,100,3,3,1,Qld,Aus_For18
+218,219,1,Native forest,Rainforest,100,3,3,1,Qld,NVIS 6.0
+219,220,82339,Native forest,Casuarina,25,1,1,1,WA,Aus_For18
+220,221,132,Native forest,Eucalypt Mallee Woodland,34,1,1,1,NT,NVIS 6.0
+221,222,766,Native forest,Callitris,16,1,1,1,Qld,NVIS 6.0
+222,223,32586,Native forest,Melaleuca,64,1,1,1,WA,NVIS 6.0
+223,224,510274,Native forest,Callitris,17,1,2,1,Qld,Aus_For18
+224,225,329719,Native forest,Acacia,3,1,3,1,Qld,Aus_For18
+225,226,299,Native forest,Eucalypt Mallee Woodland,34,1,1,1,NT,Aus_For18
+226,227,2879,Native forest,Casuarina,30,3,2,1,Qld,Aus_For18
+227,228,2128,Native forest,Casuarina,25,1,1,1,NT,Aus_For18
+228,229,3,Native forest,Casuarina,30,3,2,1,Qld,NVIS 6.0
+229,230,1319,Native forest,Casuarina,25,1,1,1,NT,NVIS 6.0
+230,231,907,Native forest,Casuarina,28,1,2,1,WA,Aus_For18
+231,232,107,Native forest,Casuarina,28,1,2,1,WA,NVIS 6.0
+232,233,2434,Native forest,Casuarina,13,1,5,1,WA,Aus_For18
+233,234,93297820,Non-forest,Non-forest,0,6,6,0,SA, 
+234,235,118272,Native forest,Eucalypt Low Woodland,40,1,1,1,SA,Aus_For18
+235,236,38871,Native forest,Eucalypt Low Woodland,40,1,1,1,SA,NVIS 6.0
+236,237,11119,Native forest,Other native forest,73,1,1,1,SA,Aus_For18
+237,238,5403,Native forest,Acacia,1,1,1,1,SA,NVIS 6.0
+238,239,5941,Native forest,Other native forest,73,1,1,1,SA,NVIS 6.0
+239,240,3469,Native forest,Other native forest,80,2,3,1,Qld,NVIS 6.0
+240,241,2,Native forest,Other native forest,80,2,3,1,Qld,Aus_For18
+241,242,840,Non-forest,Non-forest,0,6,6,0,SA,CLUM
+242,243,4007,Native forest,Casuarina,25,1,1,1,WA,NVIS 6.0
+243,244,86608,Native forest,Eucalypt Mallee Woodland,34,1,1,1,SA,NVIS 6.0
+244,245,3662502,Native forest,Eucalypt Mallee Woodland,34,1,1,1,SA,Aus_For18
+245,246,91018,Native forest,Acacia,1,1,1,1,SA,Aus_For18
+246,247,245726,Native forest,Casuarina,25,1,1,1,SA,Aus_For18
+247,248,13411,Native forest,Casuarina,25,1,1,1,SA,NVIS 6.0
+248,249,3102,Native forest,Eucalypt Mallee Woodland,35,1,2,1,WA,Aus_For18
+249,250,65434,Native forest,Eucalypt Mallee Woodland,34,1,1,1,WA,NVIS 6.0
+250,251,442,Native forest,Eucalypt Low Closed,46,3,1,1,Qld,NVIS 6.0
+251,252,24,Native forest,Melaleuca,66,3,1,1,WA,Aus_For18
+252,253,630,Native forest,Other native forest,84,3,1,1,WA,Aus_For18
+253,254,501,Native forest,Other native forest,76,1,2,1,WA,Aus_For18
+254,255,59840372,Non-forest,Non-forest,0,6,6,0,NSW, 
+255,256,302,Native forest,Acacia,4,2,1,1,WA,NVIS 6.0
+256,257,2854,Native forest,Acacia,1,1,1,1,NSW,NVIS 6.0
+257,258,556317,Native forest,Other native forest,18,5,5,1,NSW,Aus_For18
+258,259,444823,Native forest,Acacia,4,2,1,1,NSW,Aus_For18
+259,260,12956,Native forest,Acacia,1,1,1,1,NSW,Aus_For18
+260,261,82969,Native forest,Acacia,2,1,2,1,NSW,Aus_For18
+261,262,4418692,Native forest,Eucalypt Medium Woodland,41,1,2,1,NSW,Aus_For18
+262,263,576,Native forest,Acacia,2,1,2,1,NSW,NVIS 6.0
+263,264,165302,Native forest,Other native forest,73,1,1,1,NSW,Aus_For18
+264,265,1128,Native forest,Acacia,4,2,1,1,NSW,NVIS 6.0
+265,266,1242338,Native forest,Eucalypt Low Woodland,40,1,1,1,NSW,NVIS 6.0
+266,267,1,Native forest,Melaleuca,67,1,2,1,WA,Aus_For18
+267,268,41836,Native forest,Other native forest,77,2,2,1,NSW,Aus_For18
+268,269,1258805,Native forest,Eucalypt Medium Open,44,2,2,1,NSW,NVIS 6.0
+269,270,473011,Native forest,Eucalypt Medium Woodland,41,1,2,1,NSW,NVIS 6.0
+270,271,16819,Native forest,Other native forest,80,2,3,1,NSW,NVIS 6.0
+271,272,3798243,Native forest,Eucalypt Medium Open,44,2,2,1,NSW,Aus_For18
+272,273,421795,Native forest,Eucalypt Low Woodland,40,1,1,1,NSW,Aus_For18
+273,274,62182,Native forest,Other native forest,76,1,2,1,NSW,NVIS 6.0
+274,275,5384,Native forest,Callitris,21,2,3,1,NSW,Aus_For18
+275,276,30066,Native forest,Other native forest,74,2,1,1,NSW,Aus_For18
+276,277,89077,Native forest,Other native forest,77,2,2,1,NSW,NVIS 6.0
+277,278,1344186,Native forest,Eucalypt Tall Open,45,2,3,1,NSW,Aus_For18
+278,279,6055,Non-forest,Non-forest,0,6,6,0,NSW,CLUM
+279,280,135121,Native forest,Acacia,5,2,2,1,NSW,Aus_For18
+280,281,742247,Native forest,Eucalypt Tall Open,45,2,3,1,NSW,NVIS 6.0
+281,282,94451,Native forest,Rainforest,98,3,2,1,NSW,NVIS 6.0
+282,283,323218,Native forest,Rainforest,98,3,2,1,NSW,Aus_For18
+283,284,17845,Native forest,Rainforest,97,2,2,1,NSW,NVIS 6.0
+284,285,71631,Native forest,Rainforest,97,2,2,1,NSW,Aus_For18
+285,286,25355,Native forest,Rainforest,99,2,3,1,NSW,NVIS 6.0
+286,287,28863,Native forest,Rainforest,99,2,3,1,NSW,Aus_For18
+287,288,17320,Native forest,Rainforest,100,3,3,1,NSW,Aus_For18
+288,289,92,Native forest,Acacia,5,2,2,1,NSW,NVIS 6.0
+289,290,228341,Native forest,Casuarina,25,1,1,1,NSW,Aus_For18
+290,291,1002,Native forest,Casuarina,25,1,1,1,NSW,NVIS 6.0
+291,292,23329,Native forest,Melaleuca,67,1,2,1,NSW,Aus_For18
+292,293,188,Native forest,Other native forest,9,1,3,1,NSW,NVIS 6.0
+293,294,19613,Native forest,Melaleuca,67,1,2,1,NSW,NVIS 6.0
+294,295,16823,Native forest,Other native forest,18,5,5,1,NSW,NVIS 6.0
+295,296,2133,Native forest,Other native forest,73,1,1,1,NSW,NVIS 6.0
+296,297,346,Native forest,Callitris,21,2,3,1,NSW,NVIS 6.0
+297,298,23082,Native forest,Casuarina,29,2,2,1,NSW,Aus_For18
+298,299,5766,Native forest,Casuarina,29,2,2,1,NSW,NVIS 6.0
+299,300,17009,Native forest,Melaleuca,65,2,1,1,NSW,Aus_For18
+300,301,1390,Native forest,Mangrove,58,1,1,1,NSW,Global Mangroves
+301,302,1895,Native forest,Mangrove,58,1,1,1,NSW,Aus_For18
+302,303,73777,Native forest,Eucalypt Tall Closed,48,3,3,1,NSW,NVIS 6.0
+303,304,30196,Other forest,Other forest - unallocated type,90,5,5,1,NSW,NVIS 6.0
+304,305,20638,Native forest,Other native forest,76,1,2,1,NSW,Aus_For18
+305,306,3294,Native forest,Mangrove,59,2,1,1,NSW,Aus_For18
+306,307,310522,Commercial plantation,Softwood plantation,92,4,4,1,NSW,NPI spatial
+307,308,8223,Native forest,Casuarina,28,1,2,1,NSW,NVIS 6.0
+308,309,191524,Native forest,Casuarina,28,1,2,1,NSW,Aus_For18
+309,310,242,Native forest,Mangrove,58,1,1,1,NSW,NVIS 6.0
+310,311,3724,Native forest,Melaleuca,65,2,1,1,NSW,NVIS 6.0
+311,312,11253,Native forest,Other native forest,74,2,1,1,NSW,NVIS 6.0
+312,313,1091,Native forest,Other native forest,10,3,2,1,NSW,NVIS 6.0
+313,314,56710,Commercial plantation,Hardwood plantation,91,4,4,1,NSW,NPI spatial
+314,315,33281,Native forest,Eucalypt Low Open,43,2,1,1,NSW,Aus_For18
+315,316,1282,Native forest,Eucalypt Tall Woodland,42,1,3,1,NSW,Aus_For18
+316,317,74,Native forest,Rainforest,100,3,3,1,NSW,NVIS 6.0
+317,318,11065,Native forest,Eucalypt Mallee Woodland,34,1,1,1,NSW,NVIS 6.0
+318,319,93,Other forest,Other forest - unallocated type,82,1,2,1,NSW,NVIS 6.0
+319,320,544757,Native forest,Callitris,20,2,2,1,NSW,Aus_For18
+320,321,687357,Native forest,Callitris,17,1,2,1,NSW,Aus_For18
+321,322,18247,Native forest,Callitris,20,2,2,1,NSW,NVIS 6.0
+322,323,2722,Native forest,Other native forest,84,3,1,1,NSW,Aus_For18
+323,324,28800,Native forest,Callitris,17,1,2,1,NSW,NVIS 6.0
+324,325,336,Commercial plantation,Mixed species plantation,93,4,4,1,NSW,NPI spatial
+325,326,178567,Native forest,Eucalypt Medium Woodland,41,1,2,1,SA,Aus_For18
+326,327,7,Other forest,Other forest - unallocated type,87,2,3,1,NSW,NVIS 6.0
+327,328,21137,Native forest,Eucalypt Medium Woodland,41,1,2,1,SA,NVIS 6.0
+328,329,4167,Other forest,Other forest - unallocated type,86,2,2,1,NSW,NVIS 6.0
+329,330,2616,Native forest,Eucalypt Mallee Open,38,2,2,1,NSW,Aus_For18
+330,331,588867,Native forest,Eucalypt Mallee Woodland,35,1,2,1,NSW,NVIS 6.0
+331,332,1058,Native forest,Eucalypt Medium Closed,47,3,2,1,NSW,Aus_For18
+332,333,843628,Native forest,Eucalypt Mallee Woodland,34,1,1,1,NSW,Aus_For18
+333,334,112548,Native forest,Eucalypt Low Open,43,2,1,1,NSW,NVIS 6.0
+334,335,609,Native forest,Casuarina,31,1,3,1,NSW,NVIS 6.0
+335,336,3580,Native forest,Casuarina,31,1,3,1,NSW,Aus_For18
+336,337,3,Native forest,Mangrove,60,3,1,1,WA,Global Mangroves
+337,338,152,Native forest,Melaleuca,67,1,2,1,WA,NVIS 6.0
+338,339,60844,Native forest,Callitris,16,1,1,1,SA,Aus_For18
+339,340,2984,Native forest,Callitris,16,1,1,1,SA,NVIS 6.0
+340,341,104,Native forest,Eucalypt Tall Closed,48,3,3,1,NSW,Aus_For18
+341,342,28994,Native forest,Rainforest,94,1,2,1,NSW,Aus_For18
+342,343,1056,Native forest,Eucalypt Tall Woodland,42,1,3,1,NSW,NVIS 6.0
+343,344,5765,Native forest,Rainforest,94,1,2,1,NSW,NVIS 6.0
+344,345,100018,Commercial plantation,Softwood plantation,92,4,4,1,WA,NPI spatial
+345,346,3,Native forest,Eucalypt Medium Closed,47,3,2,1,NSW,NVIS 6.0
+346,347,14,Native forest,Other native forest,11,3,3,1,NSW,NVIS 6.0
+347,348,599,Native forest,Rainforest,95,2,1,1,NSW,Aus_For18
+348,349,531,Native forest,Other native forest,76,1,2,1,SA,NVIS 6.0
+349,350,8,Native forest,Rainforest,95,2,1,1,NSW,NVIS 6.0
+350,351,14316,Commercial plantation,Mixed species plantation,93,4,4,1,WA,NPI spatial
+351,352,13169,Native forest,Callitris,16,1,1,1,NSW,Aus_For18
+352,353,1518,Native forest,Callitris,16,1,1,1,NSW,NVIS 6.0
+353,354,65235,Native forest,Callitris,19,2,1,1,NSW,Aus_For18
+354,355,1,Native forest,Acacia,7,3,1,1,WA,Aus_For18
+355,356,842,Native forest,Callitris,19,2,1,1,NSW,NVIS 6.0
+356,357,18,Native forest,Casuarina,26,2,1,1,NSW,NVIS 6.0
+357,358,3,Native forest,Callitris,22,3,1,1,NSW,Aus_For18
+358,359,29484,Other forest,Other forest - unallocated type,81,1,1,1,SA,NVIS 6.0
+359,360,76,Native forest,Callitris,16,1,1,1,WA,Aus_For18
+360,361,198314,Native forest,Eucalypt Mallee Open,37,2,1,1,SA,Aus_For18
+361,362,12726,Native forest,Eucalypt Mallee Open,37,2,1,1,SA,NVIS 6.0
+362,363,215,Native forest,Other native forest,74,2,1,1,SA,NVIS 6.0
+363,364,26651,Native forest,Eucalypt Mallee Woodland,36,1,3,1,NSW,NVIS 6.0
+364,365,4448,Other forest,Other forest - unallocated type,85,2,1,1,SA,NVIS 6.0
+365,366,78512,Native forest,Eucalypt Mallee Open,38,2,2,1,NSW,NVIS 6.0
+366,367,46143,Other forest,Other forest - unallocated type,90,5,5,1,SA,NVIS 6.0
+367,368,2,Native forest,Eucalypt Mallee Woodland,35,1,2,1,WA,NVIS 6.0
+368,369,5,Other forest,Other forest - unallocated type,88,3,1,1,NSW,NVIS 6.0
+369,370,8671,Other forest,Other forest - unallocated type,82,1,2,1,SA,NVIS 6.0
+370,371,12527,Native forest,Mangrove,59,2,1,1,SA,Aus_For18
+371,372,3416,Native forest,Mangrove,15,5,5,1,SA,Global Mangroves
+372,373,2241,Native forest,Mangrove,59,2,1,1,SA,Global Mangroves
+373,374,416,Native forest,Other native forest,74,2,1,1,SA,Aus_For18
+374,375,308,Native forest,Mangrove,59,2,1,1,SA,NVIS 6.0
+375,376,307,Native forest,Mangrove,58,1,1,1,SA,Global Mangroves
+376,377,2174,Native forest,Melaleuca,64,1,1,1,SA,NVIS 6.0
+377,378,38645,Native forest,Other native forest,18,5,5,1,SA,Aus_For18
+378,379,450643,Native forest,Eucalypt Medium Open,44,2,2,1,WA,NVIS 6.0
+379,380,19361,Native forest,Melaleuca,64,1,1,1,SA,Aus_For18
+380,381,131,Native forest,Mangrove,58,1,1,1,SA,Aus_For18
+381,382,32,Native forest,Mangrove,58,1,1,1,SA,NVIS 6.0
+382,383,14882,Native forest,Eucalypt Medium Open,44,2,2,1,SA,Aus_For18
+383,384,2110,Native forest,Eucalypt Medium Open,44,2,2,1,SA,NVIS 6.0
+384,385,558,Other forest,Other forest - unallocated type,86,2,2,1,SA,NVIS 6.0
+385,386,954,Native forest,Callitris,19,2,1,1,SA,Aus_For18
+386,387,33,Native forest,Callitris,19,2,1,1,SA,NVIS 6.0
+387,388,174,Native forest,Other native forest,77,2,2,1,SA,NVIS 6.0
+388,389,5,Native forest,Mangrove,15,5,5,1,SA,NVIS 6.0
+389,390,189245,Native forest,Eucalypt Mallee Woodland,35,1,2,1,NSW,Aus_For18
+390,391,3882,Native forest,Casuarina,26,2,1,1,NSW,Aus_For18
+391,392,3,Native forest,Acacia,2,1,2,1,WA,Aus_For18
+392,393,1313,Native forest,Other native forest,18,5,5,1,SA,NVIS 6.0
+393,394,1506,Native forest,Eucalypt Mallee Open,37,2,1,1,NSW,Aus_For18
+394,395,163972,Native forest,Eucalypt Tall Open,45,2,3,1,WA,Aus_For18
+395,396,265,Native forest,Other native forest,80,2,3,1,NSW,Aus_For18
+396,397,36,Native forest,Eucalypt Mallee Open,37,2,1,1,NSW,NVIS 6.0
+397,398,480,Native forest,Eucalypt Tall Woodland,42,1,3,1,WA,Aus_For18
+398,399,3248,Native forest,Melaleuca,65,2,1,1,SA,Aus_For18
+399,400,23396,Native forest,Eucalypt Low Open,43,2,1,1,WA,NVIS 6.0
+400,401,6049,Native forest,Eucalypt Low Open,43,2,1,1,SA,Aus_For18
+401,402,1307,Native forest,Eucalypt Low Open,43,2,1,1,SA,NVIS 6.0
+402,403,92,Native forest,Other native forest,84,3,1,1,NSW,NVIS 6.0
+403,404,119,Other forest,Other forest - unallocated type,88,3,1,1,SA,NVIS 6.0
+404,405,292,Native forest,Melaleuca,65,2,1,1,SA,NVIS 6.0
+405,406,70,Native forest,Callitris,17,1,2,1,SA,Aus_For18
+406,407,19699,Native forest,Other native forest,77,2,2,1,WA,Aus_For18
+407,408,3,Native forest,Callitris,17,1,2,1,SA,NVIS 6.0
+408,409,58,Native forest,Other native forest,84,3,1,1,SA,Aus_For18
+409,410,27,Native forest,Other native forest,84,3,1,1,SA,NVIS 6.0
+410,411,115,Native forest,Melaleuca,66,3,1,1,SA,Aus_For18
+411,412,14511311,Non-forest,Non-forest,0,6,6,0,Vic, 
+412,413,941651,Native forest,Eucalypt Medium Woodland,41,1,2,1,Vic,Aus_For18
+413,414,3575,Other forest,Other forest - unallocated type,82,1,2,1,Vic,NVIS 6.0
+414,415,435919,Native forest,Eucalypt Medium Woodland,41,1,2,1,Vic,NVIS 6.0
+415,416,18019,Native forest,Other native forest,76,1,2,1,Vic,NVIS 6.0
+416,417,62374,Native forest,Other native forest,18,5,5,1,Vic,NVIS 6.0
+417,418,9196,Native forest,Casuarina,28,1,2,1,Vic,NVIS 6.0
+418,419,940521,Native forest,Eucalypt Mallee Woodland,34,1,1,1,Vic,Aus_For18
+419,420,150152,Native forest,Eucalypt Mallee Woodland,34,1,1,1,Vic,NVIS 6.0
+420,421,535,Native forest,Eucalypt Mallee Open,37,2,1,1,WA,Aus_For18
+421,422,2524043,Native forest,Eucalypt Medium Open,44,2,2,1,Vic,Aus_For18
+422,423,2567,Native forest,Other native forest,73,1,1,1,Vic,NVIS 6.0
+423,424,21513,Native forest,Other native forest,74,2,1,1,Vic,Aus_For18
+424,425,84800,Native forest,Other native forest,73,1,1,1,Vic,Aus_For18
+425,426,1071847,Native forest,Eucalypt Medium Open,44,2,2,1,Vic,NVIS 6.0
+426,427,12212,Native forest,Other native forest,77,2,2,1,Vic,NVIS 6.0
+427,428,44396,Native forest,Casuarina,28,1,2,1,Vic,Aus_For18
+428,429,10644,Native forest,Eucalypt Mallee Open,37,2,1,1,Vic,Aus_For18
+429,430,1352,Native forest,Other native forest,74,2,1,1,Vic,NVIS 6.0
+430,431,187869,Native forest,Eucalypt Mallee Open,37,2,1,1,Vic,NVIS 6.0
+431,432,7230,Non-forest,Non-forest,0,6,6,0,Vic,CLUM
+432,433,1279,Native forest,Other native forest,80,2,3,1,Vic,NVIS 6.0
+433,434,1708,Native forest,Eucalypt Tall Woodland,42,1,3,1,WA,NVIS 6.0
+434,435,5016,Other forest,Other forest - unallocated type,86,2,2,1,Vic,NVIS 6.0
+435,436,74,Native forest,Other native forest,9,1,3,1,Vic,NVIS 6.0
+436,437,313,Other forest,Other forest - unallocated type,81,1,1,1,Vic,NVIS 6.0
+437,438,57622,Native forest,Eucalypt Tall Open,45,2,3,1,WA,NVIS 6.0
+438,439,803,Native forest,Mangrove,59,2,1,1,NSW,Global Mangroves
+439,440,82,Native forest,Mangrove,59,2,1,1,NSW,NVIS 6.0
+440,441,2643,Native forest,Melaleuca,68,2,2,1,NSW,Aus_For18
+441,442,309,Native forest,Melaleuca,68,2,2,1,NSW,NVIS 6.0
+442,443,5,Native forest,Acacia,4,2,1,1,SA,NVIS 6.0
+443,444,102,Native forest,Casuarina,26,2,1,1,SA,NVIS 6.0
+444,445,915,Native forest,Casuarina,26,2,1,1,SA,Aus_For18
+445,446,51,Native forest,Acacia,4,2,1,1,SA,Aus_For18
+446,447,523,Native forest,Callitris,20,2,2,1,SA,Aus_For18
+447,448,129940,Commercial plantation,Softwood plantation,92,4,4,1,SA,NPI spatial
+448,449,21,Native forest,Callitris,20,2,2,1,SA,NVIS 6.0
+449,450,741,Native forest,Other native forest,77,2,2,1,WA,NVIS 6.0
+450,451,45804,Commercial plantation,Hardwood plantation,91,4,4,1,SA,NPI spatial
+451,452,55,Native forest,Casuarina,27,3,1,1,NSW,Aus_For18
+452,453,54,Native forest,Other native forest,11,3,3,1,Vic,NVIS 6.0
+453,454,21238,Other forest,Other forest - unallocated type,90,5,5,1,Vic,NVIS 6.0
+454,455,72,Other forest,Other forest - unallocated type,85,2,1,1,Vic,NVIS 6.0
+455,456,90,Commercial plantation,Mixed species plantation,93,4,4,1,SA,NPI spatial
+456,457,107,Native forest,Other native forest,10,3,2,1,Vic,NVIS 6.0
+457,458,252,Native forest,Acacia,1,1,1,1,Vic,NVIS 6.0
+458,459,179,Other forest,Other forest - unallocated type,87,2,3,1,Vic,NVIS 6.0
+459,460,16,Native forest,Eucalypt Tall Closed,48,3,3,1,WA,Aus_For18
+460,461,944,Native forest,Acacia,1,1,1,1,Vic,Aus_For18
+461,462,30,Native forest,Melaleuca,66,3,1,1,SA,NVIS 6.0
+462,463,167583,Native forest,Other native forest,76,1,2,1,Vic,Aus_For18
+463,464,7422,Native forest,Melaleuca,65,2,1,1,Vic,NVIS 6.0
+464,465,14,Native forest,Melaleuca,14,5,5,1,Vic,NVIS 6.0
+465,466,93108,Non-forest,Non-forest,0,6,6,0,ACT, 
+466,467,90712,Native forest,Eucalypt Tall Open,45,2,3,1,ACT,Aus_For18
+467,468,29985,Native forest,Eucalypt Tall Woodland,42,1,3,1,ACT,Aus_For18
+468,469,3058,Other forest,Other forest - unallocated type,90,5,5,1,ACT,NVIS 6.0
+469,470,88,Native forest,Other native forest,18,5,5,1,ACT,Aus_For18
+470,471,137,Native forest,Casuarina,32,2,3,1,ACT,Aus_For18
+471,472,407,Native forest,Casuarina,31,1,3,1,ACT,Aus_For18
+472,473,89,Native forest,Other native forest,80,2,3,1,ACT,Aus_For18
+473,474,440,Native forest,Casuarina,26,2,1,1,ACT,Aus_For18
+474,475,9488,Commercial plantation,Softwood plantation,92,4,4,1,ACT,NPI spatial
+475,476,861,Native forest,Eucalypt Medium Open,44,2,2,1,ACT,Aus_For18
+476,477,33,Commercial plantation,Hardwood plantation,91,4,4,1,ACT,NPI spatial
+477,478,7574,Native forest,Eucalypt Medium Woodland,41,1,2,1,ACT,Aus_For18
+478,479,3,Native forest,Other native forest,84,3,1,1,Vic,Aus_For18
+479,480,48869,Native forest,Eucalypt Mallee Woodland,35,1,2,1,Vic,NVIS 6.0
+480,481,167967,Commercial plantation,Hardwood plantation,91,4,4,1,Vic,NPI spatial
+481,482,6219,Native forest,Eucalypt Low Woodland,40,1,1,1,Vic,Aus_For18
+482,483,5342,Native forest,Eucalypt Low Woodland,40,1,1,1,Vic,NVIS 6.0
+483,484,95,Native forest,Callitris,17,1,2,1,Vic,Aus_For18
+484,485,10254,Native forest,Acacia,4,2,1,1,Vic,Aus_For18
+485,486,1210,Native forest,Acacia,4,2,1,1,Vic,NVIS 6.0
+486,487,234504,Commercial plantation,Softwood plantation,92,4,4,1,Vic,NPI spatial
+487,488,31,Native forest,Callitris,17,1,2,1,Vic,NVIS 6.0
+488,489,329,Native forest,Melaleuca,64,1,1,1,Vic,NVIS 6.0
+489,490,479903,Native forest,Eucalypt Tall Open,45,2,3,1,Vic,NVIS 6.0
+490,491,566,Commercial plantation,Mixed species plantation,93,4,4,1,Vic,NPI spatial
+491,492,2,Native forest,Callitris,20,2,2,1,Vic,Aus_For18
+492,493,1,Native forest,Callitris,19,2,1,1,Vic,NVIS 6.0
+493,494,768,Native forest,Melaleuca,64,1,1,1,Vic,Aus_For18
+494,495,7380,Native forest,Other native forest,77,2,2,1,Vic,Aus_For18
+495,496,598,Native forest,Eucalypt Mallee Woodland,39,1,5,1,Vic,NVIS 6.0
+496,497,436066,Native forest,Eucalypt Tall Open,45,2,3,1,Vic,Aus_For18
+497,498,1,Native forest,Eucalypt Mallee Open,38,2,2,1,Vic,NVIS 6.0
+498,499,16888,Native forest,Callitris,16,1,1,1,Vic,Aus_For18
+499,500,951,Native forest,Callitris,16,1,1,1,Vic,NVIS 6.0
+500,501,9653,Native forest,Acacia,2,1,2,1,Vic,Aus_For18
+501,502,6148,Native forest,Melaleuca,65,2,1,1,Vic,Aus_For18
+502,503,11,Other forest,Other forest - unallocated type,83,1,3,1,Vic,NVIS 6.0
+503,504,1710,Native forest,Acacia,2,1,2,1,Vic,NVIS 6.0
+504,505,17,Native forest,Other native forest,84,3,1,1,Vic,NVIS 6.0
+505,506,169,Native forest,Acacia,12,5,5,1,Vic,NVIS 6.0
+506,507,3,Native forest,Melaleuca,67,1,2,1,Vic,NVIS 6.0
+507,508,512,Native forest,Acacia,5,2,2,1,Vic,NVIS 6.0
+508,509,28,Other forest,Other forest - unallocated type,89,3,2,1,Vic,NVIS 6.0
+509,510,12274,Native forest,Acacia,5,2,2,1,Vic,Aus_For18
+510,511,5016,Native forest,Rainforest,99,2,3,1,Vic,Aus_For18
+511,512,18351,Native forest,Rainforest,99,2,3,1,Vic,NVIS 6.0
+512,513,2343,Native forest,Rainforest,95,2,1,1,Vic,Aus_For18
+513,514,874,Native forest,Rainforest,95,2,1,1,Vic,NVIS 6.0
+514,515,2285,Native forest,Rainforest,97,2,2,1,Vic,NVIS 6.0
+515,516,6587,Native forest,Rainforest,97,2,2,1,Vic,Aus_For18
+516,517,3,Other forest,Other forest - unallocated type,89,3,3,1,Vic,NVIS 6.0
+517,518,8,Native forest,Eucalypt Low Closed,46,3,1,1,NSW,Aus_For18
+518,519,1,Native forest,Rainforest,33,1,3,1,Vic,NVIS 6.0
+519,520,1305,Native forest,Melaleuca,68,2,2,1,Vic,NVIS 6.0
+520,521,7094,Native forest,Melaleuca,68,2,2,1,Vic,Aus_For18
+521,522,119,Native forest,Rainforest,98,3,2,1,Vic,NVIS 6.0
+522,523,509,Native forest,Rainforest,94,1,2,1,Vic,NVIS 6.0
+523,524,248,Native forest,Casuarina,25,1,1,1,Vic,Aus_For18
+524,525,288,Native forest,Casuarina,25,1,1,1,Vic,NVIS 6.0
+525,526,80,Native forest,Mangrove,62,2,2,1,Vic,Aus_For18
+526,527,1068,Native forest,Mangrove,15,5,5,1,Vic,Global Mangroves
+527,528,880,Native forest,Mangrove,60,3,1,1,Vic,Global Mangroves
+528,529,58,Native forest,Mangrove,58,1,1,1,Vic,NVIS 6.0
+529,530,733,Native forest,Mangrove,60,3,1,1,Vic,Aus_For18
+530,531,18,Native forest,Mangrove,61,1,2,1,Vic,NVIS 6.0
+531,532,3,Native forest,Mangrove,63,3,2,1,Vic,Aus_For18
+532,533,5,Native forest,Mangrove,59,2,1,1,Vic,NVIS 6.0
+533,534,95,Native forest,Melaleuca,66,3,1,1,Vic,NVIS 6.0
+534,535,16,Native forest,Melaleuca,66,3,1,1,Vic,Aus_For18
+535,536,11,Native forest,Mangrove,60,3,1,1,Vic,NVIS 6.0
+536,537,6,Native forest,Mangrove,15,5,5,1,Vic,NVIS 6.0
+537,538,1,Native forest,Melaleuca,72,3,3,1,Vic,NVIS 6.0
+538,539,3,Native forest,Mangrove,62,2,2,1,Vic,NVIS 6.0
+539,540,3121208,Non-forest,Non-forest,0,6,6,0,Tas, 
+540,541,171599,Native forest,Eucalypt Medium Open,44,2,2,1,Tas,Aus_For18
+541,542,46250,Native forest,Eucalypt Tall Open,45,2,3,1,Tas,Tas Forest Comms
+542,543,3888,Native forest,Melaleuca,69,3,2,1,Tas,Aus_For18
+543,544,367,Native forest,Melaleuca,69,3,2,1,Tas,Tas Forest Comms
+544,545,1028198,Native forest,Eucalypt Medium Woodland,41,1,2,1,Tas,Aus_For18
+545,546,13261,Native forest,Melaleuca,65,2,1,1,Tas,Aus_For18
+546,547,2168,Native forest,Melaleuca,66,3,1,1,Tas,Aus_For18
+547,548,42458,Native forest,Other native forest,74,2,1,1,Tas,Aus_For18
+548,549,825577,Native forest,Eucalypt Tall Open,45,2,3,1,Tas,Aus_For18
+549,550,1768,Other forest,Other forest - unallocated type,90,5,5,1,Tas,Tas Forest Comms
+550,551,202606,Commercial plantation,Hardwood plantation,91,4,4,1,Tas,NPI spatial
+551,552,22245,Other forest,Other forest - unallocated type,90,5,5,1,Tas,NVIS 6.0
+552,553,3881,Native forest,Other native forest,10,3,2,1,Tas,Aus_For18
+553,554,81193,Commercial plantation,Softwood plantation,92,4,4,1,Tas,NPI spatial
+554,555,61,Other forest,Other forest - unallocated type,85,2,1,1,Tas,NVIS 6.0
+555,556,566,Native forest,Eucalypt Medium Woodland,41,1,2,1,Tas,NVIS 6.0
+556,557,1103,Native forest,Eucalypt Medium Open,44,2,2,1,Tas,NVIS 6.0
+557,558,5237,Native forest,Casuarina,30,3,2,1,Tas,Aus_For18
+558,559,3184,Native forest,Acacia,7,3,1,1,Tas,Aus_For18
+559,560,2163,Native forest,Eucalypt Tall Open,45,2,3,1,Tas,NVIS 6.0
+560,561,53794,Native forest,Acacia,8,3,2,1,Tas,Aus_For18
+561,562,8938,Native forest,Eucalypt Low Open,43,2,1,1,Tas,Tas Forest Comms
+562,563,59132,Native forest,Eucalypt Low Woodland,40,1,1,1,Tas,Aus_For18
+563,564,345,Native forest,Other native forest,73,1,1,1,Tas,Aus_For18
+564,565,653,Native forest,Casuarina,29,2,2,1,Tas,Aus_For18
+565,566,51779,Native forest,Eucalypt Low Open,43,2,1,1,Tas,Aus_For18
+566,567,111,Native forest,Casuarina,30,3,2,1,Tas,Tas Forest Comms
+567,568,204,Native forest,Casuarina,28,1,2,1,Tas,Aus_For18
+568,569,6042,Native forest,Eucalypt Low Closed,46,3,1,1,Tas,Aus_For18
+569,570,667,Native forest,Callitris,23,3,2,1,Tas,Aus_For18
+570,571,20,Native forest,Callitris,16,1,1,1,Tas,Aus_For18
+571,572,8,Native forest,Eucalypt Low Open,43,2,1,1,Tas,NVIS 6.0
+572,573,19,Native forest,Callitris,20,2,2,1,Tas,Aus_For18
+573,574,65,Native forest,Callitris,17,1,2,1,Tas,Aus_For18
+574,575,40907,Native forest,Eucalypt Medium Woodland,41,1,2,1,Tas,Tas Forest Comms
+575,576,36080,Native forest,Eucalypt Medium Open,44,2,2,1,Tas,Tas Forest Comms
+576,577,24,Native forest,Callitris,20,2,2,1,Tas,Tas Forest Comms
+577,578,737,Native forest,Melaleuca,67,1,2,1,Tas,Aus_For18
+578,579,170,Native forest,Other native forest,76,1,2,1,Tas,Aus_For18
+579,580,683,Native forest,Melaleuca,65,2,1,1,Tas,Tas Forest Comms
+580,581,23,Native forest,Melaleuca,68,2,2,1,Tas,Tas Forest Comms
+581,582,245,Native forest,Melaleuca,68,2,2,1,Tas,Aus_For18
+582,583,327,Native forest,Melaleuca,66,3,1,1,Tas,Tas Forest Comms
+583,584,493623,Native forest,Rainforest,98,3,2,1,Tas,Aus_For18
+584,585,6727,Native forest,Other native forest,84,3,1,1,Tas,Aus_For18
+585,586,8,Native forest,Casuarina,25,1,1,1,Tas,Tas Forest Comms
+586,587,38,Native forest,Melaleuca,67,1,2,1,Tas,Tas Forest Comms
+587,588,4428,Native forest,Other native forest,77,2,2,1,Tas,Aus_For18
+588,589,7,Native forest,Casuarina,25,1,1,1,Tas,Aus_For18
+589,590,7753,Native forest,Acacia,5,2,2,1,Tas,Aus_For18
+590,591,88,Native forest,Melaleuca,70,1,3,1,Tas,Tas Forest Comms
+591,592,1684,Native forest,Melaleuca,70,1,3,1,Tas,Aus_For18
+592,593,177,Native forest,Melaleuca,71,2,3,1,Tas,Aus_For18
+593,594,2366,Native forest,Acacia,8,3,2,1,Tas,Tas Forest Comms
+594,595,1,Native forest,Melaleuca,68,2,2,1,Tas,NVIS 6.0
+595,596,7504,Native forest,Acacia,2,1,2,1,Tas,Aus_For18
+596,597,570,Native forest,Acacia,5,2,2,1,Tas,Tas Forest Comms
+597,598,3977,Commercial plantation,Mixed species plantation,93,4,4,1,Tas,NPI spatial
+598,599,530,Other forest,Other forest - unallocated type,89,3,2,1,Tas,NVIS 6.0
+599,600,167,Native forest,Acacia,8,3,2,1,Tas,NVIS 6.0
+600,601,82,Native forest,Melaleuca,71,2,3,1,Tas,Tas Forest Comms
+601,602,1262,Native forest,Acacia,6,2,3,1,Tas,Aus_For18
+602,603,81,Native forest,Acacia,1,1,1,1,Tas,NVIS 6.0
+603,604,247,Native forest,Other native forest,9,1,3,1,Tas,Aus_For18
+604,605,414,Other forest,Other forest - unallocated type,83,1,3,1,Tas,NVIS 6.0
+605,606,217,Other forest,Other forest - unallocated type,82,1,2,1,Tas,NVIS 6.0
+606,607,2987,Native forest,Rainforest,96,3,1,1,Tas,Aus_For18
+607,608,299,Native forest,Rainforest,98,3,2,1,Tas,NVIS 6.0
+608,609,18820,Native forest,Rainforest,99,2,3,1,Tas,Aus_For18
+609,610,197,Other forest,Other forest - unallocated type,87,2,3,1,Tas,NVIS 6.0
+610,611,63076,Native forest,Rainforest,33,1,3,1,Tas,Aus_For18
+611,612,60,Native forest,Acacia,6,2,3,1,Tas,Tas Forest Comms
+612,613,8,Native forest,Acacia,5,2,2,1,Tas,NVIS 6.0
+613,614,673,Non-forest,Non-forest,0,6,6,0,Tas,CLUM
+614,615,1490,Native forest,Acacia,4,2,1,1,Tas,Aus_For18
+615,616,5580,Native forest,Rainforest,98,3,2,1,Tas,Tas Forest Comms
+616,617,423,Native forest,Acacia,2,1,2,1,Tas,Tas Forest Comms
+617,618,13984,Native forest,Rainforest,97,2,2,1,Tas,Aus_For18
+618,619,62,Other forest,Other forest - unallocated type,86,2,2,1,Tas,Tas Forest Comms
+619,620,273,Other forest,Other forest - unallocated type,86,2,2,1,Tas,NVIS 6.0
+620,621,121,Native forest,Other native forest,10,3,2,1,Tas,NVIS 6.0
+621,622,193,Native forest,Rainforest,99,2,3,1,Tas,Tas Forest Comms
+622,623,184,Native forest,Acacia,7,3,1,1,Tas,Tas Forest Comms
+623,624,489,Native forest,Rainforest,33,1,3,1,Tas,Tas Forest Comms
+624,625,407,Native forest,Rainforest,96,3,1,1,Tas,Tas Forest Comms
+625,626,65,Native forest,Eucalypt Tall Woodland,42,1,3,1,Tas,NVIS 6.0
+626,627,26,Other forest,Other forest - unallocated type,88,3,1,1,Tas,NVIS 6.0
+627,628,14,Native forest,Melaleuca,65,2,1,1,Tas,NVIS 6.0
+628,629,69,Native forest,Other native forest,76,1,2,1,Tas,Tas Forest Comms
+629,630,209,Native forest,Other native forest,80,2,3,1,Tas,Aus_For18
+630,631,73,Native forest,Other native forest,73,1,1,1,Tas,Tas Forest Comms
+631,632,63,Native forest,Other native forest,84,3,1,1,Tas,Tas Forest Comms
+632,633,51,Other forest,Other forest - unallocated type,83,1,3,1,Tas,Tas Forest Comms
+633,634,1,Native forest,Other native forest,9,1,3,1,Tas,Tas Forest Comms
+634,635,242,Native forest,Melaleuca,64,1,1,1,Tas,Aus_For18
+635,636,17,Native forest,Rainforest,99,2,3,1,Tas,NVIS 6.0
+636,637,155,Native forest,Melaleuca,64,1,1,1,Tas,Tas Forest Comms
+637,638,47,Other forest,Other forest - unallocated type,89,3,2,1,Tas,Tas Forest Comms
+638,639,54210,Native forest,Rainforest,95,2,1,1,Tas,Aus_For18
+639,640,1,Native forest,Acacia,4,2,1,1,Tas,NVIS 6.0
+640,641,3432,Native forest,Rainforest,94,1,2,1,Tas,Aus_For18
+641,642,258511,Native forest,Eucalypt Tall Woodland,42,1,3,1,Tas,Aus_For18
+642,643,11861,Native forest,Rainforest,24,1,1,1,Tas,Aus_For18
+643,644,121,Native forest,Other native forest,18,5,5,1,Tas,NVIS 6.0
+644,645,73,Native forest,Other native forest,10,3,2,1,Tas,Tas Forest Comms
+645,646,15,Native forest,Other native forest,18,5,5,1,Tas,Tas Forest Comms
+646,647,44,Native forest,Acacia,4,2,1,1,Tas,Tas Forest Comms
+647,648,40,Native forest,Casuarina,29,2,2,1,Tas,Tas Forest Comms
+648,649,57,Native forest,Rainforest,97,2,2,1,Tas,Tas Forest Comms
+649,650,6,Native forest,Melaleuca,71,2,3,1,Tas,NVIS 6.0
+650,651,5,Other forest,Other forest - unallocated type,88,3,1,1,Tas,Tas Forest Comms
+651,652,66,Other forest,Other forest - unallocated type,82,1,2,1,Tas,Tas Forest Comms
+652,653,33,Native forest,Casuarina,28,1,2,1,Tas,Tas Forest Comms
+653,654,58,Native forest,Rainforest,33,1,3,1,Tas,NVIS 6.0
+654,655,40,Other forest,Other forest - unallocated type,81,1,1,1,Tas,NVIS 6.0
+655,656,9,Native forest,Other native forest,74,2,1,1,Tas,NVIS 6.0
+656,657,48,Native forest,Acacia,1,1,1,1,Tas,Tas Forest Comms
+657,658,11,Other forest,Other forest - unallocated type,85,2,1,1,Tas,Tas Forest Comms
+658,659,89,Native forest,Rainforest,24,1,1,1,Tas,Tas Forest Comms
+659,660,23,Native forest,Rainforest,94,1,2,1,Tas,Tas Forest Comms
+660,661,30,Other forest,Other forest - unallocated type,87,2,3,1,Tas,Tas Forest Comms
+661,662,497,Native forest,Rainforest,95,2,1,1,Tas,Tas Forest Comms
+662,663,6,Native forest,Acacia,2,1,2,1,Tas,NVIS 6.0
+663,664,159,Native forest,Acacia,1,1,1,1,Tas,Aus_For18
+664,665,6,Native forest,Rainforest,95,2,1,1,Tas,NVIS 6.0
+665,666,22,Other forest,Other forest - unallocated type,81,1,1,1,Tas,Tas Forest Comms
+666,667,2,Native forest,Rainforest,97,2,2,1,Tas,NVIS 6.0
+667,668,16611,Native forest,Rainforest,100,3,3,1,Tas,Aus_For18
+668,669,84,Native forest,Rainforest,100,3,3,1,Tas,Tas Forest Comms
+669,670,230,Native forest,Other native forest,77,2,2,1,Tas,Tas Forest Comms
+670,671,5,Native forest,Acacia,7,3,1,1,Tas,NVIS 6.0
+671,672,144,Native forest,Other native forest,74,2,1,1,Tas,Tas Forest Comms
+672,673,86,Native forest,Other native forest,11,3,3,1,Tas,Tas Forest Comms
+673,674,1,Native forest,Eucalypt Low Closed,46,3,1,1,Tas,NVIS 6.0
+674,675,2,Native forest,Eucalypt Low Woodland,40,1,1,1,Tas,NVIS 6.0
+675,676,66,Native forest,Eucalypt Mallee Woodland,34,1,1,1,Tas,Aus_For18
+676,677,3,Native forest,Rainforest,100,3,3,1,Tas,NVIS 6.0
+677,678,1,Native forest,Rainforest,24,1,1,1,Tas,NVIS 6.0
+678,679,1,Native forest,Other native forest,76,1,2,1,Tas,NVIS 6.0
+679,680,2,Native forest,Callitris,16,1,1,1,Tas,Tas Forest Comms
+680,681,1,Native forest,Callitris,17,1,2,1,Tas,Tas Forest Comms
+681,682,25,Native forest,Callitris,23,3,2,1,Tas,Tas Forest Comms
+682,683,1,Native forest,Other native forest,77,2,2,1,Tas,NVIS 6.0
+683,684,1,Native forest,Callitris,23,3,2,1,Tas,NVIS 6.0
+684,685,29,Native forest,Melaleuca,72,3,3,1,Tas,Aus_For18
+685,686,3,Native forest,Other native forest,11,3,3,1,Tas,Aus_For18
+686,687,2,Native forest,Melaleuca,72,3,3,1,Tas,Tas Forest Comms

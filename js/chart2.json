@@ -1,0 +1,391 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Australian state and territory forest area choropleth with ranked comparison.",
+  "background": null,
+  "spacing": 24,
+
+  "hconcat": [
+    {
+      "width": 430,
+      "height": 390,
+
+      "title": {
+        "text": "Forest area across Australia",
+        "subtitle": "Darker states contain more mapped forest area",
+        "anchor": "start",
+        "font": "DM Sans",
+        "fontSize": 18,
+        "fontWeight": 700,
+        "color": "#103D2E",
+        "subtitleFont": "DM Sans",
+        "subtitleFontSize": 11,
+        "subtitleColor": "#65786F",
+        "offset": 14
+      },
+
+      "data": {
+        "url": "data/australia_states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+
+      "transform": [
+        {
+          "calculate": "datum.properties.STE_NAME21",
+          "as": "state_name"
+        },
+
+        {
+          "lookup": "state_name",
+          "from": {
+            "data": {
+              "values": [
+                {
+                  "state_name": "Queensland",
+                  "forest_mha": 51.98,
+                  "national_share": 38.91
+                },
+                {
+                  "state_name": "Northern Territory",
+                  "forest_mha": 23.33,
+                  "national_share": 17.47
+                },
+                {
+                  "state_name": "Western Australia",
+                  "forest_mha": 20.77,
+                  "national_share": 15.55
+                },
+                {
+                  "state_name": "New South Wales",
+                  "forest_mha": 20.28,
+                  "national_share": 15.19
+                },
+                {
+                  "state_name": "Victoria",
+                  "forest_mha": 8.22,
+                  "national_share": 6.16
+                },
+                {
+                  "state_name": "South Australia",
+                  "forest_mha": 5.13,
+                  "national_share": 3.84
+                },
+                {
+                  "state_name": "Tasmania",
+                  "forest_mha": 3.71,
+                  "national_share": 2.78
+                },
+                {
+                  "state_name": "Australian Capital Territory",
+                  "forest_mha": 0.14,
+                  "national_share": 0.11
+                }
+              ]
+            },
+
+            "key": "state_name",
+
+            "fields": [
+              "forest_mha",
+              "national_share"
+            ]
+          }
+        }
+      ],
+
+      "projection": {
+        "type": "mercator"
+      },
+
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.6
+      },
+
+      "encoding": {
+        "color": {
+          "field": "forest_mha",
+          "type": "quantitative",
+
+          "scale": {
+            "domain": [0, 52],
+            "range": [
+              "#E8F0E3",
+              "#C8DDBA",
+              "#9BC486",
+              "#6AA55C",
+              "#397B49",
+              "#0B4F36"
+            ]
+          },
+
+          "legend": {
+            "title": "Forest area (million ha)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 190,
+            "gradientThickness": 10,
+            "titleFont": "DM Sans",
+            "titleFontSize": 10,
+            "titleFontWeight": 700,
+            "labelFont": "DM Sans",
+            "labelFontSize": 9,
+            "values": [0, 10, 20, 30, 40, 50],
+            "format": ".0f"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "state_name",
+            "type": "nominal",
+            "title": "State or territory"
+          },
+          {
+            "field": "forest_mha",
+            "type": "quantitative",
+            "title": "Forest area (million ha)",
+            "format": ".2f"
+          },
+          {
+            "field": "national_share",
+            "type": "quantitative",
+            "title": "Share of Australian forest (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+
+    {
+      "width": 205,
+      "height": 390,
+
+      "title": {
+        "text": "State ranking",
+        "subtitle": "Mapped forest area",
+        "anchor": "start",
+        "font": "DM Sans",
+        "fontSize": 18,
+        "fontWeight": 700,
+        "color": "#103D2E",
+        "subtitleFont": "DM Sans",
+        "subtitleFontSize": 11,
+        "subtitleColor": "#65786F",
+        "offset": 14
+      },
+
+      "data": {
+        "values": [
+          {
+            "state": "QLD",
+            "state_name": "Queensland",
+            "forest_mha": 51.98,
+            "national_share": 38.91
+          },
+          {
+            "state": "NT",
+            "state_name": "Northern Territory",
+            "forest_mha": 23.33,
+            "national_share": 17.47
+          },
+          {
+            "state": "WA",
+            "state_name": "Western Australia",
+            "forest_mha": 20.77,
+            "national_share": 15.55
+          },
+          {
+            "state": "NSW",
+            "state_name": "New South Wales",
+            "forest_mha": 20.28,
+            "national_share": 15.19
+          },
+          {
+            "state": "VIC",
+            "state_name": "Victoria",
+            "forest_mha": 8.22,
+            "national_share": 6.16
+          },
+          {
+            "state": "SA",
+            "state_name": "South Australia",
+            "forest_mha": 5.13,
+            "national_share": 3.84
+          },
+          {
+            "state": "TAS",
+            "state_name": "Tasmania",
+            "forest_mha": 3.71,
+            "national_share": 2.78
+          },
+          {
+            "state": "ACT",
+            "state_name": "Australian Capital Territory",
+            "forest_mha": 0.14,
+            "national_share": 0.11
+          }
+        ]
+      },
+
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "cornerRadiusEnd": 4,
+            "color": "#86AD77"
+          },
+
+          "encoding": {
+            "y": {
+              "field": "state",
+              "type": "nominal",
+
+              "sort": [
+                "QLD",
+                "NT",
+                "WA",
+                "NSW",
+                "VIC",
+                "SA",
+                "TAS",
+                "ACT"
+              ],
+
+              "axis": {
+                "title": null,
+                "domain": false,
+                "ticks": false,
+                "labelFont": "DM Sans",
+                "labelFontSize": 11,
+                "labelFontWeight": 700,
+                "labelColor": "#314B40",
+                "labelPadding": 7
+              }
+            },
+
+            "x": {
+              "field": "forest_mha",
+              "type": "quantitative",
+
+              "scale": {
+                "domain": [0, 58]
+              },
+
+              "axis": {
+                "title": "Million hectares",
+                "titleFont": "DM Sans",
+                "titleFontSize": 10,
+                "titleFontWeight": 600,
+                "titleColor": "#61746B",
+                "titlePadding": 10,
+                "labelFont": "DM Sans",
+                "labelFontSize": 9,
+                "labelColor": "#718078",
+                "values": [0, 10, 20, 30, 40, 50],
+                "grid": true,
+                "gridColor": "#EBECE7",
+                "gridWidth": 1,
+                "domain": false,
+                "ticks": false
+              }
+            },
+
+            "tooltip": [
+              {
+                "field": "state_name",
+                "type": "nominal",
+                "title": "State or territory"
+              },
+              {
+                "field": "forest_mha",
+                "type": "quantitative",
+                "title": "Forest area (million ha)",
+                "format": ".2f"
+              },
+              {
+                "field": "national_share",
+                "type": "quantitative",
+                "title": "Share of Australian forest (%)",
+                "format": ".1f"
+              }
+            ]
+          }
+        },
+
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 5,
+            "font": "DM Sans",
+            "fontSize": 10,
+            "fontWeight": 700,
+            "color": "#103D2E"
+          },
+
+          "encoding": {
+            "y": {
+              "field": "state",
+              "type": "nominal",
+
+              "sort": [
+                "QLD",
+                "NT",
+                "WA",
+                "NSW",
+                "VIC",
+                "SA",
+                "TAS",
+                "ACT"
+              ]
+            },
+
+            "x": {
+              "field": "forest_mha",
+              "type": "quantitative",
+
+              "scale": {
+                "domain": [0, 58]
+              }
+            },
+
+            "text": {
+              "field": "forest_mha",
+              "type": "quantitative",
+              "format": ".1f"
+            }
+          }
+        }
+      ]
+    }
+  ],
+
+  "resolve": {
+    "scale": {
+      "color": "independent"
+    }
+  },
+
+  "config": {
+    "font": "DM Sans",
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans"
+    },
+
+    "legend": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans"
+    }
+  }
+}

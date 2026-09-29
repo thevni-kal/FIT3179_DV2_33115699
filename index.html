@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Australia's Changing Forests</title>
+
+
+  <!-- ======================================================
+       FONTS
+  ======================================================= -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- ======================================================
+       STYLESHEET
+  ======================================================= -->
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+
+  <!-- ======================================================
+       VEGA LIBRARIES
+  ======================================================= -->
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+
+</head>
+
+
+
+<body>
+
+
+  <!-- ======================================================
+       HERO
+  ======================================================= -->
+
+  <header class="hero">
+
+    <div class="hero-grid">
+
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          AUSTRALIA'S FOREST LANDSCAPE
+        </p>
+
+
+        <h1>
+          Australia's
+          <span>Changing Forests</span>
+        </h1>
+
+
+        <p class="hero-lead">
+          Australia is often imagined as a vast dry continent,
+          yet more than 133 million hectares are classified as forest.
+          Those forests are not evenly distributed and the landscape
+          we see today is not the landscape Australia always had.
+        </p>
+
+
+        <p class="hero-question">
+          What forests remain today, where are they found,
+          and how has Australia's vegetation changed?
+        </p>
+
+      </div>
+
+
+
+      <aside class="hero-summary">
+
+        <p class="summary-label">
+          FORESTS OF AUSTRALIA 2023
+        </p>
+
+
+        <div class="summary-stat">
+
+          <span class="summary-number">
+            133.6M
+          </span>
+
+          <span class="summary-unit">
+            hectares of forest
+          </span>
+
+        </div>
+
+
+        <div class="summary-rule"></div>
+
+
+        <div class="summary-stat">
+
+          <span class="summary-number small">
+            17.4%
+          </span>
+
+          <span class="summary-unit">
+            of mapped land area
+          </span>
+
+        </div>
+
+
+        <p class="summary-source">
+          National Forest Inventory
+        </p>
+
+      </aside>
+
+    </div>
+
+
+
+  <!-- ======================================================
+       MAIN
+  ======================================================= -->
+
+  <main>
+
+
+    <!-- ====================================================
+         CHAPTER 01
+    ===================================================== -->
+
+    <section class="story-section">
+
+
+      <div class="chapter-header">
+
+        <div class="chapter-index">
+          01
+        </div>
+
+
+        <div class="chapter-copy">
+
+          <p class="chapter-label">
+            THE BIG PICTURE
+          </p>
+
+
+          <h2>
+            Forest is a small part of Australia's land,
+            but almost all of it is native.
+          </h2>
+
+
+          <p class="chapter-intro">
+            The Forests of Australia 2023 dataset classifies approximately
+            <strong>133.6 million hectares</strong> as forest.
+            That is around <strong>17.4% of Australia's mapped land area</strong>.
+            The first layer of the visualisation compares forest with
+            non-forest land. The second layer opens that forest share
+            to reveal what it contains.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="visual-story-grid">
+
+
+        <!-- =================================================
+             VISUALISATION 01
+        ================================================== -->
+
+        <div class="visualisation-card">
+
+          <div class="vis-heading">
+
+            <p class="vis-kicker">
+              LAND COVER HIERARCHY
+            </p>
+
+            <h3>
+              One continent, two layers of forest
+            </h3>
+
+            <p>
+              Read from the centre outward.
+              The inner ring separates forest from non-forest.
+              The outer ring then divides the forest section
+              into its official forest categories.
+            </p>
+
+          </div>
+
+
+          <div class="chart-wrap">
+
+            <div id="vis1"></div>
+
+          </div>
+
+
+          <div class="legend-custom">
+
+            <div class="legend-item">
+
+              <span class="legend-swatch native"></span>
+
+              <span>
+                Native forest
+              </span>
+
+            </div>
+
+
+            <div class="legend-item">
+
+              <span class="legend-swatch plantation"></span>
+
+              <span>
+                Commercial plantation
+              </span>
+
+            </div>
+
+
+            <div class="legend-item">
+
+              <span class="legend-swatch other"></span>
+
+              <span>
+                Other forest
+              </span>
+
+            </div>
+
+
+            <div class="legend-item">
+
+              <span class="legend-swatch nonforest"></span>
+
+              <span>
+                Non-forest
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <p class="interaction-hint">
+            Hover over either ring to inspect area and percentage.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ANALYSIS 01
+        ================================================== -->
+
+        <aside class="analysis-panel">
+
+
+          <div class="analysis-block">
+
+            <p class="analysis-number">
+              01
+            </p>
+
+            <p class="analysis-label">
+              START WITH THE INNER RING
+            </p>
+
+            <p class="analysis-text">
+              Forest occupies less than one fifth of Australia's
+              mapped land area. The much larger pale section represents
+              land classified as non-forest.
+            </p>
+
+          </div>
+
+
+
+          <div class="analysis-block">
+
+            <p class="analysis-number">
+              02
+            </p>
+
+            <p class="analysis-label">
+              THEN MOVE OUTWARD
+            </p>
+
+            <p class="analysis-text">
+              The green forest wedge separates into native forest,
+              commercial plantation and other forest.
+            </p>
+
+          </div>
+
+
+
+          <div class="analysis-block highlight">
+
+            <p class="analysis-label">
+              THE MAIN FINDING
+            </p>
+
+            <p class="analysis-big">
+              Native forest makes up about 98% of Australia's
+              mapped forest area.
+            </p>
+
+          </div>
+
+
+        </aside>
+
+      </div>
+
+
+
+      <div class="takeaway-strip">
+
+        <div class="takeaway-heading">
+
+          <p>
+            WHY THIS MATTERS
+          </p>
+
+        </div>
+
+
+        <div class="takeaway-copy">
+
+          <p>
+            Australia's forest footprint is overwhelmingly native.
+            Commercial plantations represent only a very small
+            proportion of the national forest landscape.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <p class="source">
+        Source: Australian Bureau of Agricultural and Resource
+        Economics and Sciences, Forests of Australia 2023,
+        National Forest Inventory.
+      </p>
+
+
+    </section>
+
+
+
+    <!-- ====================================================
+         CHAPTER 02
+    ===================================================== -->
+
+    <section class="story-section">
+
+
+      <div class="chapter-header">
+
+        <div class="chapter-index">
+          02
+        </div>
+
+
+        <div class="chapter-copy">
+
+          <p class="chapter-label">
+            WHERE THE FORESTS ARE
+          </p>
+
+
+          <h2>
+            Australia's forests are concentrated
+            in only a few parts of the country.
+          </h2>
+
+
+          <p class="chapter-intro">
+            The national total hides a strong geographic pattern.
+            Some states contain vast areas of mapped forest while
+            others contribute only a small share. Comparing the map
+            with the ranked state profile reveals where Australia's
+            forest estate is concentrated.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="visual-story-grid">
+
+
+        <!-- =================================================
+             VISUALISATION 02
+        ================================================== -->
+
+        <div class="visualisation-card">
+
+          <div class="vis-heading">
+
+            <p class="vis-kicker">
+              FOREST DISTRIBUTION BY STATE
+            </p>
+
+
+            <h3>
+              Where is Australia's forest concentrated?
+            </h3>
+
+
+            <p>
+              The map colours each state and territory by its mapped
+              forest area. The ranking beside it makes the differences
+              easier to compare. Hover over a state to inspect its
+              forest area and share of the national total.
+            </p>
+
+          </div>
+
+
+
+          <div class="chart-wrap">
+
+            <div id="vis2"></div>
+
+          </div>
+
+
+
+          <p class="interaction-hint">
+            Hover over the map or state ranking to explore the distribution.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ANALYSIS 02
+        ================================================== -->
+
+        <aside class="analysis-panel">
+
+
+          <div class="analysis-block">
+
+            <p class="analysis-number">
+              01
+            </p>
+
+
+            <p class="analysis-label">
+              START WITH THE MAP
+            </p>
+
+
+            <p class="analysis-text">
+              Forest area varies substantially across the country.
+              The strongest concentration occurs in Queensland,
+              while several southern jurisdictions contain much
+              smaller absolute forest areas.
+            </p>
+
+          </div>
+
+
+
+          <div class="analysis-block">
+
+            <p class="analysis-number">
+              02
+            </p>
+
+
+            <p class="analysis-label">
+              COMPARE THE RANKING
+            </p>
+
+
+            <p class="analysis-text">
+              Queensland contains approximately 52 million hectares
+              of mapped forest. The Northern Territory, Western Australia
+              and New South Wales form the next major group.
+            </p>
+
+          </div>
+
+
+
+          <div class="analysis-block highlight">
+
+            <p class="analysis-label">
+              THE MAIN FINDING
+            </p>
+
+
+            <p class="analysis-big">
+              Queensland alone contains almost two fifths of
+              Australia's mapped forest area.
+            </p>
+
+          </div>
+
+
+        </aside>
+
+      </div>
+
+
+
+      <div class="takeaway-strip">
+
+        <div class="takeaway-heading">
+
+          <p>
+            THE GEOGRAPHIC PATTERN
+          </p>
+
+        </div>
+
+
+        <div class="takeaway-copy">
+
+          <p>
+            Australia's forest area is not evenly distributed.
+            Queensland, the Northern Territory, Western Australia
+            and New South Wales account for most of the mapped
+            forest estate.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <p class="source">
+        Source: Australian Bureau of Agricultural and Resource
+        Economics and Sciences, Forests of Australia 2023,
+        National Forest Inventory.
+      </p>
+
+
+    </section>
+
+
+  </main>
+
+<!-- ====================================================
+     CHAPTER 03
+===================================================== -->
+
+<section class="story-section">
+
+  <div class="chapter-header">
+
+    <div class="chapter-index">
+      03
+    </div>
+
+    <div class="chapter-copy">
+
+      <p class="chapter-label">
+        INSIDE THE FOREST
+      </p>
+
+      <h2>
+        Australia's forest estate is dominated by
+        a handful of eucalypt formations.
+      </h2>
+
+      <p class="chapter-intro">
+        Forest area is not divided evenly between forest types.
+        Some formations cover tens of millions of hectares,
+        while others occupy only a small fraction of the national
+        forest estate.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="visual-story-grid">
+
+    <div class="visualisation-card">
+
+      <div class="vis-heading">
+
+        <p class="vis-kicker">
+          FOREST TYPE COMPOSITION
+        </p>
+
+        <h3>
+          Which forest types dominate Australia?
+        </h3>
+
+        <p>
+          Each rectangle represents one forest type.
+          Its area is proportional to the amount of mapped forest
+          it occupies. Larger rectangles therefore represent
+          more widespread forest formations.
+        </p>
+
+      </div>
+
+
+      <div class="chart-wrap">
+
+        <div id="vis3"></div>
+
+      </div>
+
+
+      <p class="interaction-hint">
+        Hover over a rectangle to inspect its forest type,
+        category, area and share of Australia's mapped forest.
+      </p>
+
+    </div>
+
+
+    <aside class="analysis-panel">
+
+      <div class="analysis-block">
+
+        <p class="analysis-number">
+          01
+        </p>
+
+        <p class="analysis-label">
+          LOOK AT THE LARGEST BLOCK
+        </p>
+
+        <p class="analysis-text">
+          Eucalypt Medium Woodland is by far Australia's
+          largest mapped forest type, covering about
+          54.4 million hectares.
+        </p>
+
+      </div>
+
+
+      <div class="analysis-block">
+
+        <p class="analysis-number">
+          02
+        </p>
+
+        <p class="analysis-label">
+          EUCALYPTS DOMINATE
+        </p>
+
+        <p class="analysis-text">
+          Several of the largest forest types are eucalypt
+          formations, including medium open forest,
+          mallee woodland and low woodland.
+        </p>
+
+      </div>
+
+
+      <div class="analysis-block highlight">
+
+        <p class="analysis-label">
+          THE MAIN FINDING
+        </p>
+
+        <p class="analysis-big">
+          Eucalypt Medium Woodland alone accounts for
+          around 41% of Australia's mapped forest area.
+        </p>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+
+  <div class="takeaway-strip">
+
+    <div class="takeaway-heading">
+
+      <p>
+        WHAT THIS REVEALS
+      </p>
+
+    </div>
+
+    <div class="takeaway-copy">
+
+      <p>
+        Australia's forests are diverse, but their area is
+        strongly concentrated in a small number of dominant
+        forest formations.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <p class="source">
+    Source: Australian Bureau of Agricultural and Resource
+    Economics and Sciences, Forests of Australia 2023,
+    National Forest Inventory.
+  </p>
+
+</section>
+
+<!-- ====================================================
+     CHAPTER 04
+===================================================== -->
+
+<section class="story-section">
+
+  <div class="chapter-header">
+
+    <div class="chapter-index">
+      04
+    </div>
+
+    <div class="chapter-copy">
+
+      <p class="chapter-label">
+        FORESTS ACROSS THE STATES
+      </p>
+
+      <h2>
+        The same forest types do not dominate everywhere.
+      </h2>
+
+      <p class="chapter-intro">
+        Australia's national forest profile hides strong regional
+        differences. Comparing forest types across states and territories
+        reveals which formations define different parts of the country.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="visual-story-grid">
+
+    <div class="visualisation-card">
+
+      <div class="vis-heading">
+
+        <p class="vis-kicker">
+          STATE × FOREST TYPE MATRIX
+        </p>
+
+        <h3>
+          How does forest composition change across Australia?
+        </h3>
+
+        <p>
+          Each cell represents a forest type within a state or territory.
+          Darker cells indicate that the forest type represents a larger
+          share of that state's major forest formations.
+        </p>
+
+      </div>
+
+
+      <div class="chart-wrap">
+
+        <div id="vis4"></div>
+
+      </div>
+
+
+      <p class="interaction-hint">
+        Hover over any cell to inspect the forest type,
+        mapped area and its relative importance within that state.
+      </p>
+
+    </div>
+
+
+    <aside class="analysis-panel">
+
+      <div class="analysis-block">
+
+        <p class="analysis-number">
+          01
+        </p>
+
+        <p class="analysis-label">
+          READ DOWN THE COLUMNS
+        </p>
+
+        <p class="analysis-text">
+          Each column represents one state or territory.
+          Dark cells reveal the forest formations that are most
+          important within that jurisdiction.
+        </p>
+
+      </div>
+
+
+      <div class="analysis-block">
+
+        <p class="analysis-number">
+          02
+        </p>
+
+        <p class="analysis-label">
+          READ ACROSS THE ROWS
+        </p>
+
+        <p class="analysis-text">
+          Following a forest type across the matrix shows whether
+          it is widespread nationally or concentrated in only
+          particular parts of Australia.
+        </p>
+
+      </div>
+
+
+      <div class="analysis-block highlight">
+
+        <p class="analysis-label">
+          THE MAIN FINDING
+        </p>
+
+        <p class="analysis-big">
+          Australia's forest landscape is regional:
+          national dominance does not mean every state
+          has the same forest composition.
+        </p>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+
+  <div class="takeaway-strip">
+
+    <div class="takeaway-heading">
+
+      <p>
+        WHY THIS MATTERS
+      </p>
+
+    </div>
+
+    <div class="takeaway-copy">
+
+      <p>
+        Looking state by state reveals a much more varied forest
+        landscape than the national totals alone suggest.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <p class="source">
+    Source: Australian Bureau of Agricultural and Resource
+    Economics and Sciences, Forests of Australia 2023,
+    National Forest Inventory.
+  </p>
+
+</section>
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+
+  <footer>
+
+    <span>
+      FIT3179 Data Visualisation 2
+    </span>
+
+    <span>
+      Australia's Changing Forests
+    </span>
+
+  </footer>
+
+
+
+  <!-- ======================================================
+       VISUALISATION JAVASCRIPT
+  ======================================================= -->
+
+  <script src="js/vega_lite_vis.js"></script>
+
+
+</body>
+
+</html>
+
+

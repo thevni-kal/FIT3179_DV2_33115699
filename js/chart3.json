@@ -1,0 +1,713 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Annotated radial bar chart showing the relative mapped area of Australia's 22 forest types.",
+  "width": 820,
+  "height": 610,
+  "padding": 0,
+  "autosize": "none",
+  "background": null,
+  "signals": [
+    {
+      "name": "hovered",
+      "value": null,
+      "on": [
+        {
+          "events": "@bars:mouseover",
+          "update": "datum.type"
+        },
+        {
+          "events": "@bars:mouseout",
+          "update": "null"
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "forest",
+      "values": [
+        {
+          "rank": 1,
+          "category": "Native forest",
+          "type": "Eucalypt Medium Woodland",
+          "area_ha": 54377578,
+          "area_mha": 54.377578,
+          "percent": 40.712506588562256,
+          "startAngle": 0.0,
+          "endAngle": 0.28559933214452665,
+          "outerRadius": 245.0,
+          "px": 445.72102440659455,
+          "py": 56.554818087885906,
+          "annotate": 1,
+          "lx": 590,
+          "ly": 74,
+          "align": "left",
+          "note": "40.7% of all mapped forest",
+          "ex": 572,
+          "ey": 76
+        },
+        {
+          "rank": 2,
+          "category": "Native forest",
+          "type": "Eucalypt Medium Open",
+          "area_ha": 20087897,
+          "area_mha": 20.087897,
+          "percent": 15.039813633532187,
+          "startAngle": 0.28559933214452665,
+          "endAngle": 0.5711986642890533,
+          "outerRadius": 184.99267426478804,
+          "px": 489.341224262972,
+          "py": 131.26695261042528,
+          "annotate": 1,
+          "lx": 620,
+          "ly": 150,
+          "align": "left",
+          "note": "20.1M ha",
+          "ex": 602,
+          "ey": 152
+        },
+        {
+          "rank": 3,
+          "category": "Native forest",
+          "type": "Acacia",
+          "area_ha": 10895217,
+          "area_mha": 10.895217,
+          "percent": 8.157251760943003,
+          "startAngle": 0.5711986642890533,
+          "endAngle": 0.8567979964335799,
+          "outerRadius": 160.48562808647256,
+          "px": 519.0249006000492,
+          "py": 179.178557437547,
+          "annotate": 1,
+          "lx": 630,
+          "ly": 226,
+          "align": "left",
+          "note": "10.9M ha",
+          "ex": 612,
+          "ey": 228
+        },
+        {
+          "rank": 4,
+          "category": "Native forest",
+          "type": "Eucalypt Mallee Woodland",
+          "area_ha": 9925054,
+          "area_mha": 9.925054,
+          "percent": 7.430890474136899,
+          "startAngle": 0.8567979964335799,
+          "endAngle": 1.1423973285781066,
+          "outerRadius": 157.36540253010355,
+          "px": 547.4317220208376,
+          "py": 216.67799523216206,
+          "annotate": 0
+        },
+        {
+          "rank": 5,
+          "category": "Native forest",
+          "type": "Eucalypt Low Woodland",
+          "area_ha": 8271417,
+          "area_mha": 8.271417,
+          "percent": 6.192812028318839,
+          "startAngle": 1.1423973285781066,
+          "endAngle": 1.4279966607226333,
+          "outerRadius": 151.6721188147937,
+          "px": 561.2852901377048,
+          "py": 260.5786308237025,
+          "annotate": 0
+        },
+        {
+          "rank": 6,
+          "category": "Native forest",
+          "type": "Melaleuca",
+          "area_ha": 7193189,
+          "area_mha": 7.193189,
+          "percent": 5.385542448309734,
+          "startAngle": 1.4279966607226333,
+          "endAngle": 1.7135959928671598,
+          "outerRadius": 147.647061580842,
+          "px": 563.647061580842,
+          "py": 305.0,
+          "annotate": 0
+        },
+        {
+          "rank": 7,
+          "category": "Native forest",
+          "type": "Other native forest",
+          "area_ha": 4700616,
+          "area_mha": 4.700616,
+          "percent": 3.519352404226264,
+          "startAngle": 1.7135959928671598,
+          "endAngle": 1.9991953250116865,
+          "outerRadius": 136.9840846820896,
+          "px": 547.1922245911653,
+          "py": 345.2832717651166,
+          "annotate": 0
+        },
+        {
+          "rank": 8,
+          "category": "Native forest",
+          "type": "Eucalypt Tall Open",
+          "area_ha": 4404748,
+          "area_mha": 4.404748,
+          "percent": 3.297835956779031,
+          "startAngle": 1.9991953250116865,
+          "endAngle": 2.284794657156213,
+          "outerRadius": 135.54537494038203,
+          "px": 529.0755467245106,
+          "py": 381.5252072148272,
+          "annotate": 0
+        },
+        {
+          "rank": 9,
+          "category": "Native forest",
+          "type": "Rainforest",
+          "area_ha": 3442271,
+          "area_mha": 3.442271,
+          "percent": 2.577229180143271,
+          "startAngle": 2.284794657156213,
+          "endAngle": 2.5703939893007397,
+          "outerRadius": 130.4949739298528,
+          "px": 499.385198807546,
+          "py": 408.1560184489818,
+          "annotate": 1,
+          "lx": 590,
+          "ly": 500,
+          "align": "left",
+          "note": "3.44M ha",
+          "ex": 572,
+          "ey": 502
+        },
+        {
+          "rank": 10,
+          "category": "Native forest",
+          "type": "Eucalypt Tall Woodland",
+          "area_ha": 2391605,
+          "area_mha": 2.391605,
+          "percent": 1.7905952765998223,
+          "startAngle": 2.5703939893007397,
+          "endAngle": 2.8559933214452666,
+          "outerRadius": 124.08678669131913,
+          "px": 464.04000418474794,
+          "py": 423.33110334728224,
+          "annotate": 0
+        },
+        {
+          "rank": 11,
+          "category": "Native forest",
+          "type": "Callitris",
+          "area_ha": 1993462,
+          "area_mha": 1.993462,
+          "percent": 1.492505510433887,
+          "startAngle": 2.8559933214452666,
+          "endAngle": 3.1415926535897927,
+          "outerRadius": 121.29445896616393,
+          "px": 428.11589034085495,
+          "py": 430.9987849173416,
+          "annotate": 0
+        },
+        {
+          "rank": 12,
+          "category": "Native forest",
+          "type": "Mangrove",
+          "area_ha": 1109811,
+          "area_mha": 1.109811,
+          "percent": 0.8309157802055631,
+          "startAngle": 3.1415926535897927,
+          "endAngle": 3.4271919857343196,
+          "outerRadius": 113.8577781320767,
+          "px": 392.94245968933825,
+          "py": 423.6377987713371,
+          "annotate": 1,
+          "lx": 185,
+          "ly": 470,
+          "align": "right",
+          "note": "1.11M ha",
+          "ex": 203,
+          "ey": 472
+        },
+        {
+          "rank": 13,
+          "category": "Native forest",
+          "type": "Casuarina",
+          "area_ha": 1086276,
+          "area_mha": 1.086276,
+          "percent": 0.813295119672249,
+          "startAngle": 3.4271919857343196,
+          "endAngle": 3.7127913178788465,
+          "outerRadius": 113.62477477938093,
+          "px": 360.3060726296758,
+          "py": 413.8145225764032,
+          "annotate": 0
+        },
+        {
+          "rank": 14,
+          "category": "Commercial plantation",
+          "type": "Softwood plantation",
+          "area_ha": 1060111,
+          "area_mha": 1.060111,
+          "percent": 0.7937053774647213,
+          "startAngle": 3.7127913178788465,
+          "endAngle": 3.998390650023373,
+          "outerRadius": 113.3627506449582,
+          "px": 331.8340215069146,
+          "py": 395.2083479936806,
+          "annotate": 1,
+          "lx": 195,
+          "ly": 160,
+          "align": "right",
+          "note": "1.06M ha",
+          "ex": 213,
+          "ey": 162
+        },
+        {
+          "rank": 15,
+          "category": "Native forest",
+          "type": "Eucalypt Low Open",
+          "area_ha": 1007181,
+          "area_mha": 1.007181,
+          "percent": 0.7540766728958528,
+          "startAngle": 3.998390650023373,
+          "endAngle": 4.283989982167899,
+          "outerRadius": 112.82261469838242,
+          "px": 310.0400556047476,
+          "py": 369.2403555427451,
+          "annotate": 0
+        },
+        {
+          "rank": 16,
+          "category": "Commercial plantation",
+          "type": "Hardwood plantation",
+          "area_ha": 738520,
+          "area_mha": 0.73852,
+          "percent": 0.5529301133232708,
+          "startAngle": 4.283989982167899,
+          "endAngle": 4.569589314312426,
+          "outerRadius": 109.83046344160846,
+          "px": 298.8614841972658,
+          "py": 337.6332126255321,
+          "annotate": 0
+        },
+        {
+          "rank": 17,
+          "category": "Native forest",
+          "type": "Eucalypt Mallee Open",
+          "area_ha": 492759,
+          "area_mha": 0.492759,
+          "percent": 0.3689287896212175,
+          "startAngle": 4.569589314312426,
+          "endAngle": 4.855188646456953,
+          "outerRadius": 106.56460743416773,
+          "px": 297.4353925658323,
+          "py": 305.0,
+          "annotate": 0
+        },
+        {
+          "rank": 18,
+          "category": "Other forest",
+          "type": "Other forest - unallocated type",
+          "area_ha": 242578,
+          "area_mha": 0.242578,
+          "percent": 0.1816182107860753,
+          "startAngle": 4.855188646456953,
+          "endAngle": 5.140787978601479,
+          "outerRadius": 102.21897193308163,
+          "px": 306.1646568184237,
+          "py": 274.51119233854206,
+          "annotate": 0
+        },
+        {
+          "rank": 19,
+          "category": "Native forest",
+          "type": "Eucalypt Tall Closed",
+          "area_ha": 73897,
+          "area_mha": 0.073897,
+          "percent": 0.055326702843863,
+          "startAngle": 5.140787978601479,
+          "endAngle": 5.426387310746006,
+          "outerRadius": 97.64020520028421,
+          "px": 322.8123112319123,
+          "py": 248.96787473925252,
+          "annotate": 0
+        },
+        {
+          "rank": 20,
+          "category": "Native forest",
+          "type": "Eucalypt Medium Closed",
+          "area_ha": 26481,
+          "area_mha": 0.026481,
+          "percent": 0.0198263314885359,
+          "startAngle": 5.426387310746006,
+          "endAngle": 5.711986642890533,
+          "outerRadius": 95.37635957203011,
+          "px": 343.6126027659592,
+          "py": 228.38485940385405,
+          "annotate": 0
+        },
+        {
+          "rank": 21,
+          "category": "Commercial plantation",
+          "type": "Mixed species plantation",
+          "area_ha": 22222,
+          "area_mha": 0.022222,
+          "percent": 0.01663761709672,
+          "startAngle": 5.711986642890533,
+          "endAngle": 5.99758597503506,
+          "outerRadius": 95.09295123271242,
+          "px": 368.00447034926367,
+          "py": 213.0426170539108,
+          "annotate": 0
+        },
+        {
+          "rank": 22,
+          "category": "Native forest",
+          "type": "Eucalypt Low Closed",
+          "area_ha": 21910,
+          "area_mha": 0.02191,
+          "percent": 0.0164040226167373,
+          "startAngle": 5.99758597503506,
+          "endAngle": 6.283185307179585,
+          "outerRadius": 95.07116174571195,
+          "px": 395.61607396206585,
+          "py": 204.95759694827845,
+          "annotate": 0
+        }
+      ]
+    },
+    {
+      "name": "ann",
+      "source": "forest",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.annotate === 1"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "catColor",
+      "type": "ordinal",
+      "domain": [
+        "Native forest",
+        "Commercial plantation",
+        "Other forest"
+      ],
+      "range": [
+        "#4F8F45",
+        "#9DBB73",
+        "#D5A14A"
+      ]
+    }
+  ],
+  "legends": [
+    {
+      "fill": "catColor",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "title": null,
+      "labelFont": "DM Sans",
+      "labelFontSize": 11,
+      "labelColor": "#55695F",
+      "symbolType": "square",
+      "symbolSize": 85,
+      "offset": 4
+    }
+  ],
+  "marks": [
+    {
+      "name": "bars",
+      "type": "arc",
+      "from": {
+        "data": "forest"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 410
+          },
+          "y": {
+            "value": 305
+          },
+          "startAngle": {
+            "field": "startAngle"
+          },
+          "endAngle": {
+            "field": "endAngle"
+          },
+          "innerRadius": {
+            "value": 92
+          },
+          "outerRadius": {
+            "field": "outerRadius"
+          },
+          "fill": {
+            "scale": "catColor",
+            "field": "category"
+          },
+          "stroke": {
+            "value": "#FFFFFF"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          },
+          "cornerRadius": {
+            "value": 2
+          },
+          "tooltip": {
+            "signal": "{'Forest type': datum.type, 'Category': datum.category, 'Area (million ha)': format(datum.area_mha, '.2f'), 'Share of forest': format(datum.percent, '.2f') + '%'}"
+          }
+        },
+        "update": {
+          "fillOpacity": {
+            "signal": "hovered === null || hovered === datum.type ? 0.96 : 0.30"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 410
+          },
+          "y": {
+            "value": 296
+          },
+          "text": {
+            "value": "22 forest types"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 20
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fill": {
+            "value": "#173F30"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 410
+          },
+          "y": {
+            "value": 322
+          },
+          "text": {
+            "value": "radial length = mapped area"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": 500
+          },
+          "fill": {
+            "value": "#6B7C73"
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "from": {
+        "data": "ann"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "px"
+          },
+          "y": {
+            "field": "py"
+          },
+          "x2": {
+            "field": "ex"
+          },
+          "y2": {
+            "field": "ey"
+          },
+          "stroke": {
+            "value": "#6F8278"
+          },
+          "strokeWidth": {
+            "value": 1.25
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "ann"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "px"
+          },
+          "y": {
+            "field": "py"
+          },
+          "size": {
+            "value": 48
+          },
+          "shape": {
+            "value": "circle"
+          },
+          "fill": {
+            "scale": "catColor",
+            "field": "category"
+          },
+          "stroke": {
+            "value": "#FFFFFF"
+          },
+          "strokeWidth": {
+            "value": 1.2
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "ann"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "lx"
+          },
+          "y": {
+            "field": "ly"
+          },
+          "text": {
+            "field": "type"
+          },
+          "align": {
+            "field": "align"
+          },
+          "baseline": {
+            "value": "bottom"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fill": {
+            "value": "#173F30"
+          },
+          "limit": {
+            "value": 205
+          },
+          "ellipsis": {
+            "value": ""
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "ann"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "field": "lx"
+          },
+          "y": {
+            "signal": "datum.ly + 6"
+          },
+          "text": {
+            "field": "note"
+          },
+          "align": {
+            "field": "align"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fontWeight": {
+            "value": 500
+          },
+          "fill": {
+            "value": "#667A70"
+          },
+          "limit": {
+            "value": 205
+          },
+          "ellipsis": {
+            "value": ""
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 410
+          },
+          "y": {
+            "value": 570
+          },
+          "text": {
+            "value": "Hover over any segment to inspect its exact area and share."
+          },
+          "align": {
+            "value": "center"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fill": {
+            "value": "#87958E"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "DM Sans"
+  }
+}
