@@ -426,7 +426,7 @@ h1 span {
 
 
 
-  margin-bottom: 65px;
+  margin-bottom: 46px;
 
 }
 
@@ -1144,7 +1144,7 @@ h2 {
 
 
 
-  margin-top: 42px;
+  margin-top: 32px;
 
 
 
@@ -1675,5 +1675,83 @@ footer {
   .structure-key {
     grid-template-columns: 1fr;
     gap: 13px;
+  }
+}
+
+
+/* =========================================================
+   CHAPTERS 06–08 — NVIS
+========================================================= */
+
+.story-section + .story-section {
+  padding-top: 82px;
+}
+
+.nvis-map-wrap,
+.nvis-comparison-wrap,
+.nvis-change-wrap {
+  min-height: 500px;
+}
+
+#vis6,
+#vis7,
+#vis8 {
+  width: 100%;
+}
+
+#vis6 .vega-embed,
+#vis7 .vega-embed,
+#vis8 .vega-embed {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nvis-section .takeaway-strip {
+  margin-top: 34px;
+}
+
+.change-key {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 8px;
+  font-size: 10px;
+  color: #65776d;
+}
+
+.change-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.change-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.change-dot.pre { background: #b9896e; }
+.change-dot.ext { background: #174d38; }
+
+@media (max-width: 1050px) {
+  .nvis-map-wrap,
+  .nvis-comparison-wrap,
+  .nvis-change-wrap {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 760px) {
+  .story-section + .story-section {
+    padding-top: 62px;
+  }
+
+  .nvis-map-wrap,
+  .nvis-comparison-wrap,
+  .nvis-change-wrap {
+    min-height: 390px;
   }
 }

@@ -1,0 +1,220 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Pre-1750 versus extant mapped area of major vegetation groups.",
+  "width": 680,
+  "height": 560,
+  "background": null,
+
+  "data": {
+    "url": "data/nvis_mvg_change.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+
+  "transform": [
+    {
+      "filter": "datum.pre1750_mha > 0"
+    },
+    {
+      "filter": "datum.mvg != 24 && datum.mvg != 25 && datum.mvg != 26 && datum.mvg != 27 && datum.mvg != 28 && datum.mvg != 29 && datum.mvg != 99"
+    },
+    {
+      "calculate": "datum.mvg == 1 ? 'Rainforests' : datum.mvg == 2 ? 'Tall eucalypt forests' : datum.mvg == 3 ? 'Eucalypt open forests' : datum.mvg == 4 ? 'Low eucalypt forests' : datum.mvg == 5 ? 'Eucalypt woodlands' : datum.mvg == 6 ? 'Acacia forests' : datum.mvg == 7 ? 'Callitris forests' : datum.mvg == 8 ? 'Casuarina forests' : datum.mvg == 9 ? 'Melaleuca forests' : datum.mvg == 10 ? 'Other forests' : datum.mvg == 11 ? 'Eucalypt open woodlands' : datum.mvg == 12 ? 'Tropical eucalypt woodlands' : datum.mvg == 13 ? 'Acacia open woodlands' : datum.mvg == 14 ? 'Mallee woodlands' : datum.mvg == 15 ? 'Low closed forests' : datum.mvg == 16 ? 'Acacia shrublands' : datum.mvg == 17 ? 'Other shrublands' : datum.mvg == 18 ? 'Heathlands' : datum.mvg == 19 ? 'Tussock grasslands' : datum.mvg == 20 ? 'Hummock grasslands' : datum.mvg == 21 ? 'Other grasslands' : datum.mvg == 22 ? 'Chenopod shrublands' : datum.mvg == 23 ? 'Mangroves' : datum.mvg == 31 ? 'Other open woodlands' : datum.mvg == 32 ? 'Sparse mallee' : datum.mvg_name",
+      "as": "short_name"
+    },
+    {
+      "calculate": "abs(datum.change_mha)",
+      "as": "absolute_change"
+    },
+    {
+      "calculate": "datum.extant_mha < datum.pre1750_mha ? 'Below historical extent' : 'Above historical extent'",
+      "as": "change_direction"
+    }
+  ],
+
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0,
+            "y": 0,
+            "x2": 150,
+            "y2": 150
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [7, 6],
+        "strokeWidth": 2,
+        "color": "#9AA79F",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y2": {
+          "field": "y2"
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "opacity": 0.88,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+        "x": {
+          "field": "pre1750_mha",
+          "type": "quantitative",
+          "title": "Estimated pre-1750 area (million hectares)",
+          "scale": {
+            "domain": [0, 150]
+          },
+          "axis": {
+            "labelFont": "DM Sans",
+            "titleFont": "DM Sans",
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "labelColor": "#294C3E",
+            "titleColor": "#294C3E",
+            "grid": true,
+            "gridColor": "#E7E9E5",
+            "domain": false
+          }
+        },
+
+        "y": {
+          "field": "extant_mha",
+          "type": "quantitative",
+          "title": "Extant area (million hectares)",
+          "scale": {
+            "domain": [0, 150]
+          },
+          "axis": {
+            "labelFont": "DM Sans",
+            "titleFont": "DM Sans",
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "labelColor": "#294C3E",
+            "titleColor": "#294C3E",
+            "grid": true,
+            "gridColor": "#E7E9E5",
+            "domain": false
+          }
+        },
+
+        "size": {
+          "field": "absolute_change",
+          "type": "quantitative",
+          "title": "Absolute difference (Mha)",
+          "scale": {
+            "range": [80, 1000]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleFont": "DM Sans",
+            "labelFont": "DM Sans",
+            "titleColor": "#294C3E",
+            "labelColor": "#294C3E"
+          }
+        },
+
+        "color": {
+          "field": "family",
+          "type": "nominal",
+          "title": "Vegetation family",
+          "scale": {
+            "domain": [
+              "Rainforest",
+              "Eucalypt forest & woodland",
+              "Acacia",
+              "Other forest & woodland",
+              "Shrubland",
+              "Grassland",
+              "Other native vegetation"
+            ],
+            "range": [
+              "#174D2C",
+              "#3E7C4B",
+              "#83A85B",
+              "#5D8F72",
+              "#B89B62",
+              "#D8BE7A",
+              "#9DAF9B"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 3,
+            "titleFont": "DM Sans",
+            "labelFont": "DM Sans",
+            "titleColor": "#294C3E",
+            "labelColor": "#294C3E"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "short_name",
+            "type": "nominal",
+            "title": "Vegetation group"
+          },
+          {
+            "field": "family",
+            "type": "nominal",
+            "title": "Vegetation family"
+          },
+          {
+            "field": "pre1750_mha",
+            "type": "quantitative",
+            "title": "Pre-1750 area (Mha)",
+            "format": ".1f"
+          },
+          {
+            "field": "extant_mha",
+            "type": "quantitative",
+            "title": "Extant area (Mha)",
+            "format": ".1f"
+          },
+          {
+            "field": "change_mha",
+            "type": "quantitative",
+            "title": "Difference (Mha)",
+            "format": "+.1f"
+          },
+          {
+            "field": "change_pct",
+            "type": "quantitative",
+            "title": "Relative difference (%)",
+            "format": "+.1f"
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

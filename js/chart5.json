@@ -1,0 +1,311 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Forest structure matrix showing Australia's mapped forest by tree height and crown cover.",
+  "background": null,
+  "width": 680,
+  "height": 420,
+  "padding": {
+    "left": 10,
+    "right": 20,
+    "top": 20,
+    "bottom": 10
+  },
+
+  "data": {
+    "values": [
+      {
+        "height": "Tall (>30 m)",
+        "cover": "Woodland (20–50%)",
+        "area_ha": 2914480,
+        "area_mha": 2.91,
+        "share": 2.1821,
+        "share_label": "2.2%"
+      },
+      {
+        "height": "Tall (>30 m)",
+        "cover": "Open (>50–80%)",
+        "area_ha": 4532143,
+        "area_mha": 4.53,
+        "share": 3.3932,
+        "share_label": "3.4%"
+      },
+      {
+        "height": "Tall (>30 m)",
+        "cover": "Closed (>80%)",
+        "area_ha": 108613,
+        "area_mha": 0.11,
+        "share": 0.0813,
+        "share_label": "0.1%"
+      },
+
+      {
+        "height": "Medium (>10–30 m)",
+        "cover": "Woodland (20–50%)",
+        "area_ha": 61558208,
+        "area_mha": 61.56,
+        "share": 46.0886,
+        "share_label": "46.1%"
+      },
+      {
+        "height": "Medium (>10–30 m)",
+        "cover": "Open (>50–80%)",
+        "area_ha": 23017753,
+        "area_mha": 23.02,
+        "share": 17.2334,
+        "share_label": "17.2%"
+      },
+      {
+        "height": "Medium (>10–30 m)",
+        "cover": "Closed (>80%)",
+        "area_ha": 2105563,
+        "area_mha": 2.11,
+        "share": 1.5764,
+        "share_label": "1.6%"
+      },
+
+      {
+        "height": "Low (2–10 m)",
+        "cover": "Woodland (20–50%)",
+        "area_ha": 28521759,
+        "area_mha": 28.52,
+        "share": 21.3542,
+        "share_label": "21.4%"
+      },
+      {
+        "height": "Low (2–10 m)",
+        "cover": "Open (>50–80%)",
+        "area_ha": 6313597,
+        "area_mha": 6.31,
+        "share": 4.727,
+        "share_label": "4.7%"
+      },
+      {
+        "height": "Low (2–10 m)",
+        "cover": "Closed (>80%)",
+        "area_ha": 337750,
+        "area_mha": 0.34,
+        "share": 0.2529,
+        "share_label": "0.3%"
+      }
+    ]
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "fill": "#F3F6F1",
+        "stroke": "#DCE4DD",
+        "strokeWidth": 1.2,
+        "cornerRadius": 10
+      },
+
+      "encoding": {
+        "x": {
+          "field": "cover",
+          "type": "ordinal",
+          "sort": [
+            "Woodland (20–50%)",
+            "Open (>50–80%)",
+            "Closed (>80%)"
+          ],
+          "axis": {
+            "orient": "top",
+            "title": "CROWN COVER",
+            "titleFont": "DM Sans",
+            "titleFontSize": 10,
+            "titleFontWeight": 700,
+            "titleColor": "#74857B",
+            "titlePadding": 20,
+
+            "labelFont": "DM Sans",
+            "labelFontSize": 11,
+            "labelFontWeight": 600,
+            "labelColor": "#29483B",
+            "labelAngle": 0,
+            "labelPadding": 12,
+
+            "domain": false,
+            "ticks": false
+          }
+        },
+
+        "y": {
+          "field": "height",
+          "type": "ordinal",
+          "sort": [
+            "Tall (>30 m)",
+            "Medium (>10–30 m)",
+            "Low (2–10 m)"
+          ],
+          "axis": {
+            "title": "TREE HEIGHT",
+            "titleFont": "DM Sans",
+            "titleFontSize": 10,
+            "titleFontWeight": 700,
+            "titleColor": "#74857B",
+            "titlePadding": 25,
+
+            "labelFont": "DM Sans",
+            "labelFontSize": 11,
+            "labelFontWeight": 600,
+            "labelColor": "#29483B",
+            "labelPadding": 12,
+
+            "domain": false,
+            "ticks": false
+          }
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "circle",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 3,
+        "opacity": 0.95
+      },
+
+      "encoding": {
+        "x": {
+          "field": "cover",
+          "type": "ordinal",
+          "sort": [
+            "Woodland (20–50%)",
+            "Open (>50–80%)",
+            "Closed (>80%)"
+          ]
+        },
+
+        "y": {
+          "field": "height",
+          "type": "ordinal",
+          "sort": [
+            "Tall (>30 m)",
+            "Medium (>10–30 m)",
+            "Low (2–10 m)"
+          ]
+        },
+
+        "size": {
+          "field": "area_ha",
+          "type": "quantitative",
+          "scale": {
+            "type": "sqrt",
+            "domain": [
+              0,
+              61558208
+            ],
+            "range": [
+              300,
+              12500
+            ]
+          },
+          "legend": null
+        },
+
+        "color": {
+          "field": "share",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              46.1
+            ],
+            "range": [
+              "#D9E8D3",
+              "#B5D2A8",
+              "#82B478",
+              "#4B8B59",
+              "#174D38"
+            ]
+          },
+          "legend": null
+        },
+
+        "tooltip": [
+          {
+            "field": "height",
+            "type": "nominal",
+            "title": "Tree height"
+          },
+          {
+            "field": "cover",
+            "type": "nominal",
+            "title": "Crown cover"
+          },
+          {
+            "field": "area_mha",
+            "type": "quantitative",
+            "title": "Mapped area (million ha)",
+            "format": ".2f"
+          },
+          {
+            "field": "share",
+            "type": "quantitative",
+            "title": "Share of mapped forest (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "baseline": "middle",
+        "pointerEvents": "none"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "cover",
+          "type": "ordinal",
+          "sort": [
+            "Woodland (20–50%)",
+            "Open (>50–80%)",
+            "Closed (>80%)"
+          ]
+        },
+
+        "y": {
+          "field": "height",
+          "type": "ordinal",
+          "sort": [
+            "Tall (>30 m)",
+            "Medium (>10–30 m)",
+            "Low (2–10 m)"
+          ]
+        },
+
+        "text": {
+          "field": "share_label"
+        },
+
+        "color": {
+          "condition": {
+            "test": "datum.share >= 12",
+            "value": "#FFFFFF"
+          },
+          "value": "#173F30"
+        }
+      }
+    }
+  ],
+
+  "config": {
+    "font": "DM Sans",
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "grid": false
+    }
+  }
+}

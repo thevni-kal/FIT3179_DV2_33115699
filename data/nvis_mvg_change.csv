@@ -1,0 +1,32 @@
+mvg,mvg_name,family,pre1750_ha,extant_ha,pre1750_mha,extant_mha,change_mha,retention_pct,change_pct
+1,Rainforests and Vine Thickets,Rainforest,5032588,3739713,5.032588,3.739713,-1.292875,74.31,-25.69
+2,Eucalypt Tall Open Forests,Eucalypt forest & woodland,4373866,7664024,4.373866,7.664024,3.290158,175.22,75.22
+3,Eucalypt Open Forests,Eucalypt forest & woodland,33208267,20897470,33.208267,20.89747,-12.310797,62.93,-37.07
+4,Eucalypt Low Open Forests,Eucalypt forest & woodland,1229184,2112693,1.229184,2.112693,0.883509,171.88,71.88
+5,Eucalypt Woodlands,Eucalypt forest & woodland,129108989,89341449,129.108989,89.341449,-39.76754,69.2,-30.8
+6,Acacia Forests and Woodlands,Acacia,46410780,41094444,46.41078,41.094444,-5.316336,88.55,-11.45
+7,Callitris Forests and Woodlands,Other forest & woodland,4219177,1869266,4.219177,1.869266,-2.349911,44.3,-55.7
+8,Casuarina Forests and Woodlands,Other forest & woodland,3106419,3288341,3.106419,3.288341,0.181922,105.86,5.86
+9,Melaleuca Forests and Woodlands,Other forest & woodland,8505279,9562796,8.505279,9.562796,1.057517,112.43,12.43
+10,Other Forests and Woodlands,Other forest & woodland,5040727,5358893,5.040727,5.358893,0.318166,106.31,6.31
+11,Eucalypt Open Woodlands,Eucalypt forest & woodland,52677623,34802213,52.677623,34.802213,-17.87541,66.07,-33.93
+12,Tropical Eucalypt Woodlands/Grasslands,Eucalypt forest & woodland,13854271,15207009,13.854271,15.207009,1.352738,109.76,9.76
+13,Acacia Open Woodlands,Acacia,39503042,31180996,39.503042,31.180996,-8.322046,78.93,-21.07
+14,Mallee Woodlands and Shrublands,Shrubland,31821768,20598808,31.821768,20.598808,-11.22296,64.73,-35.27
+15,Low Closed Forests and Tall Closed Shrublands,Shrubland,2975463,1875203,2.975463,1.875203,-1.10026,63.02,-36.98
+16,Acacia Shrublands,Shrubland,87539536,79458061,87.539536,79.458061,-8.081475,90.77,-9.23
+17,Other Shrublands,Shrubland,15622402,11192118,15.622402,11.192118,-4.430284,71.64,-28.36
+18,Heathlands,Shrubland,1852235,3708680,1.852235,3.70868,1.856445,200.23,100.23
+19,Tussock Grasslands,Grassland,56798693,49127301,56.798693,49.127301,-7.671392,86.49,-13.51
+20,Hummock Grasslands,Grassland,137344074,141027639,137.344074,141.027639,3.683565,102.68,2.68
+21,"Other Grasslands, Herblands, Sedgelands and Rushlands",Grassland,5117830,10806652,5.11783,10.806652,5.688822,211.16,111.16
+22,"Chenopod Shrublands, Samphire Shrublands and Forblands",Shrubland,50264954,47289934,50.264954,47.289934,-2.97502,94.08,-5.92
+23,Mangroves,Other forest & woodland,1074955,1107726,1.074955,1.107726,0.032771,103.05,3.05
+24,"Inland aquatic - freshwater, salt lakes, lagoons",Other native vegetation,8821780,8219839,8.82178,8.219839,-0.601941,93.18,-6.82
+25,"Cleared, non-native vegetation, buildings",Modified / non-native,0,105452596,0.0,105.452596,105.452596,,
+26,Unclassified native vegetation,Other native vegetation,59996,19240,0.059996,0.01924,-0.040756,32.07,-67.93
+27,"Naturally bare - sand, rock, claypan, mudflat",Other native vegetation,1689167,5759968,1.689167,5.759968,4.070801,340.99,240.99
+29,"Regrowth, modified native vegetation",Modified / non-native,0,1722258,0.0,1.722258,1.722258,,
+30,Unclassified Forest,Other native vegetation,101419,0,0.101419,0.0,-0.101419,0.0,-100.0
+31,Other Open Woodlands,Other forest & woodland,17447948,13369111,17.447948,13.369111,-4.078837,76.62,-23.38
+32,Mallee Open Woodlands and Sparse Mallee Shrublands,Shrubland,3387004,1103022,3.387004,1.103022,-2.283982,32.57,-67.43
