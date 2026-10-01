@@ -1,0 +1,57 @@
+from_family,to_family,cell_count,area_mha
+Acacia,Acacia,141067411,141.067411
+Acacia,Modified / non-native,15872591,15.872591
+Acacia,Shrubland,4394896,4.394896
+Acacia,Grassland,3862385,3.862385
+Acacia,Other native vegetation,3655413,3.655413
+Acacia,Eucalypt forest & woodland,2497400,2.4974
+Acacia,Other forest & woodland,2066559,2.066559
+Acacia,Rainforest,26242,0.026242
+Eucalypt forest & woodland,Eucalypt forest & woodland,159720495,159.720495
+Eucalypt forest & woodland,Modified / non-native,60213997,60.213997
+Eucalypt forest & woodland,Grassland,4493336,4.493336
+Eucalypt forest & woodland,Shrubland,3548090,3.54809
+Eucalypt forest & woodland,Other forest & woodland,2705522,2.705522
+Eucalypt forest & woodland,Acacia,2650856,2.650856
+Eucalypt forest & woodland,Rainforest,554194,0.554194
+Eucalypt forest & woodland,Other native vegetation,436855,0.436855
+Grassland,Grassland,182829680,182.82968
+Grassland,Shrubland,6581338,6.581338
+Grassland,Modified / non-native,5203884,5.203884
+Grassland,Acacia,2057375,2.057375
+Grassland,Eucalypt forest & woodland,1641471,1.641471
+Grassland,Other forest & woodland,493005,0.493005
+Grassland,Other native vegetation,346413,0.346413
+Grassland,Rainforest,9260,0.00926
+Other forest & woodland,Other forest & woodland,27742786,27.742786
+Other forest & woodland,Modified / non-native,4776269,4.776269
+Other forest & woodland,Eucalypt forest & woodland,2959282,2.959282
+Other forest & woodland,Shrubland,1774446,1.774446
+Other forest & woodland,Acacia,1060004,1.060004
+Other forest & woodland,Grassland,968609,0.968609
+Other forest & woodland,Other native vegetation,35984,0.035984
+Other forest & woodland,Rainforest,26975,0.026975
+Other native vegetation,Other native vegetation,8761526,8.761526
+Other native vegetation,Modified / non-native,888708,0.888708
+Other native vegetation,Shrubland,355764,0.355764
+Other native vegetation,Grassland,310068,0.310068
+Other native vegetation,Eucalypt forest & woodland,185562,0.185562
+Other native vegetation,Other forest & woodland,37500,0.0375
+Other native vegetation,Acacia,15125,0.015125
+Other native vegetation,Rainforest,4470,0.00447
+Rainforest,Rainforest,3089286,3.089286
+Rainforest,Modified / non-native,1368377,1.368377
+Rainforest,Eucalypt forest & woodland,352981,0.352981
+Rainforest,Acacia,148886,0.148886
+Rainforest,Other forest & woodland,33400,0.0334
+Rainforest,Other native vegetation,20254,0.020254
+Rainforest,Shrubland,11411,0.011411
+Rainforest,Grassland,7068,0.007068
+Shrubland,Shrubland,69068863,69.068863
+Shrubland,Modified / non-native,18670662,18.670662
+Shrubland,Grassland,8462233,8.462233
+Shrubland,Acacia,4730330,4.73033
+Shrubland,Eucalypt forest & woodland,2546563,2.546563
+Shrubland,Other forest & woodland,1376170,1.37617
+Shrubland,Other native vegetation,681813,0.681813
+Shrubland,Rainforest,23812,0.023812

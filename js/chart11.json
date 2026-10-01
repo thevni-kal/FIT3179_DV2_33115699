@@ -1,201 +1,491 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "background": null,
-  "width": 760,
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Historical to extant vegetation-family transition flow derived from spatially aligned NVIS pre-1750 and extant rasters.",
+
+  "width": 820,
   "height": 500,
-  "data": {
-    "url": "data/nvis_mvg_change.csv"
+
+  "padding": {
+    "left": 190,
+    "right": 190,
+    "top": 45,
+    "bottom": 35
   },
-  "transform": [
+
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+
+  "signals": [
     {
-      "filter": "datum.pre1750_mha >= 3"
+      "name": "nodeWidth",
+      "value": 24
     },
     {
-      "joinaggregate": [
+      "name": "rightX",
+      "update": "width-nodeWidth"
+    }
+  ],
+
+  "data": [
+    {
+      "name": "flows",
+      "url": "data/nvis_family_transitions.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "area_mha": "number",
+          "cell_count": "number"
+        }
+      },
+      "transform": [
         {
-          "op": "max",
-          "field": "pre1750_mha",
-          "as": "max_pre"
-        },
-        {
-          "op": "max",
-          "field": "extant_mha",
-          "as": "max_ext"
-        },
-        {
-          "op": "max",
-          "field": "absolute_change_mha",
-          "as": "max_abs"
-        },
-        {
-          "op": "max",
-          "field": "retention_pct",
-          "as": "max_ret"
+          "type": "filter",
+          "expr": "datum.area_mha > 0"
         }
       ]
     },
+
     {
-      "calculate": "datum.pre1750_mha/datum.max_pre*100",
-      "as": "Historical area"
+      "name": "leftNodes",
+      "source": "flows",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["from_family"],
+          "fields": ["area_mha"],
+          "ops": ["sum"],
+          "as": ["total"]
+        },
+        {
+          "type": "collect",
+          "sort": {
+            "field": "total",
+            "order": "descending"
+          }
+        },
+        {
+          "type": "stack",
+          "field": "total",
+          "sort": {
+            "field": "total",
+            "order": "descending"
+          },
+          "as": ["y0", "y1"],
+          "offset": "normalize"
+        },
+        {
+          "type": "formula",
+          "as": "py0",
+          "expr": "datum.y0 * height"
+        },
+        {
+          "type": "formula",
+          "as": "py1",
+          "expr": "datum.y1 * height"
+        },
+        {
+          "type": "formula",
+          "as": "nodeHeight",
+          "expr": "datum.py1-datum.py0"
+        }
+      ]
     },
+
     {
-      "calculate": "datum.extant_mha/datum.max_ext*100",
-      "as": "Extant area"
+      "name": "rightNodes",
+      "source": "flows",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["to_family"],
+          "fields": ["area_mha"],
+          "ops": ["sum"],
+          "as": ["total"]
+        },
+        {
+          "type": "collect",
+          "sort": {
+            "field": "total",
+            "order": "descending"
+          }
+        },
+        {
+          "type": "stack",
+          "field": "total",
+          "sort": {
+            "field": "total",
+            "order": "descending"
+          },
+          "as": ["y0", "y1"],
+          "offset": "normalize"
+        },
+        {
+          "type": "formula",
+          "as": "py0",
+          "expr": "datum.y0 * height"
+        },
+        {
+          "type": "formula",
+          "as": "py1",
+          "expr": "datum.y1 * height"
+        },
+        {
+          "type": "formula",
+          "as": "nodeHeight",
+          "expr": "datum.py1-datum.py0"
+        }
+      ]
     },
+
     {
-      "calculate": "datum.absolute_change_mha/datum.max_abs*100",
-      "as": "Absolute change"
-    },
-    {
-      "calculate": "min(datum.retention_pct,140)/140*100",
-      "as": "Area ratio"
-    },
-    {
-      "fold": [
-        "Historical area",
-        "Extant area",
-        "Absolute change",
-        "Area ratio"
-      ],
-      "as": [
-        "metric",
-        "score"
+      "name": "flowLayout",
+      "source": "flows",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "leftNodes",
+          "key": "from_family",
+          "fields": ["from_family"],
+          "values": ["py0", "py1", "total"],
+          "as": ["l0", "l1", "ltotal"]
+        },
+        {
+          "type": "lookup",
+          "from": "rightNodes",
+          "key": "to_family",
+          "fields": ["to_family"],
+          "values": ["py0", "py1", "total"],
+          "as": ["r0", "r1", "rtotal"]
+        },
+
+        {
+          "type": "window",
+          "groupby": ["from_family"],
+          "sort": {
+            "field": "to_family",
+            "order": "ascending"
+          },
+          "ops": ["sum"],
+          "fields": ["area_mha"],
+          "as": ["from_cumulative"]
+        },
+
+        {
+          "type": "window",
+          "groupby": ["to_family"],
+          "sort": {
+            "field": "from_family",
+            "order": "ascending"
+          },
+          "ops": ["sum"],
+          "fields": ["area_mha"],
+          "as": ["to_cumulative"]
+        },
+
+        {
+          "type": "formula",
+          "as": "sy",
+          "expr": "datum.l0 + ((datum.from_cumulative-datum.area_mha/2)/datum.ltotal)*(datum.l1-datum.l0)"
+        },
+
+        {
+          "type": "formula",
+          "as": "ty",
+          "expr": "datum.r0 + ((datum.to_cumulative-datum.area_mha/2)/datum.rtotal)*(datum.r1-datum.r0)"
+        },
+
+        {
+          "type": "formula",
+          "as": "flowWidth",
+          "expr": "max(1,(datum.area_mha/datum.ltotal)*(datum.l1-datum.l0))"
+        }
       ]
     }
   ],
-  "mark": {
-    "type": "line",
-    "strokeWidth": 2,
-    "opacity": 0.48
-  },
-  "encoding": {
-    "x": {
-      "field": "metric",
-      "type": "ordinal",
-      "sort": [
-        "Historical area",
-        "Extant area",
-        "Absolute change",
-        "Area ratio"
-      ],
-      "axis": {
-        "title": null,
-        "labelAngle": 0,
-        "labelFontSize": 11
-      }
-    },
-    "y": {
-      "field": "score",
-      "type": "quantitative",
-      "title": "Normalised score (0\u2013100)",
-      "scale": {
-        "domain": [
-          0,
-          100
-        ]
-      }
-    },
-    "detail": {
-      "field": "mvg_name"
-    },
-    "color": {
-      "field": "family",
-      "type": "nominal",
-      "title": "Vegetation family",
-      "scale": {
-        "domain": [
-          "Rainforest",
-          "Eucalypt forest & woodland",
-          "Acacia",
-          "Other forest & woodland",
-          "Shrubland",
-          "Grassland",
-          "Other native vegetation"
-        ],
-        "range": [
-          "#174C3A",
-          "#4F8A5B",
-          "#8AAE68",
-          "#6F9C86",
-          "#B59B69",
-          "#D2BE7F",
-          "#9BAE9C"
-        ]
-      }
-    },
-    "opacity": {
-      "condition": {
-        "param": "hover",
-        "value": 0.95
-      },
-      "value": 0.35
-    },
-    "tooltip": [
-      {
-        "field": "mvg_name",
-        "title": "Major Vegetation Group"
-      },
-      {
-        "field": "family",
-        "title": "Vegetation family"
-      },
-      {
-        "field": "pre1750_mha",
-        "type": "quantitative",
-        "title": "Pre-1750 (Mha)",
-        "format": ".1f"
-      },
-      {
-        "field": "extant_mha",
-        "type": "quantitative",
-        "title": "Extant (Mha)",
-        "format": ".1f"
-      },
-      {
-        "field": "absolute_change_mha",
-        "type": "quantitative",
-        "title": "Absolute change (Mha)",
-        "format": ".1f"
-      },
-      {
-        "field": "retention_pct",
-        "type": "quantitative",
-        "title": "Extant / pre-1750 (%)",
-        "format": ".1f"
-      }
-    ]
-  },
-  "params": [
+
+  "scales": [
     {
-      "name": "hover",
-      "select": {
-        "type": "point",
-        "on": "pointerover",
-        "clear": "pointerout",
-        "fields": [
-          "mvg_name"
-        ]
-      }
+      "name": "colour",
+      "type": "ordinal",
+      "domain": [
+        "Rainforest",
+        "Eucalypt forest & woodland",
+        "Acacia",
+        "Other forest & woodland",
+        "Shrubland",
+        "Grassland",
+        "Other native vegetation",
+        "Modified / non-native"
+      ],
+      "range": [
+        "#174C3A",
+        "#4F8A5B",
+        "#8AAE68",
+        "#6F9C86",
+        "#B59B69",
+        "#D2BE7F",
+        "#9BAE9C",
+        "#B9876A"
+      ]
     }
   ],
-  "config": {
-    "font": "DM Sans",
-    "axis": {
-      "labelFont": "DM Sans",
-      "titleFont": "DM Sans",
-      "labelColor": "#29483B",
-      "titleColor": "#29483B",
-      "gridColor": "#E7EAE5",
-      "domain": false
+
+  "marks": [
+    {
+      "type": "path",
+      "from": {
+        "data": "flowLayout"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "signal": "'M'+nodeWidth+','+datum.sy+' C'+width*0.35+','+datum.sy+' '+width*0.65+','+datum.ty+' '+rightX+','+datum.ty"
+          },
+
+          "stroke": {
+            "signal": "datum.to_family === 'Modified / non-native' ? '#B9876A' : scale('colour',datum.from_family)"
+          },
+
+          "strokeWidth": {
+            "field": "flowWidth"
+          },
+
+          "strokeOpacity": {
+            "signal": "datum.to_family === 'Modified / non-native' ? 0.72 : (datum.from_family === datum.to_family ? 0.34 : 0.20)"
+          },
+
+          "fill": {
+            "value": null
+          },
+
+          "tooltip": {
+            "signal": "{'Estimated pre-1750':datum.from_family,'Extant':datum.to_family,'Mapped area':format(datum.area_mha,'.2f')+' Mha'}"
+          }
+        },
+
+        "hover": {
+          "strokeOpacity": {
+            "value": 0.95
+          }
+        }
+      }
     },
-    "legend": {
-      "labelFont": "DM Sans",
-      "titleFont": "DM Sans",
-      "labelColor": "#29483B",
-      "titleColor": "#29483B"
+
+    {
+      "type": "rect",
+      "from": {
+        "data": "leftNodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "value": 0
+          },
+          "x2": {
+            "signal": "nodeWidth"
+          },
+          "y": {
+            "field": "py0"
+          },
+          "y2": {
+            "field": "py1"
+          },
+          "fill": {
+            "scale": "colour",
+            "field": "from_family"
+          },
+          "stroke": {
+            "value": "#F8F6F0"
+          },
+          "strokeWidth": {
+            "value": 1.2
+          },
+          "tooltip": {
+            "signal": "{'Estimated pre-1750 family':datum.from_family,'Mapped area':format(datum.total,'.2f')+' Mha'}"
+          }
+        }
+      }
     },
-    "view": {
-      "stroke": null
+
+    {
+      "type": "rect",
+      "from": {
+        "data": "rightNodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "rightX"
+          },
+          "x2": {
+            "signal": "width"
+          },
+          "y": {
+            "field": "py0"
+          },
+          "y2": {
+            "field": "py1"
+          },
+          "fill": {
+            "scale": "colour",
+            "field": "to_family"
+          },
+          "stroke": {
+            "value": "#F8F6F0"
+          },
+          "strokeWidth": {
+            "value": 1.2
+          },
+          "tooltip": {
+            "signal": "{'Extant family':datum.to_family,'Mapped area':format(datum.total,'.2f')+' Mha'}"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+      "from": {
+        "data": "leftNodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "value": -10
+          },
+          "y": {
+            "signal": "(datum.py0+datum.py1)/2"
+          },
+          "text": {
+            "field": "from_family"
+          },
+          "align": {
+            "value": "right"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "value": "#29483B"
+          },
+          "opacity": {
+            "signal": "datum.nodeHeight >= 22 ? 1 : 0"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+      "from": {
+        "data": "rightNodes"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width+10"
+          },
+          "y": {
+            "signal": "(datum.py0+datum.py1)/2"
+          },
+          "text": {
+            "field": "to_family"
+          },
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fill": {
+            "signal": "datum.to_family === 'Modified / non-native' ? '#9A6046' : '#29483B'"
+          },
+          "opacity": {
+            "signal": "datum.nodeHeight >= 22 ? 1 : 0"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 0
+          },
+          "y": {
+            "value": -18
+          },
+          "text": {
+            "value": "ESTIMATED PRE-1750"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#174C3A"
+          }
+        }
+      }
+    },
+
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width"
+          },
+          "y": {
+            "value": -18
+          },
+          "text": {
+            "value": "EXTANT"
+          },
+          "align": {
+            "value": "right"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#174C3A"
+          }
+        }
+      }
     }
-  }
+  ]
 }

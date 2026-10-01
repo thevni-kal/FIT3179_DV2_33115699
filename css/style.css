@@ -1761,7 +1761,8 @@ footer {
    CHAPTERS 06–11 — NVIS STORY SEQUENCE
 ========================================================= */
 .nvis-chart-wrap,
-.nvis-radial-wrap {
+.nvis-radial-wrap,
+.nvis-flow-wrap {
   min-height: 520px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -1782,15 +1783,17 @@ footer {
 }
 
 .nvis-radial-wrap { min-height: 650px; }
+.nvis-flow-wrap { min-height: 560px; }
 .nvis-section .vis-heading p { max-width: 860px; }
 .nvis-section .interaction-hint { margin-top: 18px; }
 
 @media (max-width: 1050px) {
   .nvis-chart-wrap { min-height: 470px; }
+  .nvis-flow-wrap { min-height: 500px; }
   .nvis-radial-wrap { min-height: 590px; }
 }
 
 @media (max-width: 760px) {
-  .nvis-chart-wrap, .nvis-radial-wrap { min-height: 420px; }
+  .nvis-chart-wrap, .nvis-radial-wrap, .nvis-flow-wrap { min-height: 420px; }
   .change-key { flex-wrap: wrap; gap: 12px 20px; }
 }
