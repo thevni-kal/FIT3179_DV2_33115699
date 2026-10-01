@@ -1,91 +1,57 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Ranked lollipop chart showing estimated pre-1750 area of Australia's major vegetation groups.",
+  "background": null,
+  "width": 760,
+  "height": {
+    "step": 24
+  },
 
   "data": {
-    "url": "data/nvis_mvg_change.csv",
-    "format": {
-      "type": "csv"
-    }
+    "url": "data/nvis_mvg_change.csv"
   },
 
   "transform": [
     {
-      "calculate": "toNumber(datum.mvg)",
-      "as": "mvg_num"
-    },
-    {
-      "calculate": "toNumber(datum.pre1750_mha)",
-      "as": "pre_area"
-    },
-    {
-      "filter": "datum.pre_area > 0 && datum.mvg_num != 24 && datum.mvg_num != 25 && datum.mvg_num != 26 && datum.mvg_num != 27 && datum.mvg_num != 28 && datum.mvg_num != 29 && datum.mvg_num != 99"
-    },
-    {
-      "calculate": "datum.mvg_num == 1 ? 'Rainforests' : datum.mvg_num == 2 ? 'Tall eucalypt forests' : datum.mvg_num == 3 ? 'Eucalypt open forests' : datum.mvg_num == 4 ? 'Low eucalypt forests' : datum.mvg_num == 5 ? 'Eucalypt woodlands' : datum.mvg_num == 6 ? 'Acacia forests' : datum.mvg_num == 7 ? 'Callitris forests' : datum.mvg_num == 8 ? 'Casuarina forests' : datum.mvg_num == 9 ? 'Melaleuca forests' : datum.mvg_num == 10 ? 'Other forests' : datum.mvg_num == 11 ? 'Eucalypt open woodlands' : datum.mvg_num == 12 ? 'Tropical eucalypt woodlands' : datum.mvg_num == 13 ? 'Acacia open woodlands' : datum.mvg_num == 14 ? 'Mallee woodlands' : datum.mvg_num == 15 ? 'Low closed forests' : datum.mvg_num == 16 ? 'Acacia shrublands' : datum.mvg_num == 17 ? 'Other shrublands' : datum.mvg_num == 18 ? 'Heathlands' : datum.mvg_num == 19 ? 'Tussock grasslands' : datum.mvg_num == 20 ? 'Hummock grasslands' : datum.mvg_num == 21 ? 'Other grasslands' : datum.mvg_num == 22 ? 'Chenopod shrublands' : datum.mvg_num == 23 ? 'Mangroves' : datum.mvg_num == 31 ? 'Other open woodlands' : datum.mvg_num == 32 ? 'Sparse mallee' : datum.mvg_name",
-      "as": "short_name"
+      "filter": "datum.pre1750_mha > 0"
     }
   ],
-
-  "width": 780,
-  "height": 650,
-
-  "encoding": {
-    "y": {
-      "field": "short_name",
-      "type": "nominal",
-      "sort": {
-        "field": "pre_area",
-        "order": "descending"
-      },
-      "axis": {
-        "title": null,
-        "labelFont": "DM Sans",
-        "labelFontSize": 12,
-        "labelColor": "#294C3E",
-        "labelLimit": 210,
-        "ticks": false,
-        "domain": false,
-        "labelPadding": 8
-      }
-    },
-
-    "x": {
-      "field": "pre_area",
-      "type": "quantitative",
-      "title": "Estimated pre-1750 mapped area (million hectares)",
-      "scale": {
-        "domain": [0, 145]
-      },
-      "axis": {
-        "titleFont": "DM Sans",
-        "titleFontSize": 13,
-        "titleFontWeight": 600,
-        "titleColor": "#294C3E",
-        "labelFont": "DM Sans",
-        "labelFontSize": 11,
-        "labelColor": "#294C3E",
-        "grid": true,
-        "gridColor": "#E4E7E2",
-        "domain": false,
-        "tickColor": "#AAB7B0"
-      }
-    }
-  },
 
   "layer": [
     {
       "mark": {
         "type": "rule",
-        "strokeWidth": 2,
-        "color": "#CBD3CD"
+        "stroke": "#C7D2CB",
+        "strokeWidth": 2
       },
+
       "encoding": {
-        "x": {
-          "datum": 0
+        "y": {
+          "field": "mvg_name",
+          "type": "nominal",
+          "sort": {
+            "field": "pre1750_mha",
+            "order": "descending"
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 205,
+            "ticks": false
+          }
         },
+
+        "x": {
+          "datum": 0,
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          },
+          "axis": {
+            "title": "Estimated pre-1750 mapped area (million hectares)"
+          }
+        },
+
         "x2": {
-          "field": "pre_area"
+          "field": "pre1750_mha"
         }
       }
     },
@@ -94,17 +60,41 @@
       "mark": {
         "type": "point",
         "filled": true,
-        "size": 180,
-        "stroke": "#FFFFFF",
-        "strokeWidth": 1.5
+        "size": 125,
+        "stroke": "white",
+        "strokeWidth": 1.2
       },
 
       "encoding": {
+        "y": {
+          "field": "mvg_name",
+          "type": "nominal",
+          "sort": {
+            "field": "pre1750_mha",
+            "order": "descending"
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 205,
+            "ticks": false
+          }
+        },
+
+        "x": {
+          "field": "pre1750_mha",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          },
+          "axis": {
+            "title": "Estimated pre-1750 mapped area (million hectares)"
+          }
+        },
+
         "color": {
           "field": "family",
           "type": "nominal",
           "title": "Vegetation family",
-
           "scale": {
             "domain": [
               "Rainforest",
@@ -115,39 +105,23 @@
               "Grassland",
               "Other native vegetation"
             ],
-
             "range": [
-              "#174D2C",
-              "#3E7C4B",
-              "#83A85B",
-              "#5D8F72",
-              "#B89B62",
-              "#D8BE7A",
-              "#9DAF9B"
+              "#174C3A",
+              "#4F8A5B",
+              "#8AAE68",
+              "#6F9C86",
+              "#B59B69",
+              "#D2BE7F",
+              "#9BAE9C"
             ]
-          },
-
-          "legend": {
-            "orient": "bottom",
-            "direction": "horizontal",
-            "columns": 4,
-            "titleFont": "DM Sans",
-            "titleFontSize": 13,
-            "titleColor": "#294C3E",
-            "labelFont": "DM Sans",
-            "labelFontSize": 11,
-            "labelColor": "#294C3E",
-            "symbolType": "circle",
-            "symbolSize": 100,
-            "offset": 15
           }
         },
 
         "tooltip": [
           {
-            "field": "short_name",
+            "field": "mvg_name",
             "type": "nominal",
-            "title": "Vegetation group"
+            "title": "Major Vegetation Group"
           },
           {
             "field": "family",
@@ -155,7 +129,7 @@
             "title": "Vegetation family"
           },
           {
-            "field": "pre_area",
+            "field": "pre1750_mha",
             "type": "quantitative",
             "title": "Pre-1750 area (Mha)",
             "format": ".1f"
@@ -167,7 +141,7 @@
     {
       "transform": [
         {
-          "filter": "datum.pre_area >= 30"
+          "filter": "datum.pre1750_mha >= 30"
         }
       ],
 
@@ -176,15 +150,36 @@
         "align": "left",
         "baseline": "middle",
         "dx": 8,
-        "font": "DM Sans",
         "fontSize": 11,
         "fontWeight": 600,
-        "color": "#294C3E"
+        "color": "#29483B"
       },
 
       "encoding": {
+        "y": {
+          "field": "mvg_name",
+          "type": "nominal",
+          "sort": {
+            "field": "pre1750_mha",
+            "order": "descending"
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 205,
+            "ticks": false
+          }
+        },
+
+        "x": {
+          "field": "pre1750_mha",
+          "type": "quantitative",
+          "scale": {
+            "zero": true
+          }
+        },
+
         "text": {
-          "field": "pre_area",
+          "field": "pre1750_mha",
           "type": "quantitative",
           "format": ".1f"
         }
@@ -192,21 +187,35 @@
     }
   ],
 
-  "config": {
-    "background": null,
+  "resolve": {
+    "scale": {
+      "x": "shared",
+      "y": "shared"
+    }
+  },
 
-    "view": {
-      "stroke": null
-    },
+  "config": {
+    "font": "DM Sans",
 
     "axis": {
       "labelFont": "DM Sans",
-      "titleFont": "DM Sans"
+      "titleFont": "DM Sans",
+      "labelColor": "#29483B",
+      "titleColor": "#29483B",
+      "gridColor": "#E7EAE5",
+      "domain": false
     },
 
     "legend": {
       "labelFont": "DM Sans",
-      "titleFont": "DM Sans"
+      "titleFont": "DM Sans",
+      "labelColor": "#29483B",
+      "titleColor": "#29483B",
+      "orient": "bottom"
+    },
+
+    "view": {
+      "stroke": null
     }
   }
 }

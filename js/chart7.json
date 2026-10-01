@@ -1,159 +1,123 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": 760,
-  "height": 620,
   "background": null,
-
+  "width": 760,
+  "height": {
+    "step": 25
+  },
   "data": {
     "url": "data/nvis_mvg_change.csv"
   },
-
   "transform": [
     {
-      "filter": "datum.pre1750_mha > 0 && indexof([24,25,26,27,28,29,99], datum.mvg) < 0"
-    },
-
-    {
-      "calculate": "datum.mvg == 1 ? 'Rainforests' : datum.mvg == 2 ? 'Tall eucalypt forests' : datum.mvg == 3 ? 'Eucalypt open forests' : datum.mvg == 4 ? 'Low eucalypt forests' : datum.mvg == 5 ? 'Eucalypt woodlands' : datum.mvg == 6 ? 'Acacia forests & woodlands' : datum.mvg == 7 ? 'Callitris forests & woodlands' : datum.mvg == 8 ? 'Casuarina forests & woodlands' : datum.mvg == 9 ? 'Melaleuca forests & woodlands' : datum.mvg == 10 ? 'Other forests & woodlands' : datum.mvg == 11 ? 'Eucalypt open woodlands' : datum.mvg == 12 ? 'Tropical eucalypt woodlands' : datum.mvg == 13 ? 'Acacia open woodlands' : datum.mvg == 14 ? 'Mallee woodlands' : datum.mvg == 15 ? 'Low closed forests / tall shrublands' : datum.mvg == 16 ? 'Acacia shrublands' : datum.mvg == 17 ? 'Other shrublands' : datum.mvg == 18 ? 'Heathlands' : datum.mvg == 19 ? 'Tussock grasslands' : datum.mvg == 20 ? 'Hummock grasslands' : datum.mvg == 21 ? 'Other grasslands & sedgelands' : datum.mvg == 22 ? 'Chenopod & samphire shrublands' : datum.mvg == 23 ? 'Mangroves' : datum.mvg == 31 ? 'Other open woodlands' : datum.mvg == 32 ? 'Sparse mallee' : datum.mvg_name",
-      "as": "short_name"
-    },
-
-    {
       "calculate": "-datum.pre1750_mha",
-      "as": "pre_left"
-    },
-
-    {
-      "calculate": "abs(datum.extant_mha - datum.pre1750_mha)",
-      "as": "abs_change"
-    },
-
-    {
-      "fold": [
-        "pre_left",
-        "extant_mha"
-      ],
-      "as": [
-        "period",
-        "area"
-      ]
-    },
-
-    {
-      "calculate": "datum.period == 'pre_left' ? 'Estimated pre-1750' : 'Extant'",
-      "as": "period_label"
-    },
-
-    {
-      "calculate": "abs(datum.area)",
-      "as": "display_area"
+      "as": "pre_negative"
     }
   ],
-
-  "mark": {
-    "type": "bar",
-    "cornerRadiusEnd": 3
-  },
-
   "encoding": {
     "y": {
-      "field": "short_name",
+      "field": "mvg_name",
       "type": "nominal",
-      "title": null,
-
       "sort": {
-        "field": "abs_change",
+        "field": "pre1750_mha",
         "order": "descending"
       },
-
       "axis": {
-        "labelFont": "DM Sans",
-        "labelFontSize": 11,
-        "labelLimit": 220,
-        "ticks": false,
-        "domain": false
+        "title": null,
+        "labelLimit": 210,
+        "ticks": false
       }
-    },
-
-    "x": {
-      "field": "area",
-      "type": "quantitative",
-      "title": "Mapped area (million hectares)",
-
-      "axis": {
-        "labelFont": "DM Sans",
-        "titleFont": "DM Sans",
-        "grid": true,
-        "gridColor": "#E6E7E2",
-        "domain": false,
-        "labelExpr": "abs(datum.value)"
-      }
-    },
-
-    "color": {
-      "field": "period_label",
-      "type": "nominal",
-      "title": null,
-
-      "scale": {
-        "domain": [
-          "Estimated pre-1750",
-          "Extant"
-        ],
-
-        "range": [
-          "#D6B879",
-          "#2F6651"
-        ]
-      },
-
-      "legend": {
-        "orient": "top",
-        "direction": "horizontal",
-        "labelFont": "DM Sans",
-        "labelFontSize": 12,
-        "symbolType": "square",
-        "symbolSize": 130
-      }
-    },
-
-    "tooltip": [
-      {
-        "field": "short_name",
-        "type": "nominal",
-        "title": "Vegetation group"
-      },
-
-      {
-        "field": "period_label",
-        "type": "nominal",
-        "title": "Period"
-      },
-
-      {
-        "field": "display_area",
-        "type": "quantitative",
-        "title": "Mapped area (Mha)",
-        "format": ".1f"
-      },
-
-      {
-        "field": "change_mha",
-        "type": "quantitative",
-        "title": "Overall difference (Mha)",
-        "format": "+.1f"
-      }
-    ]
+    }
   },
-
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "color": "#D7B873"
+      },
+      "encoding": {
+        "x": {
+          "field": "pre_negative",
+          "type": "quantitative",
+          "title": "Mapped area (million hectares)",
+          "scale": {
+            "domain": [
+              -145,
+              145
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "mvg_name",
+            "title": "Major Vegetation Group"
+          },
+          {
+            "field": "pre1750_mha",
+            "type": "quantitative",
+            "title": "Pre-1750 (Mha)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "color": "#2F6D55"
+      },
+      "encoding": {
+        "x": {
+          "field": "extant_mha",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "mvg_name",
+            "title": "Major Vegetation Group"
+          },
+          {
+            "field": "extant_mha",
+            "type": "quantitative",
+            "title": "Extant (Mha)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#173F30",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "datum": 0
+        }
+      }
+    }
+  ],
   "config": {
+    "font": "DM Sans",
+    "axis": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans",
+      "labelColor": "#29483B",
+      "titleColor": "#29483B",
+      "gridColor": "#E7EAE5",
+      "domain": false
+    },
+    "legend": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans",
+      "labelColor": "#29483B",
+      "titleColor": "#29483B"
+    },
     "view": {
       "stroke": null
-    },
-
-    "axis": {
-      "labelColor": "#294C3E",
-      "titleColor": "#294C3E"
     }
   }
 }

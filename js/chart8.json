@@ -1,142 +1,119 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Pre-1750 versus extant mapped area of major vegetation groups.",
-  "width": 680,
-  "height": 560,
   "background": null,
-
+  "width": 760,
+  "height": 500,
   "data": {
-    "url": "data/nvis_mvg_change.csv",
-    "format": {
-      "type": "csv"
-    }
+    "url": "data/nvis_mvg_change.csv"
   },
-
   "transform": [
     {
-      "filter": "datum.pre1750_mha > 0"
+      "calculate": "datum.retention_pct < 50 ? 'Less than 50%' : datum.retention_pct < 75 ? '50\u201375%' : datum.retention_pct < 100 ? '75\u2013100%' : '100% or more'",
+      "as": "retention_band"
     },
     {
-      "filter": "datum.mvg != 24 && datum.mvg != 25 && datum.mvg != 26 && datum.mvg != 27 && datum.mvg != 28 && datum.mvg != 29 && datum.mvg != 99"
-    },
-    {
-      "calculate": "datum.mvg == 1 ? 'Rainforests' : datum.mvg == 2 ? 'Tall eucalypt forests' : datum.mvg == 3 ? 'Eucalypt open forests' : datum.mvg == 4 ? 'Low eucalypt forests' : datum.mvg == 5 ? 'Eucalypt woodlands' : datum.mvg == 6 ? 'Acacia forests' : datum.mvg == 7 ? 'Callitris forests' : datum.mvg == 8 ? 'Casuarina forests' : datum.mvg == 9 ? 'Melaleuca forests' : datum.mvg == 10 ? 'Other forests' : datum.mvg == 11 ? 'Eucalypt open woodlands' : datum.mvg == 12 ? 'Tropical eucalypt woodlands' : datum.mvg == 13 ? 'Acacia open woodlands' : datum.mvg == 14 ? 'Mallee woodlands' : datum.mvg == 15 ? 'Low closed forests' : datum.mvg == 16 ? 'Acacia shrublands' : datum.mvg == 17 ? 'Other shrublands' : datum.mvg == 18 ? 'Heathlands' : datum.mvg == 19 ? 'Tussock grasslands' : datum.mvg == 20 ? 'Hummock grasslands' : datum.mvg == 21 ? 'Other grasslands' : datum.mvg == 22 ? 'Chenopod shrublands' : datum.mvg == 23 ? 'Mangroves' : datum.mvg == 31 ? 'Other open woodlands' : datum.mvg == 32 ? 'Sparse mallee' : datum.mvg_name",
-      "as": "short_name"
-    },
-    {
-      "calculate": "abs(datum.change_mha)",
-      "as": "absolute_change"
-    },
-    {
-      "calculate": "datum.extant_mha < datum.pre1750_mha ? 'Below historical extent' : 'Above historical extent'",
-      "as": "change_direction"
+      "calculate": "datum.absolute_change_mha < 2 ? 'Under 2 Mha' : datum.absolute_change_mha < 10 ? '2\u201310 Mha' : datum.absolute_change_mha < 25 ? '10\u201325 Mha' : '25+ Mha'",
+      "as": "change_band"
     }
   ],
-
   "layer": [
     {
-      "data": {
-        "values": [
-          {
-            "x": 0,
-            "y": 0,
-            "x2": 150,
-            "y2": 150
-          }
-        ]
-      },
       "mark": {
-        "type": "rule",
-        "strokeDash": [7, 6],
-        "strokeWidth": 2,
-        "color": "#9AA79F",
-        "opacity": 0.8
+        "type": "rect",
+        "cornerRadius": 7,
+        "stroke": "#F6F3EC",
+        "strokeWidth": 4
       },
       "encoding": {
         "x": {
-          "field": "x",
-          "type": "quantitative"
+          "field": "retention_band",
+          "type": "ordinal",
+          "sort": [
+            "Less than 50%",
+            "50\u201375%",
+            "75\u2013100%",
+            "100% or more"
+          ],
+          "axis": {
+            "title": "Historical mapped extent remaining",
+            "labelAngle": 0
+          }
         },
         "y": {
-          "field": "y",
-          "type": "quantitative"
+          "field": "change_band",
+          "type": "ordinal",
+          "sort": [
+            "25+ Mha",
+            "10\u201325 Mha",
+            "2\u201310 Mha",
+            "Under 2 Mha"
+          ],
+          "axis": {
+            "title": "Absolute change in mapped area"
+          }
         },
-        "x2": {
-          "field": "x2"
+        "color": {
+          "aggregate": "count",
+          "type": "quantitative",
+          "title": "Number of groups",
+          "scale": {
+            "range": [
+              "#EDF2ED",
+              "#174C3A"
+            ]
+          }
         },
-        "y2": {
-          "field": "y2"
-        }
+        "tooltip": [
+          {
+            "aggregate": "count",
+            "type": "quantitative",
+            "title": "Vegetation groups"
+          }
+        ]
       }
     },
-
     {
       "mark": {
         "type": "circle",
-        "filled": true,
         "opacity": 0.88,
-        "stroke": "#FFFFFF",
-        "strokeWidth": 1.5
+        "stroke": "white",
+        "strokeWidth": 1.2
       },
-
       "encoding": {
         "x": {
+          "field": "retention_band",
+          "type": "ordinal",
+          "sort": [
+            "Less than 50%",
+            "50\u201375%",
+            "75\u2013100%",
+            "100% or more"
+          ]
+        },
+        "y": {
+          "field": "change_band",
+          "type": "ordinal",
+          "sort": [
+            "25+ Mha",
+            "10\u201325 Mha",
+            "2\u201310 Mha",
+            "Under 2 Mha"
+          ]
+        },
+        "xOffset": {
+          "field": "family"
+        },
+        "size": {
           "field": "pre1750_mha",
           "type": "quantitative",
-          "title": "Estimated pre-1750 area (million hectares)",
+          "title": "Historical area (Mha)",
           "scale": {
-            "domain": [0, 150]
-          },
-          "axis": {
-            "labelFont": "DM Sans",
-            "titleFont": "DM Sans",
-            "labelFontSize": 11,
-            "titleFontSize": 12,
-            "labelColor": "#294C3E",
-            "titleColor": "#294C3E",
-            "grid": true,
-            "gridColor": "#E7E9E5",
-            "domain": false
+            "range": [
+              35,
+              650
+            ]
           }
         },
-
-        "y": {
-          "field": "extant_mha",
-          "type": "quantitative",
-          "title": "Extant area (million hectares)",
-          "scale": {
-            "domain": [0, 150]
-          },
-          "axis": {
-            "labelFont": "DM Sans",
-            "titleFont": "DM Sans",
-            "labelFontSize": 11,
-            "titleFontSize": 12,
-            "labelColor": "#294C3E",
-            "titleColor": "#294C3E",
-            "grid": true,
-            "gridColor": "#E7E9E5",
-            "domain": false
-          }
-        },
-
-        "size": {
-          "field": "absolute_change",
-          "type": "quantitative",
-          "title": "Absolute difference (Mha)",
-          "scale": {
-            "range": [80, 1000]
-          },
-          "legend": {
-            "orient": "bottom",
-            "direction": "horizontal",
-            "titleFont": "DM Sans",
-            "labelFont": "DM Sans",
-            "titleColor": "#294C3E",
-            "labelColor": "#294C3E"
-          }
-        },
-
         "color": {
           "field": "family",
           "type": "nominal",
@@ -152,67 +129,69 @@
               "Other native vegetation"
             ],
             "range": [
-              "#174D2C",
-              "#3E7C4B",
-              "#83A85B",
-              "#5D8F72",
-              "#B89B62",
-              "#D8BE7A",
-              "#9DAF9B"
+              "#174C3A",
+              "#4F8A5B",
+              "#8AAE68",
+              "#6F9C86",
+              "#B59B69",
+              "#D2BE7F",
+              "#9BAE9C"
             ]
-          },
-          "legend": {
-            "orient": "bottom",
-            "direction": "horizontal",
-            "columns": 3,
-            "titleFont": "DM Sans",
-            "labelFont": "DM Sans",
-            "titleColor": "#294C3E",
-            "labelColor": "#294C3E"
           }
         },
-
         "tooltip": [
           {
-            "field": "short_name",
-            "type": "nominal",
-            "title": "Vegetation group"
+            "field": "mvg_name",
+            "title": "Major Vegetation Group"
           },
           {
             "field": "family",
-            "type": "nominal",
             "title": "Vegetation family"
           },
           {
             "field": "pre1750_mha",
             "type": "quantitative",
-            "title": "Pre-1750 area (Mha)",
+            "title": "Pre-1750 (Mha)",
             "format": ".1f"
           },
           {
             "field": "extant_mha",
             "type": "quantitative",
-            "title": "Extant area (Mha)",
+            "title": "Extant (Mha)",
             "format": ".1f"
           },
           {
-            "field": "change_mha",
+            "field": "retention_pct",
             "type": "quantitative",
-            "title": "Difference (Mha)",
-            "format": "+.1f"
+            "title": "Area ratio (%)",
+            "format": ".1f"
           },
           {
-            "field": "change_pct",
+            "field": "absolute_change_mha",
             "type": "quantitative",
-            "title": "Relative difference (%)",
-            "format": "+.1f"
+            "title": "Absolute change (Mha)",
+            "format": ".1f"
           }
         ]
       }
     }
   ],
-
   "config": {
+    "font": "DM Sans",
+    "axis": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans",
+      "labelColor": "#29483B",
+      "titleColor": "#29483B",
+      "gridColor": "#E7EAE5",
+      "domain": false
+    },
+    "legend": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans",
+      "labelColor": "#29483B",
+      "titleColor": "#29483B"
+    },
     "view": {
       "stroke": null
     }

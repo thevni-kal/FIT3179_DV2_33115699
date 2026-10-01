@@ -1,0 +1,175 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": null,
+  "width": 720,
+  "height": 560,
+  "data": {
+    "url": "data/nvis_mvg_change.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.pre1750_mha >= 10"
+    },
+    {
+      "fold": [
+        "pre1750_mha",
+        "extant_mha"
+      ],
+      "as": [
+        "period_key",
+        "area_mha"
+      ]
+    },
+    {
+      "calculate": "datum.period_key == 'pre1750_mha' ? 'Estimated pre-1750' : 'Extant'",
+      "as": "period"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2,
+        "opacity": 0.55
+      },
+      "encoding": {
+        "x": {
+          "field": "period",
+          "type": "ordinal",
+          "sort": [
+            "Estimated pre-1750",
+            "Extant"
+          ],
+          "axis": {
+            "title": null,
+            "labelAngle": 0,
+            "labelFontSize": 12
+          }
+        },
+        "y": {
+          "field": "area_mha",
+          "type": "quantitative",
+          "title": "Mapped area (million hectares)"
+        },
+        "detail": {
+          "field": "mvg_name"
+        },
+        "color": {
+          "field": "family",
+          "type": "nominal",
+          "title": "Vegetation family",
+          "scale": {
+            "domain": [
+              "Rainforest",
+              "Eucalypt forest & woodland",
+              "Acacia",
+              "Other forest & woodland",
+              "Shrubland",
+              "Grassland",
+              "Other native vegetation"
+            ],
+            "range": [
+              "#174C3A",
+              "#4F8A5B",
+              "#8AAE68",
+              "#6F9C86",
+              "#B59B69",
+              "#D2BE7F",
+              "#9BAE9C"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 105,
+        "stroke": "white",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "period",
+          "type": "ordinal",
+          "sort": [
+            "Estimated pre-1750",
+            "Extant"
+          ]
+        },
+        "y": {
+          "field": "area_mha",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "family",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Rainforest",
+              "Eucalypt forest & woodland",
+              "Acacia",
+              "Other forest & woodland",
+              "Shrubland",
+              "Grassland",
+              "Other native vegetation"
+            ],
+            "range": [
+              "#174C3A",
+              "#4F8A5B",
+              "#8AAE68",
+              "#6F9C86",
+              "#B59B69",
+              "#D2BE7F",
+              "#9BAE9C"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "mvg_name",
+            "title": "Major Vegetation Group"
+          },
+          {
+            "field": "period",
+            "title": "Landscape"
+          },
+          {
+            "field": "area_mha",
+            "type": "quantitative",
+            "title": "Mapped area (Mha)",
+            "format": ".1f"
+          },
+          {
+            "field": "change_mha",
+            "type": "quantitative",
+            "title": "Net difference (Mha)",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "font": "DM Sans",
+    "axis": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans",
+      "labelColor": "#29483B",
+      "titleColor": "#29483B",
+      "gridColor": "#E7EAE5",
+      "domain": false
+    },
+    "legend": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans",
+      "labelColor": "#29483B",
+      "titleColor": "#29483B"
+    },
+    "view": {
+      "stroke": null
+    }
+  }
+}

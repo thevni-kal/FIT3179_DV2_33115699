@@ -1755,3 +1755,42 @@ footer {
     min-height: 390px;
   }
 }
+
+
+/* =========================================================
+   CHAPTERS 06–11 — NVIS STORY SEQUENCE
+========================================================= */
+.nvis-chart-wrap,
+.nvis-radial-wrap {
+  min-height: 520px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#vis6, #vis7, #vis8, #vis9, #vis10, #vis11 { width: 100%; }
+
+#vis6 .vega-embed, #vis7 .vega-embed, #vis8 .vega-embed,
+#vis9 .vega-embed, #vis10 .vega-embed, #vis11 .vega-embed {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#vis6 svg, #vis7 svg, #vis8 svg, #vis9 svg, #vis10 svg, #vis11 svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.nvis-radial-wrap { min-height: 650px; }
+.nvis-section .vis-heading p { max-width: 860px; }
+.nvis-section .interaction-hint { margin-top: 18px; }
+
+@media (max-width: 1050px) {
+  .nvis-chart-wrap { min-height: 470px; }
+  .nvis-radial-wrap { min-height: 590px; }
+}
+
+@media (max-width: 760px) {
+  .nvis-chart-wrap, .nvis-radial-wrap { min-height: 420px; }
+  .change-key { flex-wrap: wrap; gap: 12px 20px; }
+}

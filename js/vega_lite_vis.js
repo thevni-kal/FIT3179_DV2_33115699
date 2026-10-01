@@ -1,7 +1,11 @@
+// =====================================================
+// VEGA EMBED OPTIONS
+// =====================================================
 const embedOptions = {
   actions: false,
   renderer: "svg"
 };
+
 
 // =====================================================
 // VISUALISATION 1
@@ -50,7 +54,6 @@ vegaEmbed("#vis5", "js/chart5.json", embedOptions)
 
 // =====================================================
 // VISUALISATION 6
-// PRE-1750 VEGETATION MAP
 // =====================================================
 vegaEmbed("#vis6", "js/chart6.json", embedOptions)
   .catch(error => {
@@ -60,7 +63,6 @@ vegaEmbed("#vis6", "js/chart6.json", embedOptions)
 
 // =====================================================
 // VISUALISATION 7
-// PRE-1750 VS EXTANT VEGETATION
 // =====================================================
 vegaEmbed("#vis7", "js/chart7.json", embedOptions)
   .catch(error => {
@@ -70,9 +72,35 @@ vegaEmbed("#vis7", "js/chart7.json", embedOptions)
 
 // =====================================================
 // VISUALISATION 8
-// VEGETATION GROUP CHANGE
 // =====================================================
 vegaEmbed("#vis8", "js/chart8.json", embedOptions)
   .catch(error => {
     console.error("Chart 8 error:", error);
+  });
+
+
+// =====================================================
+// VISUALISATION 9
+// =====================================================
+vegaEmbed("#vis9", "js/chart9.json", embedOptions)
+  .catch(error => {
+    console.error("Chart 9 error:", error);
+  });
+
+
+// =====================================================
+// VISUALISATION 10
+// =====================================================
+vegaEmbed("#vis10", "js/chart10.json", embedOptions)
+  .catch(error => {
+    console.error("Chart 10 error:", error);
+  });
+
+
+// =====================================================
+// VISUALISATION 11
+// =====================================================
+vegaEmbed("#vis11", "js/chart11.json", embedOptions)
+  .catch(error => {
+    console.error("Chart 11 error:", error);
   });
