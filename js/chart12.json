@@ -1,0 +1,114 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Extant NVIS Major Vegetation Groups shown as broad author-derived vegetation families.",
+  "background": null,
+  "width": 760,
+  "height": 560,
+  "projection": {
+    "type": "mercator",
+    "center": [
+      134,
+      -28
+    ],
+    "scale": 650,
+    "translate": [
+      380,
+      280
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#F2F0E8",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.1
+      }
+    },
+    {
+      "data": {
+        "url": "data/nvis_extant_mvg.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#F8F6F0",
+        "strokeWidth": 0.18,
+        "opacity": 0.96
+      },
+      "encoding": {
+        "color": {
+          "field": "properties.family",
+          "type": "nominal",
+          "title": "Vegetation family",
+          "scale": {
+            "domain": [
+              "Rainforest",
+              "Eucalypt forest & woodland",
+              "Acacia",
+              "Other forest & woodland",
+              "Shrubland",
+              "Grassland",
+              "Other native vegetation",
+              "Modified / non-native"
+            ],
+            "range": [
+              "#174C3A",
+              "#4F8A5B",
+              "#8AAE68",
+              "#6F9C86",
+              "#B59B69",
+              "#D2BE7F",
+              "#9BAE9C",
+              "#B9876A"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "columns": 2,
+            "labelLimit": 210,
+            "titleFont": "DM Sans",
+            "labelFont": "DM Sans"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.family",
+            "type": "nominal",
+            "title": "Broad family"
+          },
+          {
+            "field": "properties.mvg",
+            "type": "quantitative",
+            "title": "NVIS MVG code"
+          },
+          {
+            "field": "properties.mvg_name",
+            "type": "nominal",
+            "title": "Major Vegetation Group"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "font": "DM Sans",
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelColor": "#29483B",
+      "titleColor": "#29483B"
+    }
+  }
+}

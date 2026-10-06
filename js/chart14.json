@@ -1,0 +1,632 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": null,
+  "spacing": 35,
+  "hconcat": [
+    {
+      "width": 680,
+      "height": 430,
+      "layer": [
+        {
+          "data": {
+            "values": [
+              {
+                "state": "Qld",
+                "category": "Native forest",
+                "area_ha": 51750379,
+                "state_total_ha": 51976500,
+                "category_share_pct": 99.565,
+                "x0": 0,
+                "x1": 38.9148,
+                "y0": 0,
+                "y1": 99.565
+              },
+              {
+                "state": "Qld",
+                "category": "Commercial plantation",
+                "area_ha": 213833,
+                "state_total_ha": 51976500,
+                "category_share_pct": 0.411,
+                "x0": 0,
+                "x1": 38.9148,
+                "y0": 99.565,
+                "y1": 99.9764
+              },
+              {
+                "state": "Qld",
+                "category": "Other forest",
+                "area_ha": 12288,
+                "state_total_ha": 51976500,
+                "category_share_pct": 0.024,
+                "x0": 0,
+                "x1": 38.9148,
+                "y0": 99.9764,
+                "y1": 100.0
+              },
+              {
+                "state": "NT",
+                "category": "Native forest",
+                "area_ha": 23280074,
+                "state_total_ha": 23333020,
+                "category_share_pct": 99.773,
+                "x0": 38.9148,
+                "x1": 56.3843,
+                "y0": 0,
+                "y1": 99.7731
+              },
+              {
+                "state": "NT",
+                "category": "Commercial plantation",
+                "area_ha": 46651,
+                "state_total_ha": 23333020,
+                "category_share_pct": 0.2,
+                "x0": 38.9148,
+                "x1": 56.3843,
+                "y0": 99.7731,
+                "y1": 99.973
+              },
+              {
+                "state": "NT",
+                "category": "Other forest",
+                "area_ha": 6295,
+                "state_total_ha": 23333020,
+                "category_share_pct": 0.027,
+                "x0": 38.9148,
+                "x1": 56.3843,
+                "y0": 99.973,
+                "y1": 100.0
+              },
+              {
+                "state": "WA",
+                "category": "Native forest",
+                "area_ha": 20408985,
+                "state_total_ha": 20766164,
+                "category_share_pct": 98.28,
+                "x0": 56.3843,
+                "x1": 71.9319,
+                "y0": 0,
+                "y1": 98.28
+              },
+              {
+                "state": "WA",
+                "category": "Commercial plantation",
+                "area_ha": 316633,
+                "state_total_ha": 20766164,
+                "category_share_pct": 1.525,
+                "x0": 56.3843,
+                "x1": 71.9319,
+                "y0": 98.28,
+                "y1": 99.8047
+              },
+              {
+                "state": "WA",
+                "category": "Other forest",
+                "area_ha": 40546,
+                "state_total_ha": 20766164,
+                "category_share_pct": 0.195,
+                "x0": 56.3843,
+                "x1": 71.9319,
+                "y0": 99.8047,
+                "y1": 100.0
+              },
+              {
+                "state": "NSW",
+                "category": "Native forest",
+                "area_ha": 19882093,
+                "state_total_ha": 20284129,
+                "category_share_pct": 98.018,
+                "x0": 71.9319,
+                "x1": 87.1186,
+                "y0": 0,
+                "y1": 98.018
+              },
+              {
+                "state": "NSW",
+                "category": "Commercial plantation",
+                "area_ha": 367568,
+                "state_total_ha": 20284129,
+                "category_share_pct": 1.812,
+                "x0": 71.9319,
+                "x1": 87.1186,
+                "y0": 98.018,
+                "y1": 99.8301
+              },
+              {
+                "state": "NSW",
+                "category": "Other forest",
+                "area_ha": 34468,
+                "state_total_ha": 20284129,
+                "category_share_pct": 0.17,
+                "x0": 71.9319,
+                "x1": 87.1186,
+                "y0": 99.8301,
+                "y1": 100.0
+              },
+              {
+                "state": "Vic",
+                "category": "Native forest",
+                "area_ha": 7790197,
+                "state_total_ha": 8223669,
+                "category_share_pct": 94.729,
+                "x0": 87.1186,
+                "x1": 93.2757,
+                "y0": 0,
+                "y1": 94.729
+              },
+              {
+                "state": "Vic",
+                "category": "Commercial plantation",
+                "area_ha": 403037,
+                "state_total_ha": 8223669,
+                "category_share_pct": 4.901,
+                "x0": 87.1186,
+                "x1": 93.2757,
+                "y0": 94.729,
+                "y1": 99.6299
+              },
+              {
+                "state": "Vic",
+                "category": "Other forest",
+                "area_ha": 30435,
+                "state_total_ha": 8223669,
+                "category_share_pct": 0.37,
+                "x0": 87.1186,
+                "x1": 93.2757,
+                "y0": 99.6299,
+                "y1": 100.0
+              },
+              {
+                "state": "SA",
+                "category": "Native forest",
+                "area_ha": 4866034,
+                "state_total_ha": 5131291,
+                "category_share_pct": 94.831,
+                "x0": 93.2757,
+                "x1": 97.1175,
+                "y0": 0,
+                "y1": 94.8306
+              },
+              {
+                "state": "SA",
+                "category": "Commercial plantation",
+                "area_ha": 175834,
+                "state_total_ha": 5131291,
+                "category_share_pct": 3.427,
+                "x0": 93.2757,
+                "x1": 97.1175,
+                "y0": 94.8306,
+                "y1": 98.2573
+              },
+              {
+                "state": "SA",
+                "category": "Other forest",
+                "area_ha": 89423,
+                "state_total_ha": 5131291,
+                "category_share_pct": 1.743,
+                "x0": 93.2757,
+                "x1": 97.1175,
+                "y0": 98.2573,
+                "y1": 100.0
+              },
+              {
+                "state": "Tas",
+                "category": "Native forest",
+                "area_ha": 3393314,
+                "state_total_ha": 3707155,
+                "category_share_pct": 91.534,
+                "x0": 97.1175,
+                "x1": 99.893,
+                "y0": 0,
+                "y1": 91.5342
+              },
+              {
+                "state": "Tas",
+                "category": "Commercial plantation",
+                "area_ha": 287776,
+                "state_total_ha": 3707155,
+                "category_share_pct": 7.763,
+                "x0": 97.1175,
+                "x1": 99.893,
+                "y0": 91.5342,
+                "y1": 99.2969
+              },
+              {
+                "state": "Tas",
+                "category": "Other forest",
+                "area_ha": 26065,
+                "state_total_ha": 3707155,
+                "category_share_pct": 0.703,
+                "x0": 97.1175,
+                "x1": 99.893,
+                "y0": 99.2969,
+                "y1": 100.0
+              },
+              {
+                "state": "ACT",
+                "category": "Native forest",
+                "area_ha": 130293,
+                "state_total_ha": 142872,
+                "category_share_pct": 91.196,
+                "x0": 99.893,
+                "x1": 100.0,
+                "y0": 0,
+                "y1": 91.1956
+              },
+              {
+                "state": "ACT",
+                "category": "Commercial plantation",
+                "area_ha": 9521,
+                "state_total_ha": 142872,
+                "category_share_pct": 6.664,
+                "x0": 99.893,
+                "x1": 100.0,
+                "y0": 91.1956,
+                "y1": 97.8596
+              },
+              {
+                "state": "ACT",
+                "category": "Other forest",
+                "area_ha": 3058,
+                "state_total_ha": 142872,
+                "category_share_pct": 2.14,
+                "x0": 99.893,
+                "x1": 100.0,
+                "y0": 97.8596,
+                "y1": 100.0
+              }
+            ]
+          },
+          "mark": {
+            "type": "rect",
+            "stroke": "#FFFFFF",
+            "strokeWidth": 1.2
+          },
+          "encoding": {
+            "x": {
+              "field": "x0",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  100
+                ]
+              },
+              "axis": {
+                "title": "Share of Australia's mapped forest area (%)",
+                "format": ".0f"
+              }
+            },
+            "x2": {
+              "field": "x1"
+            },
+            "y": {
+              "field": "y0",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  100
+                ]
+              },
+              "axis": {
+                "title": "Composition within each state (%)",
+                "format": ".0f"
+              }
+            },
+            "y2": {
+              "field": "y1"
+            },
+            "color": {
+              "field": "category",
+              "type": "nominal",
+              "title": "Forest category",
+              "scale": {
+                "domain": [
+                  "Native forest",
+                  "Commercial plantation",
+                  "Other forest"
+                ],
+                "range": [
+                  "#174D38",
+                  "#8CAC73",
+                  "#D1A45C"
+                ]
+              },
+              "legend": {
+                "orient": "bottom",
+                "direction": "horizontal",
+                "titleFont": "DM Sans",
+                "labelFont": "DM Sans"
+              }
+            },
+            "tooltip": [
+              {
+                "field": "state",
+                "type": "nominal",
+                "title": "State / territory"
+              },
+              {
+                "field": "category",
+                "type": "nominal",
+                "title": "Forest category"
+              },
+              {
+                "field": "area_ha",
+                "type": "quantitative",
+                "title": "Area (ha)",
+                "format": ","
+              },
+              {
+                "field": "category_share_pct",
+                "type": "quantitative",
+                "title": "Share of state forest",
+                "format": ".2f"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "state": "Qld",
+                "x": 19.4574,
+                "y": 50
+              },
+              {
+                "state": "NT",
+                "x": 47.6495,
+                "y": 50
+              },
+              {
+                "state": "WA",
+                "x": 64.1581,
+                "y": 50
+              },
+              {
+                "state": "NSW",
+                "x": 79.5253,
+                "y": 50
+              },
+              {
+                "state": "Vic",
+                "x": 90.1972,
+                "y": 50
+              },
+              {
+                "state": "SA",
+                "x": 95.1966,
+                "y": 50
+              },
+              {
+                "state": "Tas",
+                "x": 98.5053,
+                "y": 50
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "font": "DM Sans",
+            "fontSize": 11,
+            "fontWeight": 700,
+            "color": "#FFFFFF"
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  100
+                ]
+              }
+            },
+            "y": {
+              "field": "y",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  0,
+                  100
+                ]
+              }
+            },
+            "text": {
+              "field": "state"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 260,
+      "height": 430,
+      "data": {
+        "values": [
+          {
+            "state": "Qld",
+            "category": "Commercial plantation",
+            "share_pct": 0.4114032303060036
+          },
+          {
+            "state": "Qld",
+            "category": "Other forest",
+            "share_pct": 0.023641453349109696
+          },
+          {
+            "state": "NT",
+            "category": "Commercial plantation",
+            "share_pct": 0.19993554199156388
+          },
+          {
+            "state": "NT",
+            "category": "Other forest",
+            "share_pct": 0.026978933717109913
+          },
+          {
+            "state": "WA",
+            "category": "Commercial plantation",
+            "share_pct": 1.5247544033650124
+          },
+          {
+            "state": "WA",
+            "category": "Other forest",
+            "share_pct": 0.19525031199792123
+          },
+          {
+            "state": "NSW",
+            "category": "Commercial plantation",
+            "share_pct": 1.8120965410937784
+          },
+          {
+            "state": "NSW",
+            "category": "Other forest",
+            "share_pct": 0.16992595541075486
+          },
+          {
+            "state": "Vic",
+            "category": "Commercial plantation",
+            "share_pct": 4.900938984776746
+          },
+          {
+            "state": "Vic",
+            "category": "Other forest",
+            "share_pct": 0.37009028451899023
+          },
+          {
+            "state": "SA",
+            "category": "Commercial plantation",
+            "share_pct": 3.4267009998068714
+          },
+          {
+            "state": "SA",
+            "category": "Other forest",
+            "share_pct": 1.7426998390853297
+          },
+          {
+            "state": "Tas",
+            "category": "Commercial plantation",
+            "share_pct": 7.762718310941949
+          },
+          {
+            "state": "Tas",
+            "category": "Other forest",
+            "share_pct": 0.7030998164360541
+          },
+          {
+            "state": "ACT",
+            "category": "Commercial plantation",
+            "share_pct": 6.664006943277899
+          },
+          {
+            "state": "ACT",
+            "category": "Other forest",
+            "share_pct": 2.1403774007503222
+          }
+        ]
+      },
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "sort": [
+            "Qld",
+            "NT",
+            "WA",
+            "NSW",
+            "Vic",
+            "SA",
+            "Tas",
+            "ACT"
+          ],
+          "axis": {
+            "title": null,
+            "labelFontWeight": 700
+          }
+        },
+        "x": {
+          "field": "share_pct",
+          "type": "quantitative",
+          "axis": {
+            "title": "Share of state forest (%)",
+            "grid": true
+          }
+        },
+        "yOffset": {
+          "field": "category"
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Commercial plantation",
+              "Other forest"
+            ],
+            "range": [
+              "#8CAC73",
+              "#D1A45C"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": null
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State / territory"
+          },
+          {
+            "field": "category",
+            "title": "Category"
+          },
+          {
+            "field": "share_pct",
+            "type": "quantitative",
+            "title": "Share of state forest (%)",
+            "format": ".2f"
+          }
+        ]
+      },
+      "title": {
+        "text": "Small categories become visible",
+        "subtitle": "Commercial plantation and other forest as a share of each state total",
+        "anchor": "start",
+        "fontSize": 15,
+        "subtitleFontSize": 10,
+        "color": "#173D2E",
+        "subtitleColor": "#65776D"
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "independent"
+    }
+  },
+  "config": {
+    "font": "DM Sans",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#385348",
+      "titleColor": "#29483B",
+      "gridColor": "#E7EBE7",
+      "domain": false,
+      "tickColor": "#AAB7AF"
+    },
+    "legend": {
+      "labelColor": "#29483B",
+      "titleColor": "#29483B"
+    }
+  }
+}

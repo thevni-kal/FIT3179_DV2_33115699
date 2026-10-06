@@ -3,12 +3,10 @@
   "description": "Australian state and territory forest area choropleth with ranked comparison.",
   "background": null,
   "spacing": 24,
-
   "hconcat": [
     {
       "width": 430,
       "height": 390,
-
       "title": {
         "text": "Forest area across Australia",
         "subtitle": "Darker states contain more mapped forest area",
@@ -22,7 +20,6 @@
         "subtitleColor": "#65786F",
         "offset": 14
       },
-
       "data": {
         "url": "data/australia_states.geojson",
         "format": {
@@ -30,13 +27,11 @@
           "property": "features"
         }
       },
-
       "transform": [
         {
           "calculate": "datum.properties.STE_NAME21",
           "as": "state_name"
         },
-
         {
           "lookup": "state_name",
           "from": {
@@ -84,9 +79,7 @@
                 }
               ]
             },
-
             "key": "state_name",
-
             "fields": [
               "forest_mha",
               "national_share"
@@ -94,24 +87,32 @@
           }
         }
       ],
-
       "projection": {
-        "type": "mercator"
+        "type": "mercator",
+        "center": [
+          134,
+          -28
+        ],
+        "scale": 370,
+        "translate": [
+          215,
+          195
+        ]
       },
-
       "mark": {
         "type": "geoshape",
         "stroke": "#FFFFFF",
         "strokeWidth": 1.6
       },
-
       "encoding": {
         "color": {
           "field": "forest_mha",
           "type": "quantitative",
-
           "scale": {
-            "domain": [0, 52],
+            "domain": [
+              0,
+              52
+            ],
             "range": [
               "#E8F0E3",
               "#C8DDBA",
@@ -121,7 +122,6 @@
               "#0B4F36"
             ]
           },
-
           "legend": {
             "title": "Forest area (million ha)",
             "orient": "bottom",
@@ -133,11 +133,17 @@
             "titleFontWeight": 700,
             "labelFont": "DM Sans",
             "labelFontSize": 9,
-            "values": [0, 10, 20, 30, 40, 50],
+            "values": [
+              0,
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
             "format": ".0f"
           }
         },
-
         "tooltip": [
           {
             "field": "state_name",
@@ -159,11 +165,9 @@
         ]
       }
     },
-
     {
       "width": 205,
       "height": 390,
-
       "title": {
         "text": "State ranking",
         "subtitle": "Mapped forest area",
@@ -177,7 +181,6 @@
         "subtitleColor": "#65786F",
         "offset": 14
       },
-
       "data": {
         "values": [
           {
@@ -230,7 +233,6 @@
           }
         ]
       },
-
       "layer": [
         {
           "mark": {
@@ -238,12 +240,10 @@
             "cornerRadiusEnd": 4,
             "color": "#86AD77"
           },
-
           "encoding": {
             "y": {
               "field": "state",
               "type": "nominal",
-
               "sort": [
                 "QLD",
                 "NT",
@@ -254,7 +254,6 @@
                 "TAS",
                 "ACT"
               ],
-
               "axis": {
                 "title": null,
                 "domain": false,
@@ -266,15 +265,15 @@
                 "labelPadding": 7
               }
             },
-
             "x": {
               "field": "forest_mha",
               "type": "quantitative",
-
               "scale": {
-                "domain": [0, 58]
+                "domain": [
+                  0,
+                  58
+                ]
               },
-
               "axis": {
                 "title": "Million hectares",
                 "titleFont": "DM Sans",
@@ -285,7 +284,14 @@
                 "labelFont": "DM Sans",
                 "labelFontSize": 9,
                 "labelColor": "#718078",
-                "values": [0, 10, 20, 30, 40, 50],
+                "values": [
+                  0,
+                  10,
+                  20,
+                  30,
+                  40,
+                  50
+                ],
                 "grid": true,
                 "gridColor": "#EBECE7",
                 "gridWidth": 1,
@@ -293,7 +299,6 @@
                 "ticks": false
               }
             },
-
             "tooltip": [
               {
                 "field": "state_name",
@@ -315,7 +320,6 @@
             ]
           }
         },
-
         {
           "mark": {
             "type": "text",
@@ -327,12 +331,10 @@
             "fontWeight": 700,
             "color": "#103D2E"
           },
-
           "encoding": {
             "y": {
               "field": "state",
               "type": "nominal",
-
               "sort": [
                 "QLD",
                 "NT",
@@ -344,16 +346,16 @@
                 "ACT"
               ]
             },
-
             "x": {
               "field": "forest_mha",
               "type": "quantitative",
-
               "scale": {
-                "domain": [0, 58]
+                "domain": [
+                  0,
+                  58
+                ]
               }
             },
-
             "text": {
               "field": "forest_mha",
               "type": "quantitative",
@@ -364,25 +366,20 @@
       ]
     }
   ],
-
   "resolve": {
     "scale": {
       "color": "independent"
     }
   },
-
   "config": {
     "font": "DM Sans",
-
     "view": {
       "stroke": null
     },
-
     "axis": {
       "labelFont": "DM Sans",
       "titleFont": "DM Sans"
     },
-
     "legend": {
       "labelFont": "DM Sans",
       "titleFont": "DM Sans"
