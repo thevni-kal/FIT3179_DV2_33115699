@@ -1,0 +1,25 @@
+state,category,area_ha,share_pct
+Qld,Native forest,51750379,99.565
+Qld,Commercial plantation,213833,0.411
+Qld,Other forest,12288,0.024
+NT,Native forest,23280074,99.773
+NT,Commercial plantation,46651,0.2
+NT,Other forest,6295,0.027
+WA,Native forest,20408985,98.28
+WA,Commercial plantation,316633,1.525
+WA,Other forest,40546,0.195
+NSW,Native forest,19882093,98.018
+NSW,Commercial plantation,367568,1.812
+NSW,Other forest,34468,0.17
+Vic,Native forest,7790197,94.729
+Vic,Commercial plantation,403037,4.901
+Vic,Other forest,30435,0.37
+SA,Native forest,4866034,94.831
+SA,Commercial plantation,175834,3.427
+SA,Other forest,89423,1.743
+Tas,Native forest,3393314,91.534
+Tas,Commercial plantation,287776,7.763
+Tas,Other forest,26065,0.703
+ACT,Native forest,130293,91.196
+ACT,Commercial plantation,9521,6.664
+ACT,Other forest,3058,2.14

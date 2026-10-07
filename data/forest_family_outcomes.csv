@@ -1,0 +1,13 @@
+from_family,outcome,area_mha,share_pct
+Rainforest,Same broad family,3.089286,61.396917877846754
+Rainforest,Other native family,0.5740000000000001,11.407759223938488
+Rainforest,Modified / non-native,1.368377,27.195322898214762
+Eucalypt forest & woodland,Same broad family,159.720495,68.16243383688466
+Eucalypt forest & woodland,Other native family,14.388853000000019,6.140597301562087
+Eucalypt forest & woodland,Modified / non-native,60.213997,25.696968861553252
+Acacia,Same broad family,141.067411,81.33363397406814
+Acacia,Other native family,16.502894999999995,9.514886620003812
+Acacia,Modified / non-native,15.872591,9.15147940592805
+Other forest & woodland,Same broad family,27.742786,70.51274827100356
+Other forest & woodland,Other native family,6.825300000000001,17.347596624725455
+Other forest & woodland,Modified / non-native,4.776269,12.139655104270995

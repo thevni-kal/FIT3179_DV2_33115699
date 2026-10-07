@@ -1,29 +1,195 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "background": null,
-  "width": 720,
-  "height": 500,
-  "data": {"url": "data/nvis_mvg_change.csv"},
+  "width": 820,
+  "height": 540,
+  "data": {
+    "url": "data/nvis_mvg_change.csv"
+  },
   "transform": [
-    {"filter": "datum.pre1750_mha > 0 && datum.mvg != 24 && datum.mvg != 25 && datum.mvg != 26 && datum.mvg != 27 && datum.mvg != 28 && datum.mvg != 29 && datum.mvg != 99"}
+    {
+      "filter": "datum.pre1750_mha > 0 && datum.mvg != 24 && datum.mvg != 25 && datum.mvg != 26 && datum.mvg != 27 && datum.mvg != 28 && datum.mvg != 29 && datum.mvg != 99"
+    }
   ],
   "layer": [
-    {"mark": {"type": "rule", "stroke": "#AEBBB4", "strokeDash": [6,5], "strokeWidth": 1.5}, "encoding": {"x": {"datum": 100}}},
-    {"mark": {"type": "point", "filled": true, "opacity": 0.88, "stroke": "#FFFFFF", "strokeWidth": 1.2},
-     "encoding": {
-       "x": {"field": "retention_pct", "type": "quantitative", "title": "Extant area as % of estimated pre-1750 area", "scale": {"domain": [0,200]}, "axis": {"values": [0,50,100,150,200], "labelExpr": "datum.value + '%'"}},
-       "y": {"field": "absolute_change_mha", "type": "quantitative", "title": "Absolute difference in mapped area (Mha)", "scale": {"zero": true}},
-       "size": {"field": "pre1750_mha", "type": "quantitative", "title": "Historical area (Mha)", "scale": {"range": [45,950]}},
-       "color": {"field": "family", "type": "nominal", "title": "Vegetation family", "scale": {"domain": ["Rainforest","Eucalypt forest & woodland","Acacia","Other forest & woodland","Shrubland","Grassland","Other native vegetation"], "range": ["#174C3A","#4F8A5B","#8AAE68","#6F9C86","#B59B69","#D2BE7F","#9BAE9C"]}},
-       "tooltip": [
-         {"field":"mvg_name","title":"Major Vegetation Group"},
-         {"field":"family","title":"Vegetation family"},
-         {"field":"pre1750_mha","type":"quantitative","title":"Pre-1750 area (Mha)","format":".1f"},
-         {"field":"extant_mha","type":"quantitative","title":"Extant area (Mha)","format":".1f"},
-         {"field":"absolute_change_mha","type":"quantitative","title":"Absolute difference (Mha)","format":".1f"},
-         {"field":"retention_pct","type":"quantitative","title":"Extant / historical area","format":".1f"}
-       ]
-     }}
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#AEBBB4",
+        "strokeDash": [
+          6,
+          5
+        ],
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "datum": 100
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "opacity": 0.88,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "x": {
+          "field": "retention_pct",
+          "type": "quantitative",
+          "title": "Extant area as % of estimated pre-1750 area",
+          "scale": {
+            "domain": [
+              0,
+              200
+            ]
+          },
+          "axis": {
+            "values": [
+              0,
+              50,
+              100,
+              150,
+              200
+            ],
+            "labelExpr": "datum.value + '%'"
+          }
+        },
+        "y": {
+          "field": "absolute_change_mha",
+          "type": "quantitative",
+          "title": "Absolute difference in mapped area (Mha)",
+          "scale": {
+            "zero": true
+          }
+        },
+        "size": {
+          "field": "pre1750_mha",
+          "type": "quantitative",
+          "title": "Historical area (Mha)",
+          "scale": {
+            "range": [
+              45,
+              950
+            ]
+          }
+        },
+        "color": {
+          "field": "family",
+          "type": "nominal",
+          "title": "Vegetation family",
+          "scale": {
+            "domain": [
+              "Rainforest",
+              "Eucalypt forest & woodland",
+              "Acacia",
+              "Other forest & woodland",
+              "Shrubland",
+              "Grassland",
+              "Other native vegetation"
+            ],
+            "range": [
+              "#174C3A",
+              "#4F8A5B",
+              "#8AAE68",
+              "#6F9C86",
+              "#B59B69",
+              "#D2BE7F",
+              "#9BAE9C"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "mvg_name",
+            "title": "Major Vegetation Group"
+          },
+          {
+            "field": "family",
+            "title": "Vegetation family"
+          },
+          {
+            "field": "pre1750_mha",
+            "type": "quantitative",
+            "title": "Pre-1750 area (Mha)",
+            "format": ".1f"
+          },
+          {
+            "field": "extant_mha",
+            "type": "quantitative",
+            "title": "Extant area (Mha)",
+            "format": ".1f"
+          },
+          {
+            "field": "absolute_change_mha",
+            "type": "quantitative",
+            "title": "Absolute difference (Mha)",
+            "format": ".1f"
+          },
+          {
+            "field": "retention_pct",
+            "type": "quantitative",
+            "title": "Extant / historical area",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.absolute_change_mha >= 8"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 11,
+        "fontWeight": 700,
+        "dx": 10,
+        "dy": -9,
+        "align": "left",
+        "color": "#173D2E"
+      },
+      "encoding": {
+        "x": {
+          "field": "retention_pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              200
+            ]
+          }
+        },
+        "y": {
+          "field": "absolute_change_mha",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "mvg_name"
+        }
+      }
+    }
   ],
-  "config": {"font":"DM Sans","axis":{"labelColor":"#29483B","titleColor":"#29483B","gridColor":"#E7EAE5","domain":false},"legend":{"labelColor":"#29483B","titleColor":"#29483B","orient":"bottom"},"view":{"stroke":null}}
+  "config": {
+    "font": "DM Sans",
+    "axis": {
+      "labelColor": "#29483B",
+      "titleColor": "#29483B",
+      "gridColor": "#E7EAE5",
+      "domain": false
+    },
+    "legend": {
+      "labelColor": "#29483B",
+      "titleColor": "#29483B",
+      "orient": "bottom"
+    },
+    "view": {
+      "stroke": null
+    }
+  }
 }

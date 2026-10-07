@@ -1,18 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Proportional-symbol map of commercial plantation forest area by state and territory.",
   "background": null,
-  "width": 760,
-  "height": 560,
+  "width": 900,
+  "height": 610,
   "projection": {
     "type": "mercator",
     "center": [
-      134,
+      134.5,
       -28
     ],
-    "scale": 650,
+    "scale": 860,
     "translate": [
-      380,
-      280
+      450,
+      300
     ]
   },
   "layer": [
@@ -26,86 +27,29 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#EEF1EC",
-        "stroke": "#FFFFFF",
-        "strokeWidth": 1.5
+        "fill": "#F1F2EC",
+        "stroke": "#1F2F28",
+        "strokeWidth": 1.2
       }
     },
     {
       "data": {
-        "values": [
-          {
-            "state": "WA",
-            "longitude": 122.5,
-            "latitude": -25.5,
-            "plantation_ha": 316633,
-            "plantation_mha": 0.317,
-            "share_pct": 1.52
-          },
-          {
-            "state": "NT",
-            "longitude": 133.2,
-            "latitude": -19.2,
-            "plantation_ha": 46651,
-            "plantation_mha": 0.047,
-            "share_pct": 0.2
-          },
-          {
-            "state": "SA",
-            "longitude": 135.8,
-            "latitude": -30.2,
-            "plantation_ha": 175834,
-            "plantation_mha": 0.176,
-            "share_pct": 3.43
-          },
-          {
-            "state": "Qld",
-            "longitude": 145.2,
-            "latitude": -22.5,
-            "plantation_ha": 213833,
-            "plantation_mha": 0.214,
-            "share_pct": 0.41
-          },
-          {
-            "state": "NSW",
-            "longitude": 147.0,
-            "latitude": -32.6,
-            "plantation_ha": 367568,
-            "plantation_mha": 0.368,
-            "share_pct": 1.81
-          },
-          {
-            "state": "Vic",
-            "longitude": 144.5,
-            "latitude": -37.1,
-            "plantation_ha": 403037,
-            "plantation_mha": 0.403,
-            "share_pct": 4.9
-          },
-          {
-            "state": "Tas",
-            "longitude": 146.7,
-            "latitude": -42.0,
-            "plantation_ha": 287776,
-            "plantation_mha": 0.288,
-            "share_pct": 7.76
-          },
-          {
-            "state": "ACT",
-            "longitude": 149.1,
-            "latitude": -35.3,
-            "plantation_ha": 9521,
-            "plantation_mha": 0.01,
-            "share_pct": 6.66
+        "url": "data/plantation_state_display.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "longitude": "number",
+            "latitude": "number",
+            "plantation_ha": "number"
           }
-        ]
+        }
       },
       "mark": {
         "type": "circle",
-        "color": "#174D38",
-        "opacity": 0.76,
-        "stroke": "#FFFFFF",
-        "strokeWidth": 1.5
+        "color": "#2E6A52",
+        "opacity": 0.72,
+        "stroke": "#173D2E",
+        "strokeWidth": 1
       },
       "encoding": {
         "longitude": {
@@ -119,127 +63,95 @@
         "size": {
           "field": "plantation_ha",
           "type": "quantitative",
-          "title": "Plantation area (ha)",
+          "title": "Commercial plantation area (ha)",
           "scale": {
             "range": [
-              80,
-              3400
+              70,
+              2200
             ]
           },
           "legend": {
             "orient": "bottom",
             "direction": "horizontal",
-            "title": "Commercial plantation area",
-            "format": "~s",
-            "titleFont": "DM Sans",
-            "labelFont": "DM Sans"
+            "values": [
+              50000,
+              200000,
+              400000
+            ],
+            "format": ".2s"
           }
         },
         "tooltip": [
           {
-            "field": "state",
-            "type": "nominal",
+            "field": "state_name",
             "title": "State / territory"
           },
           {
             "field": "plantation_ha",
             "type": "quantitative",
-            "title": "Plantation area (ha)",
+            "title": "Commercial plantation (ha)",
             "format": ","
-          },
-          {
-            "field": "share_pct",
-            "type": "quantitative",
-            "title": "Share of state forest",
-            "format": ".2f"
           }
         ]
       }
     },
     {
       "data": {
-        "values": [
-          {
-            "state": "WA",
-            "longitude": 122.5,
-            "latitude": -25.5,
-            "plantation_ha": 316633,
-            "plantation_mha": 0.317,
-            "share_pct": 1.52
-          },
-          {
-            "state": "NT",
-            "longitude": 133.2,
-            "latitude": -19.2,
-            "plantation_ha": 46651,
-            "plantation_mha": 0.047,
-            "share_pct": 0.2
-          },
-          {
-            "state": "SA",
-            "longitude": 135.8,
-            "latitude": -30.2,
-            "plantation_ha": 175834,
-            "plantation_mha": 0.176,
-            "share_pct": 3.43
-          },
-          {
-            "state": "Qld",
-            "longitude": 145.2,
-            "latitude": -22.5,
-            "plantation_ha": 213833,
-            "plantation_mha": 0.214,
-            "share_pct": 0.41
-          },
-          {
-            "state": "NSW",
-            "longitude": 147.0,
-            "latitude": -32.6,
-            "plantation_ha": 367568,
-            "plantation_mha": 0.368,
-            "share_pct": 1.81
-          },
-          {
-            "state": "Vic",
-            "longitude": 144.5,
-            "latitude": -37.1,
-            "plantation_ha": 403037,
-            "plantation_mha": 0.403,
-            "share_pct": 4.9
-          },
-          {
-            "state": "Tas",
-            "longitude": 146.7,
-            "latitude": -42.0,
-            "plantation_ha": 287776,
-            "plantation_mha": 0.288,
-            "share_pct": 7.76
-          },
-          {
-            "state": "ACT",
-            "longitude": 149.1,
-            "latitude": -35.3,
-            "plantation_ha": 9521,
-            "plantation_mha": 0.01,
-            "share_pct": 6.66
+        "url": "data/plantation_state_display.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "label_longitude": "number",
+            "label_latitude": "number"
           }
-        ]
+        }
       },
       "mark": {
         "type": "text",
-        "dy": -18,
-        "font": "DM Sans",
-        "fontSize": 10,
-        "fontWeight": 700,
-        "color": "#29483B"
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#173D2E",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 3
       },
       "encoding": {
         "longitude": {
-          "field": "longitude",
+          "field": "label_longitude",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "latitude",
+          "field": "label_latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "state"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/plantation_state_display.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "label_longitude": "number",
+            "label_latitude": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#173D2E"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "label_longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_latitude",
           "type": "quantitative"
         },
         "text": {
@@ -249,13 +161,14 @@
     }
   ],
   "config": {
-    "font": "DM Sans",
     "view": {
       "stroke": null
     },
     "legend": {
-      "labelColor": "#29483B",
-      "titleColor": "#29483B"
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans",
+      "labelColor": "#334B40",
+      "titleColor": "#173D2E"
     }
   }
 }

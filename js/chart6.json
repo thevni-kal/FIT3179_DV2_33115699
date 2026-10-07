@@ -1,19 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Dot-density map of current mapped forest area by Australian state and territory. Each dot represents approximately 0.5 million hectares; positions are illustrative within each jurisdiction rather than exact forest locations.",
+  "description": "Dot-density map of Australian mapped forest area by dominant forest type. One dot is approximately 0.5 million hectares; positions are illustrative within each jurisdiction.",
   "background": null,
-  "width": 760,
-  "height": 560,
+  "width": 900,
+  "height": 610,
   "projection": {
     "type": "mercator",
     "center": [
-      134,
+      134.5,
       -28
     ],
-    "scale": 650,
+    "scale": 860,
     "translate": [
-      380,
-      280
+      450,
+      300
     ]
   },
   "layer": [
@@ -28,22 +28,13 @@
       "mark": {
         "type": "geoshape",
         "fill": "#F1F2EC",
-        "stroke": "#FFFFFF",
-        "strokeWidth": 1.4
-      },
-      "encoding": {
-        "tooltip": [
-          {
-            "field": "properties.STE_NAME21",
-            "type": "nominal",
-            "title": "State / territory"
-          }
-        ]
+        "stroke": "#1F2F28",
+        "strokeWidth": 1.15
       }
     },
     {
       "data": {
-        "url": "data/forest_dot_density.csv",
+        "url": "data/forest_type_dot_density.csv",
         "format": {
           "type": "csv",
           "parse": {
@@ -55,11 +46,10 @@
       },
       "mark": {
         "type": "circle",
-        "size": 42,
-        "opacity": 0.72,
-        "color": "#2F7457",
+        "size": 58,
+        "opacity": 0.86,
         "stroke": "#FFFFFF",
-        "strokeWidth": 0.35
+        "strokeWidth": 0.45
       },
       "encoding": {
         "longitude": {
@@ -70,16 +60,47 @@
           "field": "latitude",
           "type": "quantitative"
         },
+        "color": {
+          "field": "forest_type",
+          "type": "nominal",
+          "title": "Forest type represented by each dot",
+          "scale": {
+            "domain": [
+              "Eucalypt Medium Woodland",
+              "Eucalypt Medium Open",
+              "Acacia",
+              "Eucalypt Mallee Woodland",
+              "Eucalypt Low Woodland",
+              "Other forest types"
+            ],
+            "range": [
+              "#174C3A",
+              "#4F8A5B",
+              "#7EA26B",
+              "#A5B77B",
+              "#C5A85C",
+              "#9BAE9C"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "columns": 3,
+            "labelLimit": 220,
+            "symbolSize": 90
+          }
+        },
         "tooltip": [
           {
             "field": "state",
-            "type": "nominal",
             "title": "State / territory"
           },
           {
+            "field": "forest_type",
+            "title": "Forest type"
+          },
+          {
             "field": "dot_mha",
-            "type": "quantitative",
-            "title": "Area represented (Mha)",
+            "title": "Approx. area represented (Mha)",
             "format": ".1f"
           }
         ]
@@ -87,9 +108,16 @@
     }
   ],
   "config": {
-    "font": "DM Sans",
     "view": {
       "stroke": null
+    },
+    "legend": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans"
+    },
+    "axis": {
+      "labelFont": "DM Sans",
+      "titleFont": "DM Sans"
     }
   }
 }
