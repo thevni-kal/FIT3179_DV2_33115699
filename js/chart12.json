@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Row-normalised spatial transition matrix. Each row sums to 100% of a historical broad vegetation family.",
   "background": null,
-  "width": 800,
-  "height": 520,
+  "width": 620,
+  "height": 390,
   "data": {
     "url": "data/nvis_family_transitions.csv",
     "format": {
@@ -59,8 +59,10 @@
           "title": "Extant vegetation family",
           "axis": {
             "labelAngle": -30,
-            "labelLimit": 170,
-            "labelPadding": 8
+            "labelLimit": 185,
+            "labelPadding": 8,
+            "labelFontSize": 13,
+            "titleFontSize": 15
           }
         },
         "y": {
@@ -77,8 +79,10 @@
           ],
           "title": "Estimated pre-1750 vegetation family",
           "axis": {
-            "labelLimit": 210,
-            "labelPadding": 8
+            "labelLimit": 185,
+            "labelPadding": 8,
+            "labelFontSize": 13,
+            "titleFontSize": 15
           }
         },
         "color": {
@@ -91,14 +95,18 @@
               100
             ],
             "range": [
-              "#F3F1E9",
-              "#B8CBAF",
-              "#5E9470",
-              "#174C3A"
+              "#fff5e6",
+              "#e6b36a",
+              "#b65b54",
+              "#603d85"
             ]
           },
           "legend": {
-            "gradientLength": 180
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 260,
+            "titleFontSize": 15,
+            "labelFontSize": 14
           }
         },
         "tooltip": [

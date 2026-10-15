@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "background": null,
-  "width": 820,
-  "height": 540,
+  "width": 750,
+  "height": 470,
   "data": {
     "url": "data/nvis_mvg_change.csv"
   },
@@ -75,7 +75,8 @@
               45,
               950
             ]
-          }
+          },
+          "legend": null
         },
         "color": {
           "field": "family",
@@ -92,15 +93,16 @@
               "Other native vegetation"
             ],
             "range": [
-              "#174C3A",
-              "#4F8A5B",
-              "#8AAE68",
-              "#6F9C86",
-              "#B59B69",
-              "#D2BE7F",
-              "#9BAE9C"
+              "#185B86",
+              "#E07848",
+              "#45A19A",
+              "#8055A6",
+              "#BE7A33",
+              "#C6A43C",
+              "#76859D"
             ]
-          }
+          },
+          "legend": null
         },
         "tooltip": [
           {
@@ -181,7 +183,9 @@
       "labelColor": "#29483B",
       "titleColor": "#29483B",
       "gridColor": "#E7EAE5",
-      "domain": false
+      "domain": false,
+      "labelFontSize": 14,
+      "titleFontSize": 16
     },
     "legend": {
       "labelColor": "#29483B",
@@ -190,6 +194,12 @@
     },
     "view": {
       "stroke": null
+    }
+  },
+  "resolve": {
+    "legend": {
+      "color": "independent",
+      "size": "independent"
     }
   }
 }

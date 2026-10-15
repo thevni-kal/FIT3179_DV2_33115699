@@ -2,18 +2,18 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Dot-density map of Australian mapped forest area by dominant forest type. One dot is approximately 0.5 million hectares; positions are illustrative within each jurisdiction.",
   "background": null,
-  "width": 900,
-  "height": 610,
+  "width": 760,
+  "height": 530,
   "projection": {
     "type": "mercator",
     "center": [
       134.5,
       -28
     ],
-    "scale": 860,
+    "scale": 690,
     "translate": [
-      450,
-      300
+      380,
+      255
     ]
   },
   "layer": [
@@ -46,7 +46,7 @@
       },
       "mark": {
         "type": "circle",
-        "size": 58,
+        "size": 95,
         "opacity": 0.86,
         "stroke": "#FFFFFF",
         "strokeWidth": 0.45
@@ -74,20 +74,15 @@
               "Other forest types"
             ],
             "range": [
-              "#174C3A",
-              "#4F8A5B",
-              "#7EA26B",
-              "#A5B77B",
-              "#C5A85C",
-              "#9BAE9C"
+              "#176B99",
+              "#D24F42",
+              "#E1A22D",
+              "#7452A3",
+              "#26947B",
+              "#9B5AA5"
             ]
           },
-          "legend": {
-            "orient": "bottom",
-            "columns": 3,
-            "labelLimit": 220,
-            "symbolSize": 90
-          }
+          "legend": null
         },
         "tooltip": [
           {
@@ -113,7 +108,10 @@
     },
     "legend": {
       "labelFont": "DM Sans",
-      "titleFont": "DM Sans"
+      "titleFont": "DM Sans",
+      "labelFontSize": 16,
+      "titleFontSize": 17,
+      "symbolSize": 160
     },
     "axis": {
       "labelFont": "DM Sans",

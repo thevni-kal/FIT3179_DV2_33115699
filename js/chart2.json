@@ -2,21 +2,21 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Australian state and territory forest area choropleth with ranked comparison.",
   "background": null,
-  "spacing": 24,
+  "spacing": 10,
   "hconcat": [
     {
-      "width": 430,
-      "height": 390,
+      "width": 560,
+      "height": 485,
       "title": {
         "text": "Forest area across Australia",
         "subtitle": "Darker states contain more mapped forest area",
         "anchor": "start",
         "font": "DM Sans",
-        "fontSize": 18,
+        "fontSize": 19,
         "fontWeight": 700,
         "color": "#103D2E",
         "subtitleFont": "DM Sans",
-        "subtitleFontSize": 11,
+        "subtitleFontSize": 13,
         "subtitleColor": "#65786F",
         "offset": 14
       },
@@ -90,13 +90,13 @@
       "projection": {
         "type": "mercator",
         "center": [
-          134,
-          -28
+          134.5,
+          -28.5
         ],
-        "scale": 370,
+        "scale": 510,
         "translate": [
-          215,
-          195
+          280,
+          245
         ]
       },
       "mark": {
@@ -114,12 +114,12 @@
               52
             ],
             "range": [
-              "#E8F0E3",
-              "#C8DDBA",
-              "#9BC486",
-              "#6AA55C",
-              "#397B49",
-              "#0B4F36"
+              "#f1e4cf",
+              "#e6bd7b",
+              "#d99052",
+              "#b75e50",
+              "#7c3763",
+              "#3e2458"
             ]
           },
           "legend": {
@@ -167,17 +167,17 @@
     },
     {
       "width": 205,
-      "height": 390,
+      "height": 485,
       "title": {
         "text": "State ranking",
         "subtitle": "Mapped forest area",
         "anchor": "start",
         "font": "DM Sans",
-        "fontSize": 18,
+        "fontSize": 19,
         "fontWeight": 700,
         "color": "#103D2E",
         "subtitleFont": "DM Sans",
-        "subtitleFontSize": 11,
+        "subtitleFontSize": 13,
         "subtitleColor": "#65786F",
         "offset": 14
       },
@@ -378,11 +378,15 @@
     },
     "axis": {
       "labelFont": "DM Sans",
-      "titleFont": "DM Sans"
+      "titleFont": "DM Sans",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     },
     "legend": {
       "labelFont": "DM Sans",
-      "titleFont": "DM Sans"
+      "titleFont": "DM Sans",
+      "labelFontSize": 15,
+      "titleFontSize": 16
     }
   }
 }

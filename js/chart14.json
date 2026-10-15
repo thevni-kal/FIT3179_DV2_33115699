@@ -1,48 +1,78 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Ranked bar chart showing the share of each historical vegetation family that remains in the same broad family in the extant NVIS classification.",
-  "background": null,
-  "width": 760,
-  "height": 430,
+  "description": "Connected dot comparison of same-family continuity versus modified/non-native share",
+  "width": 670,
+  "height": 350,
   "data": {
-    "url": "data/forest_family_outcomes_ternary.csv",
-    "format": {
-      "type": "csv",
-      "parse": {
-        "same_pct": "number",
-        "matched_mha": "number",
-        "modified_pct": "number",
-        "other_native_pct": "number"
+    "values": [
+      {
+        "family": "Rainforest",
+        "outcome": "Same broad family",
+        "share_pct": 61.4
+      },
+      {
+        "family": "Rainforest",
+        "outcome": "Modified / non-native",
+        "share_pct": 27.2
+      },
+      {
+        "family": "Eucalypt forest & woodland",
+        "outcome": "Same broad family",
+        "share_pct": 68.16
+      },
+      {
+        "family": "Eucalypt forest & woodland",
+        "outcome": "Modified / non-native",
+        "share_pct": 25.7
+      },
+      {
+        "family": "Acacia",
+        "outcome": "Same broad family",
+        "share_pct": 81.33
+      },
+      {
+        "family": "Acacia",
+        "outcome": "Modified / non-native",
+        "share_pct": 9.15
+      },
+      {
+        "family": "Other forest & woodland",
+        "outcome": "Same broad family",
+        "share_pct": 70.51
+      },
+      {
+        "family": "Other forest & woodland",
+        "outcome": "Modified / non-native",
+        "share_pct": 12.14
       }
-    }
+    ]
   },
   "layer": [
     {
       "mark": {
-        "type": "bar",
-        "cornerRadiusEnd": 5,
-        "height": 30,
-        "color": "#2f6b52"
+        "type": "line",
+        "stroke": "#ABB8B4",
+        "strokeWidth": 3
       },
       "encoding": {
         "y": {
-          "field": "from_family",
+          "field": "family",
           "type": "nominal",
-          "sort": "-x",
-          "title": null,
+          "sort": [
+            "Rainforest",
+            "Eucalypt forest & woodland",
+            "Acacia",
+            "Other forest & woodland"
+          ],
           "axis": {
-            "labelFont": "DM Sans",
-            "labelFontSize": 14,
-            "labelColor": "#173d2e",
-            "labelLimit": 240,
-            "ticks": false,
-            "domain": false
+            "title": null,
+            "labelFontSize": 15,
+            "labelLimit": 240
           }
         },
         "x": {
-          "field": "same_pct",
+          "field": "share_pct",
           "type": "quantitative",
-          "title": "Share remaining in the same broad vegetation family (%)",
           "scale": {
             "domain": [
               0,
@@ -50,76 +80,122 @@
             ]
           },
           "axis": {
-            "grid": true,
-            "gridColor": "#e5e8e2",
-            "domain": false,
-            "tickColor": "#d6dbd4",
-            "labelFont": "DM Sans",
-            "labelFontSize": 12,
-            "titleFont": "DM Sans",
-            "titleFontSize": 13,
-            "titleColor": "#173d2e",
-            "labelExpr": "datum.value + '%'"
+            "title": "Share of matched historical area (%)",
+            "labelFontSize": 14,
+            "titleFontSize": 15
           }
         },
-        "tooltip": [
-          {
-            "field": "from_family",
-            "type": "nominal",
-            "title": "Historical family"
-          },
-          {
-            "field": "same_pct",
-            "type": "quantitative",
-            "title": "Same broad family",
-            "format": ".1f"
-          },
-          {
-            "field": "other_native_pct",
-            "type": "quantitative",
-            "title": "Other native family",
-            "format": ".1f"
-          },
-          {
-            "field": "modified_pct",
-            "type": "quantitative",
-            "title": "Modified / non-native",
-            "format": ".1f"
-          },
-          {
-            "field": "matched_mha",
-            "type": "quantitative",
-            "title": "Matched area (Mha)",
-            "format": ".1f"
+        "detail": {
+          "field": "family"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 260,
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "family",
+          "type": "nominal",
+          "sort": [
+            "Rainforest",
+            "Eucalypt forest & woodland",
+            "Acacia",
+            "Other forest & woodland"
+          ],
+          "axis": {
+            "title": null,
+            "labelFontSize": 15,
+            "labelLimit": 240
           }
-        ]
+        },
+        "x": {
+          "field": "share_pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": "Share of matched historical area (%)",
+            "labelFontSize": 14,
+            "titleFontSize": 15
+          }
+        },
+        "color": {
+          "field": "outcome",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Same broad family",
+              "Modified / non-native"
+            ],
+            "range": [
+              "#197A69",
+              "#D36B4F"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "labelFontSize": 15,
+            "titleFontSize": 16,
+            "symbolSize": 160,
+            "title": "Extant classification"
+          }
+        }
       }
     },
     {
       "mark": {
         "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 8,
-        "font": "DM Sans",
-        "fontSize": 13,
-        "fontWeight": 700,
+        "dy": -17,
+        "fontSize": 14,
+        "fontWeight": "bold",
         "color": "#173d2e"
       },
       "encoding": {
         "y": {
-          "field": "from_family",
+          "field": "family",
           "type": "nominal",
-          "sort": "-x"
+          "sort": [
+            "Rainforest",
+            "Eucalypt forest & woodland",
+            "Acacia",
+            "Other forest & woodland"
+          ],
+          "axis": {
+            "title": null,
+            "labelFontSize": 15,
+            "labelLimit": 240
+          }
         },
         "x": {
-          "field": "same_pct",
-          "type": "quantitative"
+          "field": "share_pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": "Share of matched historical area (%)",
+            "labelFontSize": 14,
+            "titleFontSize": 15
+          }
         },
         "text": {
-          "field": "same_pct",
+          "field": "share_pct",
           "type": "quantitative",
-          "format": ".1f"
+          "format": ".0f"
         }
       }
     }
@@ -128,14 +204,9 @@
     "view": {
       "stroke": null
     },
+    "font": "DM Sans",
     "axis": {
-      "labelColor": "#425f54",
-      "titleColor": "#173d2e"
-    },
-    "style": {
-      "cell": {
-        "stroke": "transparent"
-      }
+      "gridColor": "#e8ece9"
     }
   }
 }

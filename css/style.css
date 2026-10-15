@@ -3699,3 +3699,78 @@ footer {
 @media (max-width: 900px) {
   .nvis-map-wrap, .plantation-map-wrap { min-height: 500px; overflow-x: auto; justify-content: flex-start; }
 }
+
+/* October 2026 readability and spacing revision */
+.story-section { padding-top: 58px !important; padding-bottom: 62px !important; }
+.chapter-header { margin-bottom: 26px !important; }
+.visualisation-card { padding: 32px 34px 28px !important; }
+.visual-story-grid { align-items: start !important; gap: 28px !important; }
+.chart-wrap { min-height: 0 !important; margin-top: 16px !important; margin-bottom: 8px !important; }
+.chart-wrap .vega-embed { max-width: 100% !important; }
+.chart-wrap svg { max-width: 100%; height: auto; }
+.vis-heading p, .chapter-intro, .analysis-text, .interaction-hint, .vis-method-note { font-size: 1.06rem !important; line-height: 1.7 !important; }
+.analysis-panel { min-width: 0; }
+.analysis-block { overflow-wrap: anywhere; }
+.analysis-number { font-size: 2.1rem !important; }
+.vega-embed summary { font-size: 1rem; }
+@media(max-width:1050px) {
+ .visual-story-grid { grid-template-columns: minmax(0,1fr) !important; }
+ .story-section { padding: 38px 20px !important; }
+ .visualisation-card { padding: 25px 20px !important; }
+}
+
+/* Chart/card containment: keep graphics out of the numbered insights */
+.visual-story-grid {display:grid!important;grid-template-columns:minmax(0,1fr) minmax(250px,290px)!important;gap:22px!important;align-items:start!important}
+.visualisation-card {min-width:0!important;max-width:100%!important;overflow:hidden!important;box-sizing:border-box!important}
+.analysis-panel {min-width:0!important;position:relative!important;z-index:2!important}
+.chart-wrap {width:100%!important;min-width:0!important;overflow-x:auto!important;overflow-y:hidden!important;justify-content:flex-start!important}
+.chart-wrap .vega-embed {max-width:none!important;display:block!important}
+.chart-wrap svg {max-width:none!important;height:auto!important}
+.story-section {padding-top:44px!important;padding-bottom:48px!important}
+.vis-heading p,.chapter-intro,.analysis-text,.interaction-hint {font-size:1.08rem!important;line-height:1.65!important}
+.clear-legend {margin:15px 8px;padding:16px;border-top:1px solid #d7ded9;font-size:16px;color:#183e31}
+.clear-legend strong {font-size:17px;display:block;margin-bottom:12px}
+.legend-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px 18px}
+.legend-grid span {display:flex;align-items:center;gap:9px;line-height:1.35}
+.legend-grid i {width:15px;height:15px;flex-shrink:0;border-radius:50%}
+@media(max-width:1100px){.visual-story-grid{grid-template-columns:minmax(0,1fr)!important}.analysis-panel{width:100%!important}}
+@media(max-width:650px){.legend-grid{grid-template-columns:1fr}.visualisation-card{padding:18px!important}}
+
+/* Last-pass layout: charts and legends in their own vertical rows */
+.chart-wrap.nvis-map-wrap,.chart-wrap.nvis-chart-wrap {display:block!important;overflow-x:auto!important;overflow-y:hidden!important}
+.clear-legend {display:block!important;clear:both!important;position:static!important;width:auto!important;max-width:100%!important;box-sizing:border-box!important;margin:18px 0 8px!important}
+.legend-grid {grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.forest-type-details {margin:14px 6px 22px;border:1px solid #d7e0d8;border-radius:12px;padding:13px 17px;font-size:16px}
+.forest-type-details summary {cursor:pointer;font-weight:700;color:#173d2e}
+.forest-type-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;margin-top:18px}
+.forest-type-list div {display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #e8ede9;padding-bottom:7px}
+.forest-type-list strong {white-space:nowrap}
+.vega-bindings {font-size:17px!important;font-weight:600!important;margin:10px 0 20px!important}
+.vega-bindings select {font-size:17px!important;padding:8px 12px!important;border:1px solid #bbc9c0;border-radius:7px}
+.story-section:last-of-type {padding-bottom:22px!important;margin-bottom:0!important}
+@media(max-width:650px){.forest-type-list{grid-template-columns:1fr}.legend-grid{grid-template-columns:1fr!important}}
+
+/* Final layout refinements: remove inherited fixed-height gaps */
+.story-section, .story-section.nvis-section, .story-section.final-section {
+  min-height:0!important; height:auto!important;
+  padding-top:28px!important;padding-bottom:28px!important;
+  margin-bottom:0!important;
+}
+.story-section + .story-section {margin-top:0!important;padding-top:28px!important}
+#chapter-09,#chapter-11,#chapter-14 {min-height:0!important}
+.visual-story-grid,.visualisation-card,.analysis-panel {min-height:0!important;height:auto!important}
+.chart-wrap,.nvis-chart-wrap,.nvis-map-wrap,.nvis-flow-wrap,.nvis-change-wrap,
+.nvis-radial-wrap,.plantation-map-wrap,.mosaic-wrap {min-height:0!important;height:auto!important}
+.final-section {padding-bottom:12px!important}
+.final-takeaway {margin-top:14px!important;margin-bottom:14px!important}
+.interaction-hint {margin-top:10px!important;margin-bottom:8px!important}
+.chart-interpretation {font-size:17px;line-height:1.65;color:#435a50;
+ margin:12px 0 4px;padding:12px 16px;border-left:3px solid #d88b54;
+ background:#faf8f3;border-radius:0 7px 7px 0}
+.chart-interpretation strong {color:#173d2e}
+.chart-annotations {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:12px;margin:18px 0 10px}
+.chart-annotations p {font-size:15px;line-height:1.5;margin:0;padding:12px 14px;
+ background:#f2f5f2;border:1px solid #dce7df;border-radius:9px;color:#40564c}
+.chart-annotations strong {color:#163e30}
+@media(max-width:800px){.chart-annotations{grid-template-columns:1fr}}
