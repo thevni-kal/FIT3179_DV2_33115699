@@ -711,7 +711,8 @@
             "labelColor": "#314B40",
             "labelPadding": 8,
             "domain": false,
-            "ticks": false
+            "ticks": false,
+            "labelLimit": 260
           }
         },
         "y": {
@@ -736,7 +737,7 @@
             "labelFont": "DM Sans",
             "labelFontSize": 11,
             "labelColor": "#415A4F",
-            "labelLimit": 190,
+            "labelLimit": 240,
             "labelPadding": 8,
             "domain": false,
             "ticks": false

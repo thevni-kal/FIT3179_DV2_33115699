@@ -46,7 +46,9 @@
           "axis": {
             "title": null,
             "labelAngle": 0,
-            "labelFontSize": 13
+            "labelFontSize": 13,
+            "labelLimit": 260,
+            "labelPadding": 7
           }
         },
         "y": {
@@ -226,7 +228,9 @@
       "labelColor": "#29483B",
       "titleColor": "#29483B",
       "gridColor": "#E7EAE5",
-      "domain": false
+      "domain": false,
+      "labelLimit": 260,
+      "labelPadding": 7
     },
     "legend": {
       "labelColor": "#29483B",

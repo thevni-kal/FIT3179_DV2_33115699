@@ -67,7 +67,8 @@
           "axis": {
             "title": null,
             "labelFontSize": 15,
-            "labelLimit": 240
+            "labelLimit": 240,
+            "labelPadding": 7
           }
         },
         "x": {
@@ -82,7 +83,9 @@
           "axis": {
             "title": "Share of matched historical area (%)",
             "labelFontSize": 14,
-            "titleFontSize": 15
+            "titleFontSize": 15,
+            "labelLimit": 260,
+            "labelPadding": 7
           }
         },
         "detail": {
@@ -111,7 +114,8 @@
           "axis": {
             "title": null,
             "labelFontSize": 15,
-            "labelLimit": 240
+            "labelLimit": 240,
+            "labelPadding": 7
           }
         },
         "x": {
@@ -126,7 +130,9 @@
           "axis": {
             "title": "Share of matched historical area (%)",
             "labelFontSize": 14,
-            "titleFontSize": 15
+            "titleFontSize": 15,
+            "labelLimit": 260,
+            "labelPadding": 7
           }
         },
         "color": {
@@ -174,7 +180,8 @@
           "axis": {
             "title": null,
             "labelFontSize": 15,
-            "labelLimit": 240
+            "labelLimit": 240,
+            "labelPadding": 7
           }
         },
         "x": {
@@ -189,7 +196,9 @@
           "axis": {
             "title": "Share of matched historical area (%)",
             "labelFontSize": 14,
-            "titleFontSize": 15
+            "titleFontSize": 15,
+            "labelLimit": 260,
+            "labelPadding": 7
           }
         },
         "text": {
@@ -239,7 +248,9 @@
     },
     "font": "DM Sans",
     "axis": {
-      "gridColor": "#e8ece9"
+      "gridColor": "#e8ece9",
+      "labelLimit": 260,
+      "labelPadding": 7
     }
   }
 }

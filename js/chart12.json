@@ -59,7 +59,7 @@
           "title": "Extant vegetation family",
           "axis": {
             "labelAngle": -30,
-            "labelLimit": 185,
+            "labelLimit": 240,
             "labelPadding": 8,
             "labelFontSize": 13,
             "titleFontSize": 15
@@ -79,7 +79,7 @@
           ],
           "title": "Estimated pre-1750 vegetation family",
           "axis": {
-            "labelLimit": 185,
+            "labelLimit": 240,
             "labelPadding": 8,
             "labelFontSize": 13,
             "titleFontSize": 15
@@ -196,7 +196,9 @@
       "titleFont": "DM Sans",
       "labelColor": "#334B40",
       "titleColor": "#173D2E",
-      "grid": false
+      "grid": false,
+      "labelLimit": 260,
+      "labelPadding": 7
     },
     "legend": {
       "labelFont": "DM Sans",

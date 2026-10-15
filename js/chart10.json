@@ -54,8 +54,9 @@
           },
           "axis": {
             "title": null,
-            "labelLimit": 210,
-            "ticks": false
+            "labelLimit": 240,
+            "ticks": false,
+            "labelPadding": 7
           }
         },
         "x": {
@@ -78,7 +79,9 @@
               150,
               200
             ],
-            "labelExpr": "datum.value + '%'"
+            "labelExpr": "datum.value + '%'",
+            "labelLimit": 260,
+            "labelPadding": 7
           }
         },
         "color": {
@@ -133,7 +136,9 @@
       "labelColor": "#29483B",
       "titleColor": "#29483B",
       "gridColor": "#E7EAE5",
-      "domain": false
+      "domain": false,
+      "labelLimit": 260,
+      "labelPadding": 7
     },
     "legend": {
       "labelColor": "#29483B",
