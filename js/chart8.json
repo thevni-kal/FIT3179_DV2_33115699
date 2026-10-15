@@ -175,6 +175,39 @@
           "field": "mvg_name"
         }
       }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "annotation": "100% = equal estimated area"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "font": "DM Sans",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "align": "left",
+        "baseline": "top",
+        "color": "#173D2E",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 3,
+        "strokeJoin": "round"
+      },
+      "encoding": {
+        "x": {
+          "value": 12
+        },
+        "y": {
+          "value": 12
+        },
+        "text": {
+          "field": "annotation",
+          "type": "nominal"
+        }
+      }
     }
   ],
   "config": {

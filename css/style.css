@@ -3793,3 +3793,9 @@ footer {
 .references-list a {color:#1a6375;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 .references-and-ai .methods-note {border-left:3px solid #d88b54;padding-left:16px;margin:20px 0}
 @media(max-width:750px){.references-and-ai{padding:24px 18px}}
+
+/* Submission metadata: authored and dated, visually consistent with references */
+.authorship-credit {margin-top:22px;padding-top:16px;border-top:1px solid #d7dfd6;}
+.authorship-credit h3 {margin:0 0 10px;color:#173d2e;font-family:'DM Serif Display',serif;}
+.authorship-credit p {margin:4px 0;font-size:15px;line-height:1.6;color:#40594e;}
+.chart-interpretation {max-width:100%;overflow-wrap:break-word;line-height:1.65;}

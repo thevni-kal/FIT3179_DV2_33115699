@@ -1,22 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v6.json",
   "description": "Historical to extant vegetation-family transition flow derived from spatially aligned NVIS pre-1750 and extant rasters.",
-
   "width": 820,
   "height": 500,
-
   "padding": {
     "left": 190,
     "right": 190,
     "top": 45,
     "bottom": 35
   },
-
   "autosize": {
     "type": "none",
     "contains": "padding"
   },
-
   "signals": [
     {
       "name": "nodeWidth",
@@ -27,7 +23,6 @@
       "update": "width-nodeWidth"
     }
   ],
-
   "data": [
     {
       "name": "flows",
@@ -46,17 +41,24 @@
         }
       ]
     },
-
     {
       "name": "leftNodes",
       "source": "flows",
       "transform": [
         {
           "type": "aggregate",
-          "groupby": ["from_family"],
-          "fields": ["area_mha"],
-          "ops": ["sum"],
-          "as": ["total"]
+          "groupby": [
+            "from_family"
+          ],
+          "fields": [
+            "area_mha"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
         },
         {
           "type": "collect",
@@ -72,7 +74,10 @@
             "field": "total",
             "order": "descending"
           },
-          "as": ["y0", "y1"],
+          "as": [
+            "y0",
+            "y1"
+          ],
           "offset": "normalize"
         },
         {
@@ -92,17 +97,24 @@
         }
       ]
     },
-
     {
       "name": "rightNodes",
       "source": "flows",
       "transform": [
         {
           "type": "aggregate",
-          "groupby": ["to_family"],
-          "fields": ["area_mha"],
-          "ops": ["sum"],
-          "as": ["total"]
+          "groupby": [
+            "to_family"
+          ],
+          "fields": [
+            "area_mha"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
         },
         {
           "type": "collect",
@@ -118,7 +130,10 @@
             "field": "total",
             "order": "descending"
           },
-          "as": ["y0", "y1"],
+          "as": [
+            "y0",
+            "y1"
+          ],
           "offset": "normalize"
         },
         {
@@ -138,7 +153,6 @@
         }
       ]
     },
-
     {
       "name": "flowLayout",
       "source": "flows",
@@ -147,55 +161,86 @@
           "type": "lookup",
           "from": "leftNodes",
           "key": "from_family",
-          "fields": ["from_family"],
-          "values": ["py0", "py1", "total"],
-          "as": ["l0", "l1", "ltotal"]
+          "fields": [
+            "from_family"
+          ],
+          "values": [
+            "py0",
+            "py1",
+            "total"
+          ],
+          "as": [
+            "l0",
+            "l1",
+            "ltotal"
+          ]
         },
         {
           "type": "lookup",
           "from": "rightNodes",
           "key": "to_family",
-          "fields": ["to_family"],
-          "values": ["py0", "py1", "total"],
-          "as": ["r0", "r1", "rtotal"]
+          "fields": [
+            "to_family"
+          ],
+          "values": [
+            "py0",
+            "py1",
+            "total"
+          ],
+          "as": [
+            "r0",
+            "r1",
+            "rtotal"
+          ]
         },
-
         {
           "type": "window",
-          "groupby": ["from_family"],
+          "groupby": [
+            "from_family"
+          ],
           "sort": {
             "field": "to_family",
             "order": "ascending"
           },
-          "ops": ["sum"],
-          "fields": ["area_mha"],
-          "as": ["from_cumulative"]
+          "ops": [
+            "sum"
+          ],
+          "fields": [
+            "area_mha"
+          ],
+          "as": [
+            "from_cumulative"
+          ]
         },
-
         {
           "type": "window",
-          "groupby": ["to_family"],
+          "groupby": [
+            "to_family"
+          ],
           "sort": {
             "field": "from_family",
             "order": "ascending"
           },
-          "ops": ["sum"],
-          "fields": ["area_mha"],
-          "as": ["to_cumulative"]
+          "ops": [
+            "sum"
+          ],
+          "fields": [
+            "area_mha"
+          ],
+          "as": [
+            "to_cumulative"
+          ]
         },
-
         {
           "type": "formula",
           "as": "sy",
           "expr": "datum.l0 + ((datum.from_cumulative-datum.area_mha/2)/datum.ltotal)*(datum.l1-datum.l0)"
         },
-
         {
           "type": "formula",
           "as": "ty",
           "expr": "datum.r0 + ((datum.to_cumulative-datum.area_mha/2)/datum.rtotal)*(datum.r1-datum.r0)"
         },
-
         {
           "type": "formula",
           "as": "flowWidth",
@@ -204,7 +249,6 @@
       ]
     }
   ],
-
   "scales": [
     {
       "name": "colour",
@@ -231,7 +275,6 @@
       ]
     }
   ],
-
   "marks": [
     {
       "type": "path",
@@ -243,28 +286,22 @@
           "path": {
             "signal": "'M'+nodeWidth+','+datum.sy+' C'+width*0.35+','+datum.sy+' '+width*0.65+','+datum.ty+' '+rightX+','+datum.ty"
           },
-
           "stroke": {
             "signal": "datum.to_family === 'Modified / non-native' ? '#B9876A' : scale('colour',datum.from_family)"
           },
-
           "strokeWidth": {
             "field": "flowWidth"
           },
-
           "strokeOpacity": {
             "signal": "datum.to_family === 'Modified / non-native' ? 0.72 : (datum.from_family === datum.to_family ? 0.34 : 0.20)"
           },
-
           "fill": {
             "value": null
           },
-
           "tooltip": {
             "signal": "{'Estimated pre-1750':datum.from_family,'Extant':datum.to_family,'Mapped area':format(datum.area_mha,'.2f')+' Mha'}"
           }
         },
-
         "hover": {
           "strokeOpacity": {
             "value": 0.95
@@ -272,7 +309,6 @@
         }
       }
     },
-
     {
       "type": "rect",
       "from": {
@@ -308,7 +344,6 @@
         }
       }
     },
-
     {
       "type": "rect",
       "from": {
@@ -344,7 +379,6 @@
         }
       }
     },
-
     {
       "type": "text",
       "from": {
@@ -385,7 +419,6 @@
         }
       }
     },
-
     {
       "type": "text",
       "from": {
@@ -426,7 +459,6 @@
         }
       }
     },
-
     {
       "type": "text",
       "encode": {
@@ -455,7 +487,6 @@
         }
       }
     },
-
     {
       "type": "text",
       "encode": {
@@ -483,6 +514,40 @@
           },
           "fill": {
             "value": "#174C3A"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 14
+          },
+          "y": {
+            "value": 470
+          },
+          "text": {
+            "value": "Ribbon width = matched area"
+          },
+          "font": {
+            "value": "DM Sans"
+          },
+          "fontSize": {
+            "value": 13
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fill": {
+            "value": "#173D2E"
+          },
+          "stroke": {
+            "value": "#FFFFFF"
+          },
+          "strokeWidth": {
+            "value": 2
           }
         }
       }
