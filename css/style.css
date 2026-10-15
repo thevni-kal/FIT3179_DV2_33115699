@@ -3839,3 +3839,30 @@ body {font-family:'DM Sans',Arial,sans-serif;}
   .story-section, .story-section.nvis-section, .story-section.final-section {padding-left: 8px !important; padding-right: 12px !important;}
   .visualisation-card {padding-left: 12px !important; padding-right: 12px !important;}
 }
+
+/* FINAL EQUAL-MARGIN FULL-WIDTH LAYOUT — all fourteen charts */
+html, body {max-width:100%;overflow-x:hidden!important;}
+.story-section, .story-section.nvis-section, .story-section.final-section {
+  width:100%!important;max-width:none!important;
+  padding-left:clamp(10px,1.1vw,20px)!important;
+  padding-right:clamp(10px,1.1vw,20px)!important;
+  margin-left:auto!important;margin-right:auto!important;box-sizing:border-box!important;
+}
+/* The story card gets the full available width; analysis is beneath, not beside it. */
+.visual-story-grid {display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:14px!important;width:100%!important;}
+.visualisation-card,.analysis-panel {min-width:0!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;}
+.visualisation-card {padding-left:clamp(12px,1.6vw,26px)!important;padding-right:clamp(12px,1.6vw,26px)!important;}
+/* Prevent inherited scrollbars on nested chart holders. */
+.chart-wrap,.chart-wrap.nvis-map-wrap,.chart-wrap.nvis-chart-wrap,.chart-wrap.nvis-change-wrap,
+.chart-wrap.nvis-flow-wrap,.chart-wrap.mosaic-wrap,.chart-wrap.plantation-map-wrap,
+.map-chart-wrap,.matrix-chart-wrap,.mosaic-wrap,.plantation-map-wrap,
+#vis1,#vis2,#vis3,#vis4,#vis5,#vis6,#vis7,#vis8,#vis9,#vis10,#vis11,#vis12,#vis13,#vis14 {
+  width:100%!important;max-width:100%!important;min-width:0!important;
+  overflow-x:clip!important;box-sizing:border-box!important;
+}
+.chart-wrap .vega-embed,.chart-wrap .vega-embed>div {max-width:100%!important;min-width:0!important;width:100%!important;box-sizing:border-box!important;}
+.chart-wrap svg {display:block!important;max-width:100%!important;height:auto!important;}
+@media(max-width:650px){
+ .story-section,.story-section.nvis-section,.story-section.final-section {padding-left:8px!important;padding-right:8px!important;}
+ .visualisation-card{padding-left:10px!important;padding-right:10px!important;}
+}
