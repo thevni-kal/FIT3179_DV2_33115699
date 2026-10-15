@@ -3839,3 +3839,83 @@ body {font-family:'DM Sans',Arial,sans-serif;}
   .story-section, .story-section.nvis-section, .story-section.final-section {padding-left: 8px !important; padding-right: 12px !important;}
   .visualisation-card {padding-left: 12px !important; padding-right: 12px !important;}
 }
+
+/* FINAL EQUAL-MARGIN FULL-WIDTH LAYOUT — all fourteen charts */
+html, body {max-width:100%;overflow-x:hidden!important;}
+.story-section, .story-section.nvis-section, .story-section.final-section {
+  width:100%!important;max-width:none!important;
+  padding-left:clamp(10px,1.1vw,20px)!important;
+  padding-right:clamp(10px,1.1vw,20px)!important;
+  margin-left:auto!important;margin-right:auto!important;box-sizing:border-box!important;
+}
+/* The story card gets the full available width; analysis is beneath, not beside it. */
+.visual-story-grid {display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:14px!important;width:100%!important;}
+.visualisation-card,.analysis-panel {min-width:0!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;}
+.visualisation-card {padding-left:clamp(12px,1.6vw,26px)!important;padding-right:clamp(12px,1.6vw,26px)!important;}
+/* Prevent inherited scrollbars on nested chart holders. */
+.chart-wrap,.chart-wrap.nvis-map-wrap,.chart-wrap.nvis-chart-wrap,.chart-wrap.nvis-change-wrap,
+.chart-wrap.nvis-flow-wrap,.chart-wrap.mosaic-wrap,.chart-wrap.plantation-map-wrap,
+.map-chart-wrap,.matrix-chart-wrap,.mosaic-wrap,.plantation-map-wrap,
+#vis1,#vis2,#vis3,#vis4,#vis5,#vis6,#vis7,#vis8,#vis9,#vis10,#vis11,#vis12,#vis13,#vis14 {
+  width:100%!important;max-width:100%!important;min-width:0!important;
+  overflow-x:clip!important;box-sizing:border-box!important;
+}
+.chart-wrap .vega-embed,.chart-wrap .vega-embed>div {max-width:100%!important;min-width:0!important;width:100%!important;box-sizing:border-box!important;}
+.chart-wrap svg {display:block!important;max-width:100%!important;height:auto!important;}
+@media(max-width:650px){
+ .story-section,.story-section.nvis-section,.story-section.final-section {padding-left:8px!important;padding-right:8px!important;}
+ .visualisation-card{padding-left:10px!important;padding-right:10px!important;}
+}
+
+/* RESPONSIVE SVG FIX: keep BOTH ends of the plotted chart and axis labels visible. */
+html, body {width:100%;max-width:100%;overflow-x:clip!important;}
+.story-section,.story-section.nvis-section,.story-section.final-section {
+  width:100%!important;max-width:100%!important;
+  margin-left:auto!important;margin-right:auto!important;
+  padding-left:clamp(10px,1.5vw,24px)!important;
+  padding-right:clamp(10px,1.5vw,24px)!important;
+}
+.visual-story-grid {display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:16px!important;}
+.visualisation-card {width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important;
+ padding-left:clamp(12px,1.5vw,24px)!important;padding-right:clamp(12px,1.5vw,24px)!important;}
+.chart-wrap,.nvis-chart-wrap,.nvis-change-wrap,.nvis-map-wrap,.nvis-flow-wrap,.mosaic-wrap,.plantation-map-wrap {
+ display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;
+ overflow:visible!important;box-sizing:border-box!important;}
+.chart-wrap .vega-embed,.chart-wrap .vega-embed>div,.chart-wrap .vega-embed svg {
+ width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;}
+.chart-wrap .vega-embed svg {display:block!important;height:auto!important;}
+#vis1,#vis2,#vis3,#vis4,#vis5,#vis6,#vis7,#vis8,#vis9,#vis10,#vis11,#vis12,#vis13,#vis14 {
+ width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important;}
+@media(max-width:650px){.story-section,.story-section.nvis-section,.story-section.final-section{padding-left:8px!important;padding-right:8px!important;}}
+
+/* Center all fourteen complete Vega charts inside their white cards. */
+.chart-wrap, .nvis-chart-wrap, .nvis-map-wrap, .nvis-flow-wrap, .nvis-change-wrap,
+.mosaic-wrap, .plantation-map-wrap {display:flex!important;flex-direction:column!important;align-items:center!important;}
+.chart-wrap .vega-embed, .chart-wrap .vega-embed > div {display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;}
+.chart-wrap .vega-embed svg {margin-left:auto!important;margin-right:auto!important;}
+.chart-wrap .vega-bindings {align-self:center!important;}
+
+
+/* FINAL LAYOUT: restore the original numbered storytelling rail on desktop.
+   The chart itself continues to fit to its card via fitChart() in JS. */
+.visual-story-grid {
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) clamp(230px,21vw,310px)!important;
+  gap:clamp(12px,1.35vw,22px)!important;
+  align-items:start!important;
+  width:100%!important;
+}
+.visual-story-grid > .visualisation-card {grid-column:1;min-width:0!important;}
+.visual-story-grid > .analysis-panel {grid-column:2;min-width:0!important;width:auto!important;max-width:none!important;}
+.visualisation-card {min-width:0!important;max-width:100%!important;box-sizing:border-box!important;}
+.chart-wrap, .nvis-chart-wrap, .nvis-map-wrap, .nvis-flow-wrap,
+.nvis-change-wrap, .mosaic-wrap, .plantation-map-wrap {
+  min-width:0!important;max-width:100%!important;box-sizing:border-box!important;
+}
+.chart-wrap svg {max-width:100%!important;height:auto!important;}
+/* Only stack when there is genuinely insufficient room for both columns. */
+@media (max-width: 1000px) {
+  .visual-story-grid {grid-template-columns:minmax(0,1fr)!important;}
+  .visual-story-grid > .visualisation-card,
+  .visual-story-grid > .analysis-panel {grid-column:1!important;}
+}
