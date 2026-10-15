@@ -5,8 +5,8 @@
   "spacing": 10,
   "hconcat": [
     {
-      "width": 560,
-      "height": 485,
+      "width": 690,
+      "height": 550,
       "title": {
         "text": "Forest area across Australia",
         "subtitle": "Darker states contain more mapped forest area",
@@ -93,10 +93,10 @@
           134.5,
           -28.5
         ],
-        "scale": 510,
+        "scale": 620,
         "translate": [
-          280,
-          245
+          345,
+          275
         ]
       },
       "mark": {
@@ -167,7 +167,7 @@
     },
     {
       "width": 205,
-      "height": 485,
+      "height": 550,
       "title": {
         "text": "State ranking",
         "subtitle": "Mapped forest area",

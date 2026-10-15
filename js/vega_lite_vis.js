@@ -23,13 +23,16 @@ function fitChart(target) {
   svg.removeAttribute('width');
   svg.removeAttribute('height');
   svg.style.setProperty('display', 'block', 'important');
-  svg.style.setProperty('width', '100%', 'important');
+  svg.style.setProperty('width', `min(100%, ${Math.ceil(w)}px)`, 'important');
   svg.style.setProperty('height', 'auto', 'important');
   svg.style.setProperty('max-width', '100%', 'important');
   svg.style.setProperty('aspect-ratio', `${w} / ${h}`, 'important');
   const outer = target.querySelector('.vega-embed');
   if (outer) {
     outer.style.setProperty('width', '100%', 'important');
+    outer.style.setProperty('display', 'flex', 'important');
+    outer.style.setProperty('flex-direction', 'column', 'important');
+    outer.style.setProperty('align-items', 'center', 'important');
     outer.style.setProperty('max-width', '100%', 'important');
     outer.style.setProperty('min-width', '0', 'important');
   }
@@ -37,6 +40,8 @@ function fitChart(target) {
   const parent = svg.parentElement;
   if (parent) {
     parent.style.setProperty('width', '100%', 'important');
+    parent.style.setProperty('display', 'flex', 'important');
+    parent.style.setProperty('justify-content', 'center', 'important');
     parent.style.setProperty('max-width', '100%', 'important');
     parent.style.setProperty('min-width', '0', 'important');
   }
@@ -44,7 +49,7 @@ function fitChart(target) {
 for (let i = 1; i <= 14; i++) {
   const target = document.querySelector(`#vis${i}`);
   if (!target) continue;
-  vegaEmbed(target, `js/chart${i}.json?v=20261015-responsive2`, embedOptions)
+  vegaEmbed(target, `js/chart${i}.json?v=20261015-centered-map3`, embedOptions)
     .then(() => {
       fitChart(target);
       // Web fonts may load after the initial SVG layout.

@@ -3887,3 +3887,10 @@ html, body {width:100%;max-width:100%;overflow-x:clip!important;}
 #vis1,#vis2,#vis3,#vis4,#vis5,#vis6,#vis7,#vis8,#vis9,#vis10,#vis11,#vis12,#vis13,#vis14 {
  width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important;}
 @media(max-width:650px){.story-section,.story-section.nvis-section,.story-section.final-section{padding-left:8px!important;padding-right:8px!important;}}
+
+/* Center all fourteen complete Vega charts inside their white cards. */
+.chart-wrap, .nvis-chart-wrap, .nvis-map-wrap, .nvis-flow-wrap, .nvis-change-wrap,
+.mosaic-wrap, .plantation-map-wrap {display:flex!important;flex-direction:column!important;align-items:center!important;}
+.chart-wrap .vega-embed, .chart-wrap .vega-embed > div {display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;}
+.chart-wrap .vega-embed svg {margin-left:auto!important;margin-right:auto!important;}
+.chart-wrap .vega-bindings {align-self:center!important;}
