@@ -3866,3 +3866,24 @@ html, body {max-width:100%;overflow-x:hidden!important;}
  .story-section,.story-section.nvis-section,.story-section.final-section {padding-left:8px!important;padding-right:8px!important;}
  .visualisation-card{padding-left:10px!important;padding-right:10px!important;}
 }
+
+/* RESPONSIVE SVG FIX: keep BOTH ends of the plotted chart and axis labels visible. */
+html, body {width:100%;max-width:100%;overflow-x:clip!important;}
+.story-section,.story-section.nvis-section,.story-section.final-section {
+  width:100%!important;max-width:100%!important;
+  margin-left:auto!important;margin-right:auto!important;
+  padding-left:clamp(10px,1.5vw,24px)!important;
+  padding-right:clamp(10px,1.5vw,24px)!important;
+}
+.visual-story-grid {display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:16px!important;}
+.visualisation-card {width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important;
+ padding-left:clamp(12px,1.5vw,24px)!important;padding-right:clamp(12px,1.5vw,24px)!important;}
+.chart-wrap,.nvis-chart-wrap,.nvis-change-wrap,.nvis-map-wrap,.nvis-flow-wrap,.mosaic-wrap,.plantation-map-wrap {
+ display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;
+ overflow:visible!important;box-sizing:border-box!important;}
+.chart-wrap .vega-embed,.chart-wrap .vega-embed>div,.chart-wrap .vega-embed svg {
+ width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;}
+.chart-wrap .vega-embed svg {display:block!important;height:auto!important;}
+#vis1,#vis2,#vis3,#vis4,#vis5,#vis6,#vis7,#vis8,#vis9,#vis10,#vis11,#vis12,#vis13,#vis14 {
+ width:100%!important;max-width:100%!important;min-width:0!important;overflow:visible!important;}
+@media(max-width:650px){.story-section,.story-section.nvis-section,.story-section.final-section{padding-left:8px!important;padding-right:8px!important;}}
