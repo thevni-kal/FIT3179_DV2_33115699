@@ -3774,3 +3774,22 @@ footer {
  background:#f2f5f2;border:1px solid #dce7df;border-radius:9px;color:#40564c}
 .chart-annotations strong {color:#163e30}
 @media(max-width:800px){.chart-annotations{grid-template-columns:1fr}}
+
+/* References and final whitespace refinements */
+#chapter-11 {padding-bottom:12px!important;margin-bottom:0!important}
+#chapter-11 .visual-story-grid {margin-bottom:0!important}
+#chapter-11 .visualisation-card {padding-bottom:14px!important}
+#chapter-11 .nvis-flow-wrap {min-height:0!important;height:auto!important;padding-bottom:0!important;margin-bottom:0!important}
+#chapter-11 .interaction-hint {margin:6px 0!important}
+#chapter-11 .chart-interpretation {margin-top:8px!important;margin-bottom:0!important}
+#chapter-11 .takeaway-strip {margin-top:12px!important;margin-bottom:8px!important;padding-top:14px!important;padding-bottom:14px!important}
+#chapter-11 .source {margin-top:8px!important;margin-bottom:0!important}
+.references-and-ai {max-width:1260px;margin:12px auto 0;padding:32px clamp(22px,5vw,64px);border-top:1px solid #c8d7cf;color:#43584f}
+.references-and-ai h2 {font-family:'DM Serif Display',Georgia,serif;font-size:clamp(28px,3vw,39px);line-height:1.2;color:#173d2e;margin:0 0 14px}
+.references-and-ai h3 {font-size:21px;color:#173d2e;margin:24px 0 10px}
+.references-and-ai p,.references-and-ai li {font-size:16px;line-height:1.7}
+.references-list {padding-left:23px;margin:18px 0}
+.references-list li {margin:10px 0}
+.references-list a {color:#1a6375;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.references-and-ai .methods-note {border-left:3px solid #d88b54;padding-left:16px;margin:20px 0}
+@media(max-width:750px){.references-and-ai{padding:24px 18px}}
