@@ -4,48 +4,7 @@
   "width": 670,
   "height": 350,
   "data": {
-    "values": [
-      {
-        "family": "Rainforest",
-        "outcome": "Same broad family",
-        "share_pct": 61.4
-      },
-      {
-        "family": "Rainforest",
-        "outcome": "Modified / non-native",
-        "share_pct": 27.2
-      },
-      {
-        "family": "Eucalypt forest & woodland",
-        "outcome": "Same broad family",
-        "share_pct": 68.16
-      },
-      {
-        "family": "Eucalypt forest & woodland",
-        "outcome": "Modified / non-native",
-        "share_pct": 25.7
-      },
-      {
-        "family": "Acacia",
-        "outcome": "Same broad family",
-        "share_pct": 81.33
-      },
-      {
-        "family": "Acacia",
-        "outcome": "Modified / non-native",
-        "share_pct": 9.15
-      },
-      {
-        "family": "Other forest & woodland",
-        "outcome": "Same broad family",
-        "share_pct": 70.51
-      },
-      {
-        "family": "Other forest & woodland",
-        "outcome": "Modified / non-native",
-        "share_pct": 12.14
-      }
-    ]
+    "url": "data/chart14_selected_outcomes_from_nvis.csv"
   },
   "layer": [
     {

@@ -49,7 +49,7 @@ function fitChart(target) {
 for (let i = 1; i <= 14; i++) {
   const target = document.querySelector(`#vis${i}`);
   if (!target) continue;
-  vegaEmbed(target, `js/chart${i}.json?v=20261015-classic-rail4`, embedOptions)
+  vegaEmbed(target, `js/chart${i}.json?v=20261020-data-sources`, embedOptions)
     .then(() => {
       fitChart(target);
       // Web fonts may load after the initial SVG layout.

@@ -36,48 +36,7 @@
           "lookup": "state_name",
           "from": {
             "data": {
-              "values": [
-                {
-                  "state_name": "Queensland",
-                  "forest_mha": 51.98,
-                  "national_share": 38.91
-                },
-                {
-                  "state_name": "Northern Territory",
-                  "forest_mha": 23.33,
-                  "national_share": 17.47
-                },
-                {
-                  "state_name": "Western Australia",
-                  "forest_mha": 20.77,
-                  "national_share": 15.55
-                },
-                {
-                  "state_name": "New South Wales",
-                  "forest_mha": 20.28,
-                  "national_share": 15.19
-                },
-                {
-                  "state_name": "Victoria",
-                  "forest_mha": 8.22,
-                  "national_share": 6.16
-                },
-                {
-                  "state_name": "South Australia",
-                  "forest_mha": 5.13,
-                  "national_share": 3.84
-                },
-                {
-                  "state_name": "Tasmania",
-                  "forest_mha": 3.71,
-                  "national_share": 2.78
-                },
-                {
-                  "state_name": "Australian Capital Territory",
-                  "forest_mha": 0.14,
-                  "national_share": 0.11
-                }
-              ]
+              "url": "data/chart2_state_forest_from_abares.csv"
             },
             "key": "state_name",
             "fields": [
@@ -182,56 +141,7 @@
         "offset": 14
       },
       "data": {
-        "values": [
-          {
-            "state": "QLD",
-            "state_name": "Queensland",
-            "forest_mha": 51.98,
-            "national_share": 38.91
-          },
-          {
-            "state": "NT",
-            "state_name": "Northern Territory",
-            "forest_mha": 23.33,
-            "national_share": 17.47
-          },
-          {
-            "state": "WA",
-            "state_name": "Western Australia",
-            "forest_mha": 20.77,
-            "national_share": 15.55
-          },
-          {
-            "state": "NSW",
-            "state_name": "New South Wales",
-            "forest_mha": 20.28,
-            "national_share": 15.19
-          },
-          {
-            "state": "VIC",
-            "state_name": "Victoria",
-            "forest_mha": 8.22,
-            "national_share": 6.16
-          },
-          {
-            "state": "SA",
-            "state_name": "South Australia",
-            "forest_mha": 5.13,
-            "national_share": 3.84
-          },
-          {
-            "state": "TAS",
-            "state_name": "Tasmania",
-            "forest_mha": 3.71,
-            "national_share": 2.78
-          },
-          {
-            "state": "ACT",
-            "state_name": "Australian Capital Territory",
-            "forest_mha": 0.14,
-            "national_share": 0.11
-          }
-        ]
+        "url": "data/chart2_state_forest_from_abares.csv"
       },
       "layer": [
         {

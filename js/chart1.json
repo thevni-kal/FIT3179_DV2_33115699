@@ -7,20 +7,7 @@
   "layer": [
     {
       "data": {
-        "values": [
-          {
-            "category": "Forest",
-            "area_ha": 133564800,
-            "share": 17.37056,
-            "order": 1
-          },
-          {
-            "category": "Non-forest",
-            "area_ha": 635349978,
-            "share": 82.62944,
-            "order": 2
-          }
-        ]
+        "url": "data/chart1_inner_from_abares.csv"
       },
       "params": [
         {
@@ -94,36 +81,7 @@
     },
     {
       "data": {
-        "values": [
-          {
-            "category": "Native forest",
-            "area_ha": 131501369,
-            "share": 17.10220336,
-            "order": 1,
-            "display_area": 125564800
-          },
-          {
-            "category": "Commercial plantation",
-            "area_ha": 1820853,
-            "share": 0.23680817,
-            "order": 2,
-            "display_area": 5000000
-          },
-          {
-            "category": "Other forest",
-            "area_ha": 242578,
-            "share": 0.0315481,
-            "order": 3,
-            "display_area": 3000000
-          },
-          {
-            "category": "Non-forest",
-            "area_ha": 635349978,
-            "share": 82.62944037,
-            "order": 4,
-            "display_area": 635349978
-          }
-        ]
+        "url": "data/chart1_outer_from_abares.csv"
       },
       "params": [
         {
@@ -202,11 +160,7 @@
     },
     {
       "data": {
-        "values": [
-          {
-            "label": "17.4%"
-          }
-        ]
+        "url": "data/chart1_inner_from_abares.csv"
       },
       "mark": {
         "type": "text",
@@ -218,9 +172,19 @@
       },
       "encoding": {
         "text": {
-          "field": "label"
+          "field": "dynamic_label",
+          "type": "nominal"
         }
-      }
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Forest'"
+        },
+        {
+          "calculate": "format(datum.share, '.1f') + '%'",
+          "as": "dynamic_label"
+        }
+      ]
     },
     {
       "data": {
@@ -336,13 +300,7 @@
     },
     {
       "data": {
-        "values": [
-          {
-            "x": 444,
-            "y": 200,
-            "label": "17.4%"
-          }
-        ]
+        "url": "data/chart1_inner_from_abares.csv"
       },
       "mark": {
         "type": "text",
@@ -376,9 +334,27 @@
           "axis": null
         },
         "text": {
-          "field": "label"
+          "field": "dynamic_label",
+          "type": "nominal"
         }
-      }
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Forest'"
+        },
+        {
+          "calculate": "format(datum.share, '.1f') + '%'",
+          "as": "dynamic_label"
+        },
+        {
+          "calculate": "444",
+          "as": "x"
+        },
+        {
+          "calculate": "200",
+          "as": "y"
+        }
+      ]
     },
     {
       "data": {
@@ -428,13 +404,7 @@
     },
     {
       "data": {
-        "values": [
-          {
-            "x": 342,
-            "y": 456,
-            "label": "82.6%"
-          }
-        ]
+        "url": "data/chart1_inner_from_abares.csv"
       },
       "mark": {
         "type": "text",
@@ -468,9 +438,27 @@
           "axis": null
         },
         "text": {
-          "field": "label"
+          "field": "dynamic_label",
+          "type": "nominal"
         }
-      }
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Non-forest'"
+        },
+        {
+          "calculate": "format(datum.share, '.1f') + '%'",
+          "as": "dynamic_label"
+        },
+        {
+          "calculate": "342",
+          "as": "x"
+        },
+        {
+          "calculate": "456",
+          "as": "y"
+        }
+      ]
     },
     {
       "data": {
@@ -1083,13 +1071,7 @@
     },
     {
       "data": {
-        "values": [
-          {
-            "x": 660,
-            "y": 100,
-            "label": "17.10%"
-          }
-        ]
+        "url": "data/chart1_outer_from_abares.csv"
       },
       "mark": {
         "type": "text",
@@ -1123,19 +1105,31 @@
           "axis": null
         },
         "text": {
-          "field": "label"
+          "field": "dynamic_label",
+          "type": "nominal"
         }
-      }
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Native forest'"
+        },
+        {
+          "calculate": "format(datum.share, '.2f') + '%'",
+          "as": "dynamic_label"
+        },
+        {
+          "calculate": "660",
+          "as": "x"
+        },
+        {
+          "calculate": "100",
+          "as": "y"
+        }
+      ]
     },
     {
       "data": {
-        "values": [
-          {
-            "x": 660,
-            "y": 122,
-            "label": "131.5M ha"
-          }
-        ]
+        "url": "data/chart1_outer_from_abares.csv"
       },
       "mark": {
         "type": "text",
@@ -1169,9 +1163,27 @@
           "axis": null
         },
         "text": {
-          "field": "label"
+          "field": "dynamic_label",
+          "type": "nominal"
         }
-      }
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Native forest'"
+        },
+        {
+          "calculate": "format(datum.area_ha / 1000000, '.1f') + 'M ha'",
+          "as": "dynamic_label"
+        },
+        {
+          "calculate": "660",
+          "as": "x"
+        },
+        {
+          "calculate": "122",
+          "as": "y"
+        }
+      ]
     },
     {
       "data": {
@@ -1226,13 +1238,7 @@
     },
     {
       "data": {
-        "values": [
-          {
-            "x": 692,
-            "y": 378,
-            "label": "0.24%"
-          }
-        ]
+        "url": "data/chart1_outer_from_abares.csv"
       },
       "mark": {
         "type": "text",
@@ -1266,19 +1272,31 @@
           "axis": null
         },
         "text": {
-          "field": "label"
+          "field": "dynamic_label",
+          "type": "nominal"
         }
-      }
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Commercial plantation'"
+        },
+        {
+          "calculate": "format(datum.share, '.2f') + '%'",
+          "as": "dynamic_label"
+        },
+        {
+          "calculate": "692",
+          "as": "x"
+        },
+        {
+          "calculate": "378",
+          "as": "y"
+        }
+      ]
     },
     {
       "data": {
-        "values": [
-          {
-            "x": 692,
-            "y": 400,
-            "label": "1.82M ha"
-          }
-        ]
+        "url": "data/chart1_outer_from_abares.csv"
       },
       "mark": {
         "type": "text",
@@ -1312,9 +1330,27 @@
           "axis": null
         },
         "text": {
-          "field": "label"
+          "field": "dynamic_label",
+          "type": "nominal"
         }
-      }
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Commercial plantation'"
+        },
+        {
+          "calculate": "format(datum.area_ha / 1000000, '.2f') + 'M ha'",
+          "as": "dynamic_label"
+        },
+        {
+          "calculate": "692",
+          "as": "x"
+        },
+        {
+          "calculate": "400",
+          "as": "y"
+        }
+      ]
     },
     {
       "data": {
@@ -1364,13 +1400,7 @@
     },
     {
       "data": {
-        "values": [
-          {
-            "x": 692,
-            "y": 493,
-            "label": "0.03%"
-          }
-        ]
+        "url": "data/chart1_outer_from_abares.csv"
       },
       "mark": {
         "type": "text",
@@ -1404,19 +1434,31 @@
           "axis": null
         },
         "text": {
-          "field": "label"
+          "field": "dynamic_label",
+          "type": "nominal"
         }
-      }
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Other forest'"
+        },
+        {
+          "calculate": "format(datum.share, '.2f') + '%'",
+          "as": "dynamic_label"
+        },
+        {
+          "calculate": "692",
+          "as": "x"
+        },
+        {
+          "calculate": "493",
+          "as": "y"
+        }
+      ]
     },
     {
       "data": {
-        "values": [
-          {
-            "x": 692,
-            "y": 515,
-            "label": "0.24M ha"
-          }
-        ]
+        "url": "data/chart1_outer_from_abares.csv"
       },
       "mark": {
         "type": "text",
@@ -1450,9 +1492,27 @@
           "axis": null
         },
         "text": {
-          "field": "label"
+          "field": "dynamic_label",
+          "type": "nominal"
         }
-      }
+      },
+      "transform": [
+        {
+          "filter": "datum.category === 'Other forest'"
+        },
+        {
+          "calculate": "format(datum.area_ha / 1000000, '.2f') + 'M ha'",
+          "as": "dynamic_label"
+        },
+        {
+          "calculate": "692",
+          "as": "x"
+        },
+        {
+          "calculate": "515",
+          "as": "y"
+        }
+      ]
     }
   ],
   "resolve": {
